@@ -1,0 +1,21 @@
+{
+  "title": "Contact",
+  "subtitle": "Start the Conversation",
+  "description": "Our legal team is available to discuss your matter confidentially. Send us a message and we will respond promptly.",
+  "form": {
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Message",
+    "caseDescription": "Brief description of your case",
+    "send": "Send Inquiry"
+  },
+  "consent": "I consent to the processing of my data for contact purposes. I understand that I can revoke this consent at any time.",
+  "requiredFields": "* Required fields",
+  "office": {
+    "titleCologne": "Head Office Cologne",
+    "titleDuesseldorf": "Branch Office Düsseldorf",
+    "hours": "Mon — Fri: 09:00 — 18:00",
+    "email": "Email"
+  }
+}

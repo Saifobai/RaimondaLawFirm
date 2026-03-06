@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 
 import Home from "./pages/Home";
 import Services from "./sections/Services";
+import Contact from "./sections/Contact";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Navbar />
       <Home />
       <Services />
+      <Contact />
     </div>
   );
 };

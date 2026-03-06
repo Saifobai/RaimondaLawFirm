@@ -1,0 +1,45 @@
+{
+  "value": {
+    "title1": "Holistic Approach",
+    "desc1": "We merge law and economics to create sustainable, long-term solutions.",
+    "title2": "International Bridge",
+    "desc2": "Specialized expertise for the German-Lithuanian market.",
+    "title3": "Crisis Excellence",
+    "desc3": "Proactive restructuring designed to avoid traditional insolvency."
+  },
+  "servicesSection": {
+    "title": "Strategic Focus for Your Success",
+    "sideTitle": "A few decisive steps toward the best legal solutions for your enterprise.",
+    "contactButton": "Contact Our Experts",
+    "clusters": [
+      {
+        "title": "Corporate Consulting & Law",
+        "headline": "Business and Law from a Single Source: Your Success in Focus",
+        "content": "We analyze structures, lead negotiations, and secure company formations. Avoid the 'Founder’s Trap' by selecting the optimal legal framework.",
+        "keywords": [
+          "Company Formation Cologne",
+          "Business Consulting Düsseldorf",
+          "Corporate Law"
+        ]
+      },
+      {
+        "title": "Restructuring & Insolvency",
+        "headline": "Corporate Restructuring: Turning Crisis into Opportunity",
+        "content": "Specialized focus on StaRUG and ESUG. We prevent standard insolvency to preserve your reputation and maintain control.",
+        "ctaLabel": "Request Crisis-Check"
+      },
+      {
+        "title": "Specialty: Germany & Lithuania",
+        "headline": "Your Partner for German-Lithuanian Economic Relations",
+        "content": "Bilingual contracts, market entry strategies, and legal protection for exporters and investors.",
+        "hoverMicrocopy": "Secure your market entry into the Baltic region."
+      }
+    ]
+  },
+  "process": {
+    "title": "Your Path to a Solution in 4 Steps"
+  },
+  "testimonials": {
+    "title": "Client Perspectives"
+  }
+}

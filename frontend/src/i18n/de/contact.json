@@ -1,0 +1,21 @@
+{
+  "title": "Kontakt",
+  "subtitle": "Kontakt aufnehmen",
+  "description": "Unser Team steht Ihnen für eine vertrauliche Beratung zur Verfügung. Senden Sie uns eine Nachricht und wir melden uns zeitnah bei Ihnen.",
+  "form": {
+    "name": "Name",
+    "email": "E-Mail-Adresse",
+    "phone": "Telefonnummer",
+    "message": "Nachricht",
+    "caseDescription": "Kurze Beschreibung Ihres Anliegens",
+    "send": "Anfrage senden"
+  },
+  "consent": "Ich bin damit einverstanden, dass diese Daten zum Zweck der Kontaktaufnahme gespeichert und verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.",
+  "requiredFields": "* Kennzeichnet erforderliche Felder",
+  "office": {
+    "titleCologne": "Hauptsitz Köln",
+    "titleDuesseldorf": "Zweigstelle Düsseldorf",
+    "hours": "Mo — Fr: 09:00 — 18:00",
+    "email": "E-Mail"
+  }
+}
