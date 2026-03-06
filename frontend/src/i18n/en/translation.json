@@ -1,0 +1,48 @@
+{
+  "navbar": {
+    "home": "Home",
+    "services": "Services",
+    "offer": "Our Offer",
+    "team": "Our Team",
+    "contact": "Contact",
+    "cta": "Free Initial Consultation"
+  },
+
+  "home": {
+    "hero": {
+      "title": "Where legal precision meets business strategy.",
+      "subtitle": "Your experts for business law, restructuring, and international law in Cologne & Düsseldorf. We secure your future – legally sound, economically strong.",
+      "cta": "Schedule your free initial consultation now",
+
+      "trust": {
+        "google": "5.0 stars on Google",
+        "chamber": "Member of the Bar Association",
+        "starug": "Experts in StaRUG & Insolvency Law"
+      }
+    },
+
+    "value": {
+      "title1": "Holistic Approach",
+      "desc1": "We combine law and business for sustainable solutions",
+
+      "title2": "International Bridge",
+      "desc2": "Specialized expertise for the Germany–Lithuania market",
+
+      "title3": "Crisis Expertise",
+      "desc3": "Proactive restructuring instead of traditional insolvency administration"
+    },
+
+    "services": {
+      "title": "Our Focus Areas for Your Success",
+      "cta": "View all services"
+    },
+
+    "process": {
+      "title": "Your Solution in 4 Steps"
+    },
+
+    "testimonials": {
+      "title": "What Our Clients Say"
+    }
+  }
+}

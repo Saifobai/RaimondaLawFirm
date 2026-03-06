@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+
+/* arrow icon */
+.heroSwiper .swiper-button-next::after,
+.heroSwiper .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* push arrows slightly toward center */
+.heroSwiper .swiper-button-prev {
+  left: 60px;
+}
+
+.heroSwiper .swiper-button-next {
+  right: 60px;
+}
