@@ -1,18 +1,22 @@
 export default function StepProgress({ step, total }) {
-  const progress = ((step + 1) / total) * 100;
-
   return (
-    <div className="w-full mb-8">
-      <div className="h-2 bg-gray-200 rounded-full">
-        <div
-          className="h-2 bg-blue-900 rounded-full transition-all duration-300"
-          style={{ width: `${progress}%` }}
-        />
-      </div>
+    <div className="flex items-center justify-between mb-8">
+      {Array.from({ length: total }).map((_, i) => (
+        <div key={i} className="flex-1 flex items-center">
+          <div
+            className={`w-8 h-8 flex items-center justify-center rounded-full text-sm
+            ${i <= step ? "bg-orange-400 text-white" : "bg-gray-200 text-gray-500"}`}
+          >
+            {i + 1}
+          </div>
 
-      <p className="text-sm text-gray-500 mt-2">
-        Step {step + 1} / {total}
-      </p>
+          {i < total - 1 && (
+            <div
+              className={`flex-1 h-1 ${i < step ? "bg-orange-400" : "bg-gray-200"}`}
+            />
+          )}
+        </div>
+      ))}
     </div>
   );
 }

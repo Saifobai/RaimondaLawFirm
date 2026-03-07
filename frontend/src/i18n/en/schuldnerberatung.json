@@ -1,40 +1,59 @@
 {
-"title":"Debt Counseling Request",
-"subtitle":"Fill out the form to receive a free consultation",
-"situation":"Your Situation",
+  "title": "Debt Counseling Request",
+  "subtitle": "Fill out the form to receive a free consultation",
+  "situation": "Your Situation",
 
-"select":"Please select",
+  "familyStatus": "Marital Status",
+  "jobBackground": "Professional Background",
+  "additional": "Additional Information",
 
-"single":"Single",
-"married":"Married",
-"relationship":"Partnership",
-"separated":"Separated",
-"divorced":"Divorced",
-"widowed":"Widowed",
+  "select": "Please select",
 
-"jobField":"Job field",
-"job":"Current job",
-"unemployed":"I am currently unemployed",
+  "single": "Single",
+  "married": "Married",
+  "relationship": "Partnership",
+  "separated": "Separated",
+  "divorced": "Divorced",
+  "widowed": "Widowed",
 
-"statements":"Which statements apply to you?",
+  "jobField": "Job field",
+  "job": "Current job",
+  "unemployed": "I am currently unemployed",
 
-"selfEmployed":"I am self-employed",
-"garnished":"My income is already garnished",
-"vehicle":"I own a vehicle",
-"property":"I own property",
-"knowCreditors":"I know my creditors",
+  "statements": "Which statements apply to you?",
 
-"contact":"Your Contact Details",
+  "selfEmployed": "I am self-employed",
+  "garnished": "My income is already garnished",
+  "vehicle": "I own a vehicle",
+  "property": "I own property",
+  "knowCreditors": "I know my creditors",
 
-"firstname":"First name",
-"lastname":"Last name",
-"email":"Email",
-"phone":"Mobile number",
+  "contact": "Your Contact Details",
 
-"notes":"Your Notes",
-"privacy":"I accept the privacy policy.",
+  "firstname": "First name",
+  "lastname": "Last name",
+  "email": "Email",
+  "phone": "Mobile number",
 
-"back":"Back",
-"next":"Next",
-"submit":"Submit"
+  "notes": "Your Notes",
+  "privacy": "I accept the privacy policy.",
+
+  "debt": "Estimated total debt",
+  "claims": "Number of creditors",
+  "income": "Monthly net income",
+
+  "back": "Back",
+  "next": "Next",
+  "submit": "Submit",
+
+  "features": {
+    "privacyTitle": "Data Protection",
+    "privacyDesc": "Your data is stored using secure encryption.",
+
+    "legalTitle": "Legal Security",
+    "legalDesc": "Advice according to the current insolvency law.",
+
+    "confidentialTitle": "Confidentiality",
+    "confidentialDesc": "Your financial situation is handled discreetly."
+  }
 }

@@ -1,40 +1,59 @@
 {
-"title":"Anfrage Schuldnerberatung",
-"subtitle":"Ausfüllen und kostenlose Erstberatung sichern",
-"situation":"Ihre Situation",
+  "title": "Anfrage Schuldnerberatung",
+  "subtitle": "Ausfüllen und kostenlose Erstberatung sichern",
+  "situation": "Ihre Situation",
 
-"select":"Bitte auswählen",
+  "familyStatus": "Familienstand",
+  "jobBackground": "Beruflicher Hintergrund",
+  "additional": "Zusatzangaben",
 
-"single":"ledig",
-"married":"verheiratet",
-"relationship":"Lebensgemeinschaft",
-"separated":"getrennt lebend",
-"divorced":"geschieden",
-"widowed":"verwitwet",
+  "select": "Bitte auswählen",
 
-"jobField":"Berufsfeld",
-"job":"Aktueller Beruf",
-"unemployed":"Ich bin aktuell arbeitsuchend",
+  "single": "ledig",
+  "married": "verheiratet",
+  "relationship": "Lebensgemeinschaft",
+  "separated": "getrennt lebend",
+  "divorced": "geschieden",
+  "widowed": "verwitwet",
 
-"statements":"Welche Aussagen treffen auf Sie zu?",
+  "jobField": "Berufsfeld",
+  "job": "Aktueller Beruf",
+  "unemployed": "Ich bin aktuell arbeitsuchend",
 
-"selfEmployed":"Ich bin aktuell selbstständig tätig",
-"garnished":"Bei mir wird bereits gepfändet",
-"vehicle":"Ich besitze ein Fahrzeug",
-"property":"Ich besitze eine Immobilie",
-"knowCreditors":"Ich weiß, wer meine Gläubiger sind",
+  "statements": "Welche Aussagen treffen auf Sie zu?",
 
-"contact":"Ihre Kontaktdaten",
+  "selfEmployed": "Ich bin aktuell selbstständig tätig",
+  "garnished": "Bei mir wird bereits gepfändet",
+  "vehicle": "Ich besitze ein Fahrzeug",
+  "property": "Ich besitze eine Immobilie",
+  "knowCreditors": "Ich weiß, wer meine Gläubiger sind",
 
-"firstname":"Vorname",
-"lastname":"Nachname",
-"email":"E-Mail",
-"phone":"Mobilnummer",
+  "contact": "Ihre Kontaktdaten",
 
-"notes":"Ihre Anmerkungen",
-"privacy":"Ich akzeptiere die Datenschutzbestimmungen.",
+  "firstname": "Vorname",
+  "lastname": "Nachname",
+  "email": "E-Mail",
+  "phone": "Mobilnummer",
 
-"back":"Zurück",
-"next":"Weiter",
-"submit":"Jetzt absenden"
+  "notes": "Ihre Anmerkungen",
+  "privacy": "Ich akzeptiere die Datenschutzbestimmungen.",
+
+  "debt": "Geschätzte Gesamtschulden",
+  "claims": "Anzahl der Gläubiger",
+  "income": "Netto-Einkommen (Monat)",
+
+  "back": "Zurück",
+  "next": "Weiter",
+  "submit": "Jetzt absenden",
+
+  "features": {
+    "privacyTitle": "Datenschutz",
+    "privacyDesc": "Ihre Daten werden verschlüsselt gespeichert.",
+
+    "legalTitle": "Rechtssicherheit",
+    "legalDesc": "Beratung gemäß aktueller Insolvenzordnung.",
+
+    "confidentialTitle": "Vertraulichkeit",
+    "confidentialDesc": "Diskrete Behandlung Ihrer Situation."
+  }
 }

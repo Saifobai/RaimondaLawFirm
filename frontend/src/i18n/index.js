@@ -5,24 +5,28 @@ import enNavbar from "./en/navbar.json";
 import enHero from "./en/hero.json";
 import enServices from "./en/services.json";
 import enContact from "./en/contact.json";
+import enSchuldnerberatung from "./en/schuldnerberatung.json";
 
 import deNavbar from "./de/navbar.json";
 import deHero from "./de/hero.json";
 import deServices from "./de/services.json";
 import deContact from "./de/contact.json";
+import deSchuldnerberatung from "./de/schuldnerberatung.json";
 
 const resources = {
     en: {
         navbar: enNavbar,
         hero: enHero,
         services: enServices,
-        contact: enContact
+        contact: enContact,
+        schuldnerberatung: enSchuldnerberatung
     },
     de: {
         navbar: deNavbar,
         hero: deHero,
         services: deServices,
-        contact: deContact
+        contact: deContact,
+        schuldnerberatung: deSchuldnerberatung
     }
 };
 
@@ -33,7 +37,7 @@ i18n
         lng: "de",
         fallbackLng: "en",
 
-        ns: ["navbar", "hero", "services", "contact"],
+        ns: ["navbar", "hero", "services", "contact", "schuldnerberatung"],
         defaultNS: "navbar",
 
         interpolation: {
