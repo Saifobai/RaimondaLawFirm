@@ -1,0 +1,40 @@
+{
+"title":"Anfrage Schuldnerberatung",
+"subtitle":"Ausfüllen und kostenlose Erstberatung sichern",
+"situation":"Ihre Situation",
+
+"select":"Bitte auswählen",
+
+"single":"ledig",
+"married":"verheiratet",
+"relationship":"Lebensgemeinschaft",
+"separated":"getrennt lebend",
+"divorced":"geschieden",
+"widowed":"verwitwet",
+
+"jobField":"Berufsfeld",
+"job":"Aktueller Beruf",
+"unemployed":"Ich bin aktuell arbeitsuchend",
+
+"statements":"Welche Aussagen treffen auf Sie zu?",
+
+"selfEmployed":"Ich bin aktuell selbstständig tätig",
+"garnished":"Bei mir wird bereits gepfändet",
+"vehicle":"Ich besitze ein Fahrzeug",
+"property":"Ich besitze eine Immobilie",
+"knowCreditors":"Ich weiß, wer meine Gläubiger sind",
+
+"contact":"Ihre Kontaktdaten",
+
+"firstname":"Vorname",
+"lastname":"Nachname",
+"email":"E-Mail",
+"phone":"Mobilnummer",
+
+"notes":"Ihre Anmerkungen",
+"privacy":"Ich akzeptiere die Datenschutzbestimmungen.",
+
+"back":"Zurück",
+"next":"Weiter",
+"submit":"Jetzt absenden"
+}

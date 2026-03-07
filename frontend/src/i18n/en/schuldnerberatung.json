@@ -1,0 +1,40 @@
+{
+"title":"Debt Counseling Request",
+"subtitle":"Fill out the form to receive a free consultation",
+"situation":"Your Situation",
+
+"select":"Please select",
+
+"single":"Single",
+"married":"Married",
+"relationship":"Partnership",
+"separated":"Separated",
+"divorced":"Divorced",
+"widowed":"Widowed",
+
+"jobField":"Job field",
+"job":"Current job",
+"unemployed":"I am currently unemployed",
+
+"statements":"Which statements apply to you?",
+
+"selfEmployed":"I am self-employed",
+"garnished":"My income is already garnished",
+"vehicle":"I own a vehicle",
+"property":"I own property",
+"knowCreditors":"I know my creditors",
+
+"contact":"Your Contact Details",
+
+"firstname":"First name",
+"lastname":"Last name",
+"email":"Email",
+"phone":"Mobile number",
+
+"notes":"Your Notes",
+"privacy":"I accept the privacy policy.",
+
+"back":"Back",
+"next":"Next",
+"submit":"Submit"
+}
