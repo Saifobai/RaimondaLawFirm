@@ -7,12 +7,14 @@ export default function RequestButton() {
 
   return (
     <motion.button
-      whileHover={{ scale: 1.08 }}
+      whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       onClick={() => navigate("/schuldnerberatung")}
-      className="fixed right-6 bottom-24 bg-orange-400 hover:bg-orange-500 text-white p-4 rounded-xl shadow-lg z-50"
+      // Removed "fixed", "right-125", "top-4".
+      // Added flex/items-center to ensure the icon stays centered.
+      className="bg-orange-400 hover:bg-orange-500 text-white p-3 rounded-xl shadow-lg transition-colors"
     >
-      <FileText size={22} />
+      <FileText size={20} />
     </motion.button>
   );
 }

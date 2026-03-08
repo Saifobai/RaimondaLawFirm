@@ -8,6 +8,7 @@ import enContact from "./en/contact.json";
 import enSchuldnerberatung from "./en/schuldnerberatung.json";
 import enOffer from "./en/offer.json";
 import enTeam from "./en/team.json";
+import enFooter from "./en/footer.json"
 
 import deNavbar from "./de/navbar.json";
 import deHero from "./de/hero.json";
@@ -16,6 +17,7 @@ import deContact from "./de/contact.json";
 import deSchuldnerberatung from "./de/schuldnerberatung.json";
 import deOffer from "./de/offer.json";
 import deTeam from "./de/team.json";
+import deFooter from "./de/footer.json"
 
 const resources = {
     en: {
@@ -26,6 +28,7 @@ const resources = {
         schuldnerberatung: enSchuldnerberatung,
         offer: enOffer,
         team: enTeam,
+        footer: enFooter
     },
     de: {
         navbar: deNavbar,
@@ -35,6 +38,7 @@ const resources = {
         schuldnerberatung: deSchuldnerberatung,
         offer: deOffer,
         team: deTeam,
+        footer: deFooter
     },
 };
 
@@ -51,6 +55,7 @@ i18n.use(initReactI18next).init({
         "schuldnerberatung",
         "offer",
         "team",
+        "footer"
     ],
     defaultNS: "navbar",
 

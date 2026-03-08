@@ -13,6 +13,9 @@ import Home from "./pages/Home/Home";
 import Schuldnerberatung from "./pages/Debtcounselling/Schuldnerberatung";
 import FirmOffers from "./sections/FirmOffers";
 import Team from "./sections/Team";
+import Footer from "./sections/Footer";
+import Terms from "./pages/Terms/Terms";
+import Privacy from "./pages/Privacy/Privacy";
 
 const MainLayout = () => {
   return (
@@ -25,8 +28,8 @@ const MainLayout = () => {
       <Team />
       <Contact />
 
-      <RequestButton />
       <ScrollToTop />
+      <Footer />
     </>
   );
 };
@@ -39,6 +42,8 @@ const App = () => {
 
       {/* Request Form Page */}
       <Route path="/schuldnerberatung" element={<Schuldnerberatung />} />
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy" element={<Privacy />} />
     </Routes>
   );
 };

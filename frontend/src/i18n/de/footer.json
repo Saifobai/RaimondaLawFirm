@@ -1,0 +1,20 @@
+{
+  "brand": {
+    "name": "Kanzlei Kraemer",
+    "tagline": "Präzision, Strategie, Erfolg."
+  },
+  "links": {
+    "legal": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "sitemap": "Sitemap"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "address": "Königsallee 1, 40212 Düsseldorf, Deutschland",
+    "phone": "+49 (0) 211 000 000",
+    "email": "info@kanzlei-kraemer.de"
+  },
+  "social": {
+    "title": "Folgen Sie uns"
+  }
+}
