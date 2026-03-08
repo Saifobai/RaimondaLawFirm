@@ -12,7 +12,7 @@ export default function Services() {
   const icons = [UserCheck, Scale, Gavel];
 
   return (
-    <section className="bg-[#fcfcfc] py-24 lg:py-40">
+    <section id="services" className="bg-[#fcfcfc] py-24 lg:py-40">
       <div className="max-w-[1600px] mx-auto px-6">
         {/* HEADER */}
         <div className="flex flex-col lg:flex-row items-end justify-between mb-24 border-b border-slate-200 pb-12">

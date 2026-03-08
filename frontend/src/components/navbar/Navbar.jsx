@@ -42,19 +42,19 @@ export default function Navbar() {
             {t("home")}
           </a>
 
-          <a href="#" className="hover:opacity-70 transition">
+          <a href="#services" className="hover:opacity-70 transition">
             {t("services")}
           </a>
 
-          <a href="#" className="hover:opacity-70 transition">
+          <a href="#offers" className="hover:opacity-70 transition">
             {t("offer")}
           </a>
 
-          <a href="#" className="hover:opacity-70 transition">
+          <a href="#team" className="hover:opacity-70 transition">
             {t("team")}
           </a>
 
-          <a href="#" className="hover:opacity-70 transition">
+          <a href="#contact" className="hover:opacity-70 transition">
             {t("contact")}
           </a>
         </nav>

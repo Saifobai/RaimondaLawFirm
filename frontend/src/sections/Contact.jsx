@@ -24,7 +24,10 @@ export default function Contact() {
   const [activeKey, setActiveKey] = useState("koeln");
 
   return (
-    <section className="bg-slate-900 py-36 text-slate-200 overflow-hidden">
+    <section
+      id="contact"
+      className="bg-slate-900 py-36 text-slate-200 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <motion.div

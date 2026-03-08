@@ -11,6 +11,8 @@ import RequestButton from "./components/RequestQuestions/RequestButton";
 
 import Home from "./pages/Home/Home";
 import Schuldnerberatung from "./pages/Debtcounselling/Schuldnerberatung";
+import FirmOffers from "./sections/FirmOffers";
+import Team from "./sections/Team";
 
 const MainLayout = () => {
   return (
@@ -19,6 +21,8 @@ const MainLayout = () => {
 
       <Home />
       <Services />
+      <FirmOffers />
+      <Team />
       <Contact />
 
       <RequestButton />

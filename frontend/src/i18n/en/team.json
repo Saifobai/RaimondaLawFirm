@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "title": "Experts in Business Law & Restructuring | Team Kraemer Law Firm",
+    "description": "Meet our interdisciplinary team specializing in business law, insolvency law and German-Lithuanian legal advisory in Cologne & Düsseldorf."
+  },
+  "hero": {
+    "title": "Expertise That Secures Your Future",
+    "subtitle": "Behind every success stands a strong team. We combine legal precision with strategic business insight and intercultural expertise."
+  },
+  "members": [
+    {
+      "name": "Dr. jur. Raimonda Kraemer, LL.M.",
+      "role": "founder",
+      "title": "Business Lawyer & Corporate Advisor",
+      "location": "Düsseldorf",
+      "languages": ["German", "English", "Lithuanian"],
+      "expertise": [
+        "Strategic business consulting",
+        "Conflict management",
+        "Foundation structuring",
+        "Corporate restructuring"
+      ],
+      "bio": "Since 2008 Dr. Kraemer has guided companies through complex negotiations and economic crises. With academic precision and deep understanding of business structures she develops tailored strategic solutions.",
+      "quote": "Strategic vision for your company.",
+      "cta": "Schedule appointment with Dr. Kraemer",
+      "email": "info@kanzlei-kraemer.de",
+      "linkedin": "#",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+      "alt": "Female corporate lawyer portrait",
+      "slug": "raimonda-kraemer"
+    },
+    {
+      "name": "Aurelija Maumevičė, LL.M.",
+      "role": "lawyer",
+      "title": "Attorney (Advokat, Lithuania) & Mediator",
+      "location": "Cologne",
+      "languages": ["German", "English", "Lithuanian"],
+      "expertise": [
+        "International business law",
+        "Civil and commercial law",
+        "Germany-Lithuania expansion",
+        "Debt advisory"
+      ],
+      "bio": "Ms. Maumevičė acts as the legal bridge between Germany and Lithuania. Since 2014 she advises clients on cross-border legal matters and economic restructuring strategies.",
+      "quote": "Your expert for international law and mediation.",
+      "cta": "Request legal consultation",
+      "email": "info@kanzlei-kraemer.de",
+      "linkedin": "#",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+      "alt": "Professional female lawyer portrait",
+      "slug": "aurelija-maumevice"
+    },
+    {
+      "name": "Kristina Zindulyte-Krickl",
+      "role": "advisor",
+      "title": "Senior Debt Advisory Specialist",
+      "location": "Cologne",
+      "languages": ["German", "Lithuanian"],
+      "expertise": [
+        "Insolvency procedures",
+        "Creditor negotiations",
+        "§305 InsO certifications"
+      ],
+      "bio": "With more than 15 years of experience in debt advisory she guides clients safely through financial restructuring and debt settlement procedures.",
+      "quote": "Extensive experience in debt resolution.",
+      "cta": "Contact us",
+      "email": "info@kanzlei-kraemer.de",
+      "linkedin": "#",
+      "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+      "alt": "Senior legal advisor portrait",
+      "slug": "kristina-zindulyte"
+    },
+    {
+      "name": "Aljona Hartfeld",
+      "role": "operations",
+      "title": "Business Economist & Case Coordinator",
+      "location": "Cologne",
+      "languages": ["German"],
+      "expertise": [
+        "Administrative coordination",
+        "Financial data analysis",
+        "Client management"
+      ],
+      "bio": "As a business economist Ms. Hartfeld ensures smooth operational workflows within the firm and supports financial analysis for client cases.",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+      "alt": "Professional business consultant portrait",
+      "slug": "aljona-hartfeld"
+    },
+    {
+      "name": "E. Schmidt",
+      "role": "operations",
+      "title": "Senior Case Administrator",
+      "location": "Cologne",
+      "languages": ["German"],
+      "expertise": [
+        "Documentation",
+        "Case management",
+        "Government communication"
+      ],
+      "bio": "Ms. Schmidt ensures that all documentation required for restructuring and advisory cases is prepared accurately and completely.",
+      "image": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e",
+      "alt": "Professional office administrator portrait",
+      "slug": "e-schmidt"
+    }
+  ],
+  "values": [
+    {
+      "title": "Discretion",
+      "description": "Your trust is our highest priority."
+    },
+    {
+      "title": "Speed",
+      "description": "Response times within 24 hours."
+    },
+    {
+      "title": "Solution-Oriented",
+      "description": "We focus on solutions, not problems."
+    }
+  ],
+  "cta": {
+    "title": "Would you like to meet our team personally?",
+    "text": "Use our free initial consultation to speak directly with one of our experts about your case.",
+    "button": "Book your free consultation now"
+  }
+}

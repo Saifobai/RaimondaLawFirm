@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Experten für Wirtschaftsrecht & Sanierung | Team Kanzlei Dr. Kraemer",
+    "description": "Lernen Sie unser interdisziplinäres Team kennen. Experten für Wirtschaftsrecht, Insolvenzrecht und deutsch-litauische Rechtsberatung in Köln & Düsseldorf."
+  },
+  "hero": {
+    "title": "Expertise, die Ihre Zukunft sichert",
+    "subtitle": "Hinter jedem Erfolg steht ein starkes Team. Wir vereinen juristische Präzision mit wirtschaftlichem Weitblick und interkultureller Kompetenz."
+  },
+  "members": [
+    {
+      "name": "Dr. jur. Raimonda Kraemer, LL.M.",
+      "role": "founder",
+      "title": "Wirtschaftsjuristin & Unternehmensberaterin",
+      "location": "Düsseldorf",
+      "languages": ["Deutsch", "Englisch", "Litauisch"],
+      "expertise": [
+        "Strategische Wirtschaftsberatung",
+        "Konfliktmanagement",
+        "Stiftungsgründung",
+        "Restrukturierung"
+      ],
+      "bio": "Seit 2008 begleitet Dr. Kraemer Unternehmen durch komplexe Verhandlungsprozesse und wirtschaftliche Krisen.",
+      "quote": "Strategische Weitsicht für Ihr Unternehmen.",
+      "cta": "Termin mit Dr. Kraemer vereinbaren",
+      "email": "info@kanzlei-kraemer.de",
+      "linkedin": "#",
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+      "alt": "Dr. jur. Raimonda Kraemer Wirtschaftsberatung Düsseldorf",
+      "slug": "raimonda-kraemer"
+    },
+    {
+      "name": "Aurelija Maumevičė, LL.M.",
+      "role": "lawyer",
+      "title": "Rechtsanwältin (Advokat, Litauen) & Mediatorin",
+      "location": "Köln",
+      "languages": ["Deutsch", "Englisch", "Litauisch"],
+      "expertise": [
+        "Internationales Wirtschaftsrecht",
+        "Zivil- und Handelsrecht",
+        "Deutschland-Litauen Expansion",
+        "Schuldenberatung"
+      ],
+      "bio": "Frau Maumevičė ist die Brücke zwischen Deutschland und Litauen für grenzüberschreitende Rechtsfragen.",
+      "quote": "Ihre Expertin für internationales Recht & Mediation.",
+      "cta": "Rechtliche Beratung anfragen",
+      "email": "info@kanzlei-kraemer.de",
+      "linkedin": "#",
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+      "alt": "Rechtsanwältin Aurelija Maumevičė Kanzlei Kraemer Köln",
+      "slug": "aurelija-maumevice"
+    },
+    {
+      "name": "Kristina Zindulyte-Krickl",
+      "role": "advisor",
+      "title": "Referentin & Expertin für Schuldnerberatung",
+      "location": "Köln",
+      "languages": ["Deutsch", "Litauisch"],
+      "expertise": [
+        "Insolvenzverfahren",
+        "Gläubigerverhandlungen",
+        "§305 InsO Bescheinigungen"
+      ],
+      "bio": "Mit über 15 Jahren Erfahrung begleitet sie Mandanten empathisch durch den Prozess der Entschuldung.",
+      "quote": "Langjährige Erfahrung in der Entschuldung.",
+      "cta": "Kontakt aufnehmen",
+      "email": "info@kanzlei-kraemer.de",
+      "linkedin": "#",
+      "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+      "slug": "kristina-zindulyte"
+    },
+    {
+      "name": "Aljona Hartfeld",
+      "role": "operations",
+      "title": "Diplom-Betriebswirtin & Sachbearbeiterin",
+      "location": "Köln",
+      "languages": ["Deutsch"],
+      "expertise": [
+        "Administrative Koordination",
+        "Datenanalyse",
+        "Mandantenmanagement"
+      ],
+      "bio": "Sie sorgt für reibungslose Abläufe und unterstützt die wirtschaftliche Analyse.",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+      "slug": "aljona-hartfeld"
+    },
+    {
+      "name": "E. Schmidt",
+      "role": "operations",
+      "title": "Sachbearbeiterin",
+      "location": "Köln",
+      "languages": ["Deutsch"],
+      "expertise": [
+        "Dokumentation",
+        "Fallmanagement",
+        "Behördenkommunikation"
+      ],
+      "bio": "Sie stellt sicher, dass alle Unterlagen für Restrukturierungen vollständig vorbereitet sind.",
+      "image": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e",
+      "slug": "e-schmidt"
+    }
+  ],
+  "values": [
+    {
+      "title": "Diskretion",
+      "description": "Ihr Vertrauen ist unser höchstes Gut."
+    },
+    {
+      "title": "Schnelligkeit",
+      "description": "Reaktionszeiten innerhalb von 24 Stunden."
+    },
+    {
+      "title": "Lösungsorientierung",
+      "description": "Wir denken nicht in Problemen, sondern in Lösungen."
+    }
+  ],
+  "cta": {
+    "title": "Möchten Sie uns persönlich kennenlernen?",
+    "text": "Nutzen Sie unsere kostenlose Ersteinschätzung.",
+    "button": "Jetzt kostenlose Ersteinschätzung buchen"
+  }
+}
