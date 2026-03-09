@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Privacy Policy"
+  },
+  "sections": [
+    {
+      "title": "1. Controller",
+      "content": [
+        "Kanzlei Dr. Jura Kraemer",
+        "Im Sionstal 3–5",
+        "50678 Cologne",
+        "Germany",
+        "Phone: +49 221 28275740",
+        "Fax: +49 221 28275741",
+        "Email: info@kanzlei-dr-jura-kraemer.de",
+        "Managing Director:",
+        "Dr. jur. Raimonda Kraemer, LL.M."
+      ]
+    },
+    {
+      "title": "2. Hosting and Server Operation",
+      "content": [
+        "Our website is operated on a server administered by the law firm and hosted on the infrastructure of the hosting provider Hostinger.",
+        "The hosting provider only provides the technical infrastructure required to operate the server.",
+        "Any processing of personal data occurs solely within the framework of providing and ensuring the technical operation of the website."
+      ]
+    },
+    {
+      "title": "3. Collection of Data When Visiting the Website",
+      "content": [
+        "When you access our website, information is automatically transmitted by your browser to our website server and temporarily stored in log files.",
+        "This may include the following data:",
+        "IP address of the requesting device",
+        "Date and time of access",
+        "Name and URL of the retrieved file",
+        "Referrer URL",
+        "Browser and operating system used",
+        "The data is processed to ensure the stable and secure operation of the website and to identify technical errors.",
+        "Legal basis: Art. 6(1)(f) GDPR (legitimate interest)."
+      ]
+    },
+    {
+      "title": "4. Contact Form",
+      "content": [
+        "If you use our contact form, the information you enter will be processed.",
+        "This may include:",
+        "Name",
+        "Email address",
+        "Phone number",
+        "Message content",
+        "The data will only be used to process your request and to contact you.",
+        "Legal basis: Art. 6(1)(b) GDPR (pre-contractual measures or contract performance)."
+      ]
+    },
+    {
+      "title": "5. Survey Form",
+      "content": [
+        "Our website may provide a form for participating in surveys or providing additional information.",
+        "The data you provide may include:",
+        "Basic contact information",
+        "Information about your situation or inquiry",
+        "Optional additional information",
+        "The data helps us better understand inquiries and improve our legal services.",
+        "Legal basis: Art. 6(1)(a) GDPR (consent) or Art. 6(1)(b) GDPR if related to a legal inquiry."
+      ]
+    },
+    {
+      "title": "6. Data Sharing",
+      "content": [
+        "Personal data will generally not be transferred to third parties.",
+        "Data may be shared if:",
+        "You have given explicit consent",
+        "It is required to establish or perform a legal mandate",
+        "There is a legal obligation",
+        "It is required to assert, exercise, or defend legal claims",
+        "As a law firm, we are also subject to statutory professional confidentiality obligations."
+      ]
+    },
+    {
+      "title": "7. Cookies and Future Analytics",
+      "content": [
+        "Currently, our website does not use tracking or analytics tools.",
+        "In the future, web analytics tools may be implemented to better understand the use of our website and improve our services.",
+        "If such tools are implemented, this privacy policy will be updated and users will be informed accordingly."
+      ]
+    },
+    {
+      "title": "8. Your Rights",
+      "content": [
+        "Under the GDPR you have the following rights:",
+        "Access to your stored personal data (Art. 15 GDPR)",
+        "Correction of inaccurate data (Art. 16 GDPR)",
+        "Deletion of your data (Art. 17 GDPR)",
+        "Restriction of processing (Art. 18 GDPR)",
+        "Data portability (Art. 20 GDPR)",
+        "Objection to processing (Art. 21 GDPR)",
+        "You also have the right to lodge a complaint with a supervisory authority.",
+        "Responsible authority:",
+        "State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia",
+        "Kavalleriestraße 2–4",
+        "40213 Düsseldorf",
+        "www.ldi.nrw.de"
+      ]
+    },
+    {
+      "title": "9. Data Security",
+      "content": [
+        "This website uses SSL/TLS encryption to ensure secure data transmission.",
+        "We also implement appropriate technical and organizational measures to protect your data against manipulation, loss, destruction, or unauthorized access."
+      ]
+    },
+    {
+      "title": "10. Updates to This Privacy Policy",
+      "content": [
+        "This privacy policy is currently valid as of March 2026.",
+        "We reserve the right to amend this policy if legal requirements or technical changes to our website require it."
+      ]
+    }
+  ]
+}

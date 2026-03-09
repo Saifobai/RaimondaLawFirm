@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "title": "Impressum"
+  },
+  "sections": [
+    {
+      "title": "Angaben gemäß § 5 DDG",
+      "content": [
+        "Anbieter dieser Website",
+        "Wirtschaftskanzlei Dr. jur. Kraemer GmbH",
+        "Gesellschaft mit beschränkter Haftung",
+        "Sitz der Gesellschaft: Köln",
+        "Registergericht: Amtsgericht Köln",
+        "Handelsregister: HRB 123210"
+      ]
+    },
+    {
+      "title": "Hauptsitz",
+      "content": [
+        "Im Sionstal 3–5",
+        "50678 Köln",
+        "Deutschland",
+        "Telefon: +49 221 28275740",
+        "Fax: +49 221 28275741",
+        "E-Mail: info@kanzlei-dr-jura-kraemer.de"
+      ]
+    },
+    {
+      "title": "Zweigstelle Düsseldorf",
+      "content": [
+        "Friedrichstraße 7",
+        "40217 Düsseldorf",
+        "Deutschland",
+        "Telefon: +49 211 15937650",
+        "Fax: +49 211 15937651"
+      ]
+    },
+    {
+      "title": "Vertretungsberechtigte Geschäftsführerin",
+      "content": [
+        "Dr. jur. Raimonda Kraemer, LL.M.",
+        "Wirtschaftsjuristin"
+      ]
+    },
+    {
+      "title": "Steuerliche Angaben",
+      "content": [
+        "Steuernummer: 5214/5803/Ü 1049",
+        "Zuständiges Finanzamt: Köln-Altstadt"
+      ]
+    },
+    {
+      "title": "Kooperation",
+      "content": [
+        "Rechtsanwältin Aurelija Maumevičė, LL.M.",
+        "Advokat (Litauen), zugelassen nach § 2 EuRAG",
+        "Zugelassen zur Rechtsanwaltschaft in Litauen und seit dem 21.05.2025 Mitglied der Rechtsanwaltskammer Köln."
+      ]
+    },
+    {
+      "title": "Zuständige Kammern",
+      "content": [
+        "Rechtsanwaltskammer Köln",
+        "Riehler Straße 30",
+        "50668 Köln",
+        "www.rak-koeln.de",
+        "Für die Zulassung in Litauen:",
+        "Lietuvos advokatūra (Litauische Rechtsanwaltskammer)",
+        "www.advokatura.lt"
+      ]
+    },
+    {
+      "title": "Berufshaftpflichtversicherung",
+      "content": [
+        "AAS „BTA Baltic Insurance Company“",
+        "Räumlicher Geltungsbereich:",
+        "Europa (mit Ausnahme von Belarus, der Ukraine und der Russischen Föderation)"
+      ]
+    },
+    {
+      "title": "Tätigkeitsbereiche",
+      "content": [
+        "Wirtschaftsberatung",
+        "Sanierung und Restrukturierung",
+        "Internationales Recht zwischen Deutschland und Litauen",
+        "Die Kanzlei verbindet juristische Expertise im Insolvenz- und Sanierungsrecht mit wirtschaftsjuristischer Beratung und bietet eine interdisziplinäre sowie grenzüberschreitende Beratung."
+      ]
+    },
+    {
+      "title": "Außergerichtliche Streitschlichtung (§§ 36, 37 VSBG)",
+      "content": [
+        "Schlichtungsstelle der Rechtsanwaltschaft",
+        "bei der Bundesrechtsanwaltskammer",
+        "Neue Grünstraße 17",
+        "10179 Berlin",
+        "www.schlichtungsstelle-der-rechtsanwaltschaft.de",
+        "E-Mail: schlichtungsstelle@s-d-r.org",
+        "Die Dr. jur. Kraemer GmbH nimmt nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.",
+        "EU Online-Streitbeilegungsplattform:",
+        "https://ec.europa.eu/consumers/odr/"
+      ]
+    },
+    {
+      "title": "Berufsrechtliche Regelungen",
+      "content": [
+        "BRAO – Bundesrechtsanwaltsordnung",
+        "BORA – Berufsordnung für Rechtsanwälte",
+        "RVG – Rechtsanwaltsvergütungsgesetz",
+        "FAO – Fachanwaltsordnung",
+        "CCBE-Berufsregeln",
+        "Weitere Informationen unter:",
+        "https://www.brak.de",
+        "https://www.gesetze-im-internet.de"
+      ]
+    },
+    {
+      "title": "Haftungsausschluss",
+      "content": [
+        "Die Inhalte unserer Website wurden mit größtmöglicher Sorgfalt erstellt.",
+        "Dennoch übernehmen wir keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte.",
+        "Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.",
+        "Die bereitgestellten Informationen stellen keine Rechtsberatung dar."
+      ]
+    }
+  ]
+}

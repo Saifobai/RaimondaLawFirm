@@ -16,6 +16,7 @@ import Team from "./sections/Team";
 import Footer from "./sections/Footer";
 import Terms from "./pages/Terms/Terms";
 import Privacy from "./pages/Privacy/Privacy";
+import Impressum from "./pages/impressum/Impressum";
 
 const MainLayout = () => {
   return (
@@ -42,7 +43,8 @@ const App = () => {
 
       {/* Request Form Page */}
       <Route path="/schuldnerberatung" element={<Schuldnerberatung />} />
-      <Route path="/terms" element={<Terms />} />
+
+      <Route path="/impressum" element={<Impressum />} />
       <Route path="/privacy" element={<Privacy />} />
     </Routes>
   );

@@ -49,7 +49,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm text-slate-400">
               <li>
-                <Link to="/terms" className="hover:text-white transition">
+                <Link to="/impressum" className="hover:text-white transition">
                   {t("links.legal")}
                 </Link>
               </li>

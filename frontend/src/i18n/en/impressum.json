@@ -1,0 +1,122 @@
+{
+  "hero": {
+    "title": "Legal Notice"
+  },
+  "sections": [
+    {
+      "title": "Information according to § 5 DDG",
+      "content": [
+        "Provider of this website:",
+        "Wirtschaftskanzlei Dr. jur. Kraemer GmbH",
+        "Limited Liability Company",
+        "Registered seat: Cologne",
+        "Commercial Register: Cologne Local Court",
+        "Registration number: HRB 123210"
+      ]
+    },
+    {
+      "title": "Head Office",
+      "content": [
+        "Im Sionstal 3–5",
+        "50678 Cologne",
+        "Germany",
+        "Phone: +49 221 28275740",
+        "Fax: +49 221 28275741",
+        "Email: info@kanzlei-dr-jura-kraemer.de"
+      ]
+    },
+    {
+      "title": "Branch Office Düsseldorf",
+      "content": [
+        "Friedrichstraße 7",
+        "40217 Düsseldorf",
+        "Germany",
+        "Phone: +49 211 15937650",
+        "Fax: +49 211 15937651"
+      ]
+    },
+    {
+      "title": "Managing Director",
+      "content": [
+        "Dr. jur. Raimonda Kraemer, LL.M.",
+        "Business Lawyer"
+      ]
+    },
+    {
+      "title": "Tax Information",
+      "content": [
+        "Tax number: 5214/5803/Ü 1049",
+        "Responsible tax office: Cologne-Altstadt"
+      ]
+    },
+    {
+      "title": "Professional Cooperation",
+      "content": [
+        "Attorney Aurelija Maumevičė, LL.M.",
+        "Advokat (Lithuania), admitted under § 2 EuRAG",
+        "Admitted to the Lithuanian Bar and member of the Cologne Bar Association since 21.05.2025."
+      ]
+    },
+    {
+      "title": "Responsible Chambers",
+      "content": [
+        "Cologne Bar Association",
+        "Riehler Straße 30",
+        "50668 Cologne",
+        "www.rak-koeln.de",
+        "Lithuanian Bar Association:",
+        "www.advokatura.lt"
+      ]
+    },
+    {
+      "title": "Professional Liability Insurance",
+      "content": [
+        "AAS “BTA Baltic Insurance Company”",
+        "Geographical scope:",
+        "Europe (excluding Belarus, Ukraine, and the Russian Federation)"
+      ]
+    },
+    {
+      "title": "Fields of Practice",
+      "content": [
+        "Business consulting",
+        "Restructuring and turnaround management",
+        "International legal relations between Germany and Lithuania"
+      ]
+    },
+    {
+      "title": "Dispute Resolution",
+      "content": [
+        "Arbitration Board of the German Legal Profession",
+        "Federal Bar Association",
+        "Neue Grünstraße 17",
+        "10179 Berlin",
+        "www.schlichtungsstelle-der-rechtsanwaltschaft.de",
+        "EU Online Dispute Resolution platform:",
+        "https://ec.europa.eu/consumers/odr/"
+      ]
+    },
+    {
+      "title": "Professional Regulations",
+      "content": [
+        "BRAO – Federal Lawyers' Act",
+        "BORA – Professional Rules for Lawyers",
+        "RVG – Lawyers' Fees Act",
+        "FAO – Specialist Lawyers' Regulations",
+        "CCBE Code of Conduct",
+        "More information:",
+        "https://www.brak.de",
+        "https://www.gesetze-im-internet.de"
+      ]
+    },
+    {
+      "title": "Disclaimer",
+      "content": [
+        "The information on this website has been prepared with the greatest care.",
+        "However, we cannot guarantee its accuracy, completeness, or timeliness.",
+        "External links are the responsibility of their respective operators.",
+        "The information provided does not constitute legal advice."
+      ]
+    }
+  ]
+}

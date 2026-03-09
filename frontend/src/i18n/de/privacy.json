@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "Datenschutzerklärung"
+  },
+  "sections": [
+    {
+      "title": "1. Verantwortlicher",
+      "content": [
+        "Kanzlei Dr. Jura Kraemer",
+        "Im Sionstal 3–5",
+        "50678 Köln",
+        "Deutschland",
+        "Telefon: +49 221 28275740",
+        "Fax: +49 221 28275741",
+        "E-Mail: info@kanzlei-dr-jura-kraemer.de",
+        "Geschäftsführerin:",
+        "Dr. jur. Raimonda Kraemer, LL.M."
+      ]
+    },
+    {
+      "title": "2. Hosting und Serverbetrieb",
+      "content": [
+        "Unsere Website wird auf einem Server betrieben, der von der Kanzlei administriert wird und auf der Infrastruktur des Hosting-Anbieters Hostinger gehostet wird.",
+        "Der Hosting-Anbieter stellt ausschließlich die technische Infrastruktur zur Verfügung.",
+        "Eine Verarbeitung personenbezogener Daten erfolgt nur im Rahmen der Bereitstellung und Sicherstellung des technischen Betriebs der Website."
+      ]
+    },
+    {
+      "title": "3. Erhebung und Speicherung personenbezogener Daten beim Besuch der Website",
+      "content": [
+        "Beim Aufrufen unserer Website werden durch den Browser Ihres Endgeräts automatisch Informationen an den Server unserer Website übermittelt.",
+        "Diese Informationen werden temporär in sogenannten Logfiles gespeichert.",
+        "Dabei können insbesondere folgende Daten verarbeitet werden:",
+        "IP-Adresse",
+        "Datum und Uhrzeit des Zugriffs",
+        "Name und URL der abgerufenen Datei",
+        "Referrer-URL",
+        "Browser und Betriebssystem",
+        "Die Daten werden verarbeitet, um einen stabilen und sicheren Betrieb der Website zu gewährleisten.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO."
+      ]
+    },
+    {
+      "title": "4. Kontaktformular",
+      "content": [
+        "Wenn Sie unser Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten verarbeitet.",
+        "Dazu können gehören:",
+        "Name",
+        "E-Mail-Adresse",
+        "Telefonnummer",
+        "Nachrichteninhalt",
+        "Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO."
+      ]
+    },
+    {
+      "title": "5. Umfrageformular",
+      "content": [
+        "Auf unserer Website kann ein Formular zur Teilnahme an einer Umfrage oder zur Übermittlung zusätzlicher Informationen bereitgestellt werden.",
+        "Die eingegebenen Daten können enthalten:",
+        "Kontaktinformationen",
+        "Angaben zu Ihrer Situation",
+        "freiwillige zusätzliche Informationen",
+        "Diese Daten helfen uns, Anfragen besser einzuordnen und unsere Dienstleistungen zu verbessern.",
+        "Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO bzw. Art. 6 Abs. 1 lit. b DSGVO."
+      ]
+    },
+    {
+      "title": "6. Weitergabe von Daten",
+      "content": [
+        "Eine Weitergabe personenbezogener Daten an Dritte erfolgt grundsätzlich nicht.",
+        "Eine Übermittlung kann erfolgen, wenn:",
+        "Sie ausdrücklich eingewilligt haben",
+        "dies zur Durchführung eines Mandats erforderlich ist",
+        "eine gesetzliche Verpflichtung besteht",
+        "dies zur Durchsetzung von Rechtsansprüchen notwendig ist",
+        "Als Rechtsanwaltskanzlei unterliegen wir der gesetzlichen Verschwiegenheitspflicht."
+      ]
+    },
+    {
+      "title": "7. Cookies und zukünftige Analyse-Tools",
+      "content": [
+        "Derzeit verwendet unsere Website keine Tracking- oder Analyse-Tools.",
+        "Zukünftig können Webanalyse-Tools eingesetzt werden, um die Nutzung unserer Website besser zu verstehen.",
+        "Sollten solche Tools eingesetzt werden, wird diese Datenschutzerklärung entsprechend aktualisiert."
+      ]
+    },
+    {
+      "title": "8. Betroffenenrechte",
+      "content": [
+        "Sie haben folgende Rechte gemäß DSGVO:",
+        "Auskunft über gespeicherte Daten (Art. 15 DSGVO)",
+        "Berichtigung unrichtiger Daten (Art. 16 DSGVO)",
+        "Löschung Ihrer Daten (Art. 17 DSGVO)",
+        "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+        "Datenübertragbarkeit (Art. 20 DSGVO)",
+        "Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)",
+        "Sie haben außerdem das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren.",
+        "Zuständige Aufsichtsbehörde:",
+        "Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen",
+        "Kavalleriestraße 2–4",
+        "40213 Düsseldorf",
+        "www.ldi.nrw.de"
+      ]
+    },
+    {
+      "title": "9. Datensicherheit",
+      "content": [
+        "Diese Website verwendet eine SSL-/TLS-Verschlüsselung.",
+        "Zusätzlich setzen wir technische und organisatorische Maßnahmen ein, um Ihre Daten gegen Manipulation, Verlust oder unbefugten Zugriff zu schützen."
+      ]
+    },
+    {
+      "title": "10. Aktualität und Änderung dieser Datenschutzerklärung",
+      "content": [
+        "Diese Datenschutzerklärung ist aktuell gültig (Stand: März 2026).",
+        "Wir behalten uns vor, diese Datenschutzerklärung bei rechtlichen oder technischen Änderungen anzupassen."
+      ]
+    }
+  ]
+}
