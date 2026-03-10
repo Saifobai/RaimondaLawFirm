@@ -8,8 +8,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import hero1 from "../../assets/hero_sw_01.jpg";
-import hero2 from "../../assets/hero_sw_02.jpg";
-import hero3 from "../../assets/hero_sw_03.jpg";
+import hero2 from "../../assets/hero_sw_02.jpeg";
+import hero3 from "../../assets/hero_sw_03.jpeg";
 
 export default function Hero() {
   const { t } = useTranslation("hero");
