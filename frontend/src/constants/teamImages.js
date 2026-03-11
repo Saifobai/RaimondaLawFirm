@@ -1,9 +1,9 @@
 // src/constants/teamImages.js
-import Rai_Image from "../assets/Rai_Image.jpeg";
-import Auri_Image from "../assets/Auri_Image.jpeg";
-import Kris_Image from "../assets/Kris_Image.jpeg";
-import Ajlona_Image from "../assets/Ajlona_Image.jpeg";
-import Elke_Image from "../assets/Elke_Image.jpeg";
+import Rai_Image from "../assets/Rai_.jpeg";
+import Auri_Image from "../assets/Auri_.jpeg";
+import Kris_Image from "../assets/Kris_.jpeg";
+import Ajlona_Image from "../assets/Alijona_.jpeg";
+import Elke_Image from "../assets/Elke_.jpeg";
 
 export const TEAM_IMAGES = {
     "raimonda-kraemer": Rai_Image,

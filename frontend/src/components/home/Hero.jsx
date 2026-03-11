@@ -9,32 +9,26 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import slide1 from "../../assets/slide_01.jpeg";
-import slide2 from "../../assets/slide_02.jpeg";
 import slide3 from "../../assets/slide_03.jpeg";
 import slide4 from "../../assets/slide_04.jpeg";
-import slide5 from "../../assets/slide_05.jpeg";
-import slide6 from "../../assets/slide_06.jpeg";
-import slide7 from "../../assets/slide_07.jpeg";
-
+import slide6 from "../../assets/slide_07.jpeg";
 import Video_Law from "../../assets/law_vid.mp4";
+
 export default function Hero() {
   const { t } = useTranslation("hero");
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const slides = [
     { image: slide1 },
-    { image: slide2 },
     { image: slide3 },
     { image: slide4 },
-    { image: slide5 },
     { image: slide6 },
-    { image: slide7 },
   ];
   const icons = [Briefcase, RefreshCw, Rocket, Globe];
   const translatedBoxes = t("infoBoxes", { returnObjects: true }) || [];
 
   return (
-    <section className="relative w-full h-screen  bg-slate-900">
+    <section className="relative w-full h-screen bg-[#262B3E]">
       <style>{`
         .swiper-button-next, .swiper-button-prev {
           top: 50% !important;
@@ -50,22 +44,21 @@ export default function Hero() {
         .swiper-button-next { right: 20px !important; }
         .swiper-button-prev { left: 20px !important; }
         
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+          background: #C9B38C !important;
+        }
+
         @media (min-width: 1280px) {
            .swiper-button-next { right: 60px !important; }
            .swiper-button-prev { left: 60px !important; }
         }
-
-        // .swiper-button-next:hover, .swiper-button-prev:hover {
-        //   background: #d97706; 
-        //   transform: translateY(-50%) scale(1.1);
-        // }
-        
         @media (max-width: 1024px) { .swiper-button-next, .swiper-button-prev { display: none !important; } }
-
-        @keyframes pulse-amber {
-          0% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7); }
-          70% { box-shadow: 0 0 0 20px rgba(217, 119, 6, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
+        
+        /* Updated pulse color to Champagne Gold #C9B38C */
+        @keyframes pulse-gold {
+          0% { box-shadow: 0 0 0 0 rgba(201, 179, 140, 0.7); }
+          70% { box-shadow: 0 0 0 20px rgba(201, 179, 140, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(201, 179, 140, 0); }
         }
       `}</style>
 
@@ -76,17 +69,14 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
+            className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-[#262B3E]/95 backdrop-blur-md"
           >
-            {/* Improved Close Button Position for Mobile */}
             <button
               onClick={() => setIsVideoOpen(false)}
-              className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-amber-600 text-white rounded-full transition-all border border-white/20"
-              aria-label="Close video"
+              className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-[#C9B38C] text-white rounded-full transition-all border border-white/20"
             >
               <X size={28} />
             </button>
-
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -106,81 +96,48 @@ export default function Hero() {
         )}
       </AnimatePresence>
 
-      {/* --- PLAY BUTTON --- 
-          - Mobile: Positioned lower (bottom-40) and centered
-          - Desktop: Back to center-right positioning
-      */}
+      {/* --- PLAY BUTTON (PULSE GOLD) --- */}
       <div className="absolute right-1/2 translate-x-1/2 bottom-[32%] md:bottom-auto md:right-[140px] lg:right-[180px] md:top-1/2 md:-translate-y-1/2 md:translate-x-0 z-40">
         <motion.button
           onClick={() => setIsVideoOpen(true)}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          style={{ animation: "pulse-amber 2s infinite" }}
-          className="flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-amber-600 hover:bg-white text-white hover:text-amber-600 rounded-full shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-amber-600 group"
+          style={{ animation: "pulse-gold 2s infinite" }}
+          className="flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-[#C9B38C] hover:bg-white text-white hover:text-[#C9B38C] rounded-full shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#C9B38C] group"
         >
-          <Play
-            fill="currentColor"
-            className="ml-1 w-5 h-5 md:w-8 md:h-8 transition-transform group-hover:scale-110"
-          />
-
-          <span className="absolute right-full mr-6 bg-slate-900 text-white text-[10px] uppercase tracking-[0.2em] px-4 py-2 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden lg:block border border-white/10">
-            {t("watchVideo") || "Watch Trailer"}
-          </span>
+          <Play fill="currentColor" className="ml-1 w-5 h-5 md:w-8 md:h-8" />
         </motion.button>
       </div>
 
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation={true}
-        autoplay={{ delay: 6000, disableOnInteraction: false }}
-        slidesPerView={1}
+        autoplay={{ delay: 6000 }}
         loop={true}
-        className="h-full heroSwiper"
+        className="h-full"
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative">
             <img
               src={slide.image}
-              alt="Law Office"
               className="absolute inset-0 w-full h-full object-cover"
+              alt="Slide"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#262B3E] via-[#262B3E]/40 to-transparent"></div>
 
             <div className="relative z-10 h-full flex items-center">
-              <div className="w-full ml-6 sm:ml-12 lg:ml-36 px-4 md:px-6 text-white pb-48 md:pb-0">
-                <div className="max-w-3xl">
-                  <motion.h1
-                    key={`t-${index}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-bold leading-[1.1] mb-6"
-                  >
-                    {t("title")}
-                  </motion.h1>
-                  <motion.p
-                    key={`p-${index}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                    className="text-base sm:text-lg md:text-xl text-gray-300 mb-10 max-w-xl font-light leading-relaxed"
-                  >
-                    {t("subtitle")}
-                  </motion.p>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    <a
-                      href="#contact"
-                      className="inline-block bg-amber-600 hover:bg-white text-white hover:text-amber-600 border-2 border-transparent hover:border-amber-600 px-8 md:px-12 py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] md:text-xs transition-all duration-300 shadow-xl"
-                    >
-                      {t("cta")}
-                    </a>
-                  </motion.div>
-                </div>
+              <div className="w-1/2 ml-6 lg:ml-36 px-4 text-white pb-48 md:pb-0">
+                <h2 className="text-4xl lg:text-7xl font-serif italic leading-[1.1] mb-6">
+                  {t("title")}
+                </h2>
+                <p className="text-gray-300 mb-10 max-w-xl font-light text-lg">
+                  {t("subtitle")}
+                </p>
+                {/* CTA Button with Gold bg and White text */}
+                <a
+                  href="#contact"
+                  className="inline-block bg-[#C9B38C] hover:bg-white hover:text-[#C9B38C] text-white px-12 py-4 rounded-sm font-bold uppercase tracking-[0.2em] text-xs transition-all duration-500 shadow-xl"
+                >
+                  {t("cta")}
+                </a>
               </div>
             </div>
           </SwiperSlide>
@@ -188,19 +145,18 @@ export default function Hero() {
       </Swiper>
 
       {/* Info Boxes */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] px-0 sm:px-6 z-30 lg:translate-y-1/2">
-        <div className="flex bg-white shadow-2xl overflow-x-auto lg:overflow-hidden scrollbar-hide min-h-[90px] lg:min-h-[140px]">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6 z-30 lg:translate-y-1/2">
+        <div className="flex bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] rounded-sm overflow-hidden min-h-[120px]">
           {translatedBoxes.map((box, index) => {
             const Icon = icons[index] || Briefcase;
             return (
               <div
                 key={index}
-                className="group relative flex-1 min-w-[140px] sm:min-w-[200px] lg:min-w-0 py-4 lg:py-6 px-4 border-r border-gray-100 last:border-0 flex flex-col justify-center items-center"
+                className="group relative flex-1 py-8 px-4 border-r border-slate-100 flex flex-col justify-center items-center hover:bg-[#dad2c4] transition-colors duration-500"
               >
-                <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out hidden lg:block" />
-                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4 w-full justify-center">
-                  <Icon className="text-amber-600 w-5 h-5 lg:w-7 lg:h-7 group-hover:text-white transition-colors" />
-                  <h4 className="text-slate-900 group-hover:text-white font-serif font-bold text-[0.65rem] md:text-[0.75rem] lg:text-[0.95rem] leading-tight text-center lg:text-left">
+                <div className="flex flex-col items-center gap-3">
+                  <Icon className="text-[#C9B38C] group-hover:text-white w-7 h-7 transition-colors" />
+                  <h4 className="text-[#262B3E] group-hover:text-white font-serif font-bold text-sm text-center uppercase tracking-wider">
                     {box.title}
                   </h4>
                 </div>

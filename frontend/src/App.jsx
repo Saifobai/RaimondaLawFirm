@@ -26,6 +26,7 @@ const MainLayout = () => {
       <Navbar />
 
       <Home />
+      <RequestButton />
       <Services />
       <FirmOffers />
       <Team />

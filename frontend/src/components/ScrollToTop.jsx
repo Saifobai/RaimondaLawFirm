@@ -32,7 +32,7 @@ export default function ScrollToTop() {
       onClick={scrollToTop}
       className="
         fixed bottom-6 right-6
-        bg-amber-600 hover:bg-amber-700
+        bg-[#BA8C61] hover:bg-[#c2a183]
         text-white
         p-3 rounded-full
         shadow-lg
