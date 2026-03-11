@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
+import { Toaster } from "react-hot-toast";
 import Navbar from "./components/navbar/Navbar";
 
 import Services from "./sections/Services";
@@ -21,6 +21,7 @@ import Impressum from "./pages/impressum/Impressum";
 const MainLayout = () => {
   return (
     <>
+      <Toaster position="top-right" />
       <Navbar />
 
       <Home />

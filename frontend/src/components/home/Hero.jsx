@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { motion } from "framer-motion";
-import { Briefcase, RefreshCw, Rocket, Globe } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Briefcase, RefreshCw, Rocket, Globe, Play, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import "swiper/css";
@@ -13,39 +14,117 @@ import hero3 from "../../assets/hero_sw_03.jpeg";
 
 export default function Hero() {
   const { t } = useTranslation("hero");
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
   const slides = [{ image: hero1 }, { image: hero2 }, { image: hero3 }];
   const icons = [Briefcase, RefreshCw, Rocket, Globe];
   const translatedBoxes = t("infoBoxes", { returnObjects: true }) || [];
 
+  // Manual ID extraction for the embed player
+  const youtubeId = "BFGOw1cwGM4";
+
   return (
-    <section className="relative w-full h-screen">
-      {/* The style tag must be inside the returned JSX */}
+    <section className="relative w-full h-screen  bg-slate-900">
       <style>{`
         .swiper-button-next, .swiper-button-prev {
           top: 50% !important;
           color: white !important;
-          transition: transform 0.3s ease;
-          width: 50px !important;
-          height: 50px !important;
+          transition: all 0.3s ease;
+          width: 44px !important;
+          height: 44px !important;
+          background: rgba(255,255,255,0.1);
+          backdrop-filter: blur(4px);
+          border-radius: 50%;
         }
-        .swiper-button-next { right: 40px !important; }
-        .swiper-button-prev { left: 40px !important; }
+        .swiper-button-next:after, .swiper-button-prev:after { font-size: 16px !important; font-weight: bold; }
+        .swiper-button-next { right: 20px !important; }
+        .swiper-button-prev { left: 20px !important; }
         
-        .swiper-button-next:hover, .swiper-button-prev:hover {
-          transform: scale(1.2);
+        @media (min-width: 1280px) {
+           .swiper-button-next { right: 60px !important; }
+           .swiper-button-prev { left: 60px !important; }
         }
 
-        @media (max-width: 1024px) {
-          .swiper-button-next, .swiper-button-prev {
-            display: none !important;
-          }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+          background: #d97706; 
+          transform: translateY(-50%) scale(1.1);
+        }
+        
+        @media (max-width: 1024px) { .swiper-button-next, .swiper-button-prev { display: none !important; } }
+
+        @keyframes pulse-amber {
+          0% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7); }
+          70% { box-shadow: 0 0 0 20px rgba(217, 119, 6, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
         }
       `}</style>
+
+      {/* --- VIDEO MODAL --- */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
+          >
+            {/* Improved Close Button Position for Mobile */}
+            <button
+              onClick={() => setIsVideoOpen(false)}
+              className="absolute top-6 right-6 z-[210] p-3 bg-white/10 hover:bg-amber-600 text-white rounded-full transition-all border border-white/20"
+              aria-label="Close video"
+            >
+              <X size={28} />
+            </button>
+
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative w-full max-w-5xl aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-white/10"
+            >
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* --- PLAY BUTTON --- 
+          - Mobile: Positioned lower (bottom-40) and centered
+          - Desktop: Back to center-right positioning
+      */}
+      <div className="absolute right-1/2 translate-x-1/2 bottom-[32%] md:bottom-auto md:right-[140px] lg:right-[180px] md:top-1/2 md:-translate-y-1/2 md:translate-x-0 z-40">
+        <motion.button
+          onClick={() => setIsVideoOpen(true)}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          style={{ animation: "pulse-amber 2s infinite" }}
+          className="flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-amber-600 hover:bg-white text-white hover:text-amber-600 rounded-full shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-amber-600 group"
+        >
+          <Play
+            fill="currentColor"
+            className="ml-1 w-5 h-5 md:w-8 md:h-8 transition-transform group-hover:scale-110"
+          />
+
+          <span className="absolute right-full mr-6 bg-slate-900 text-white text-[10px] uppercase tracking-[0.2em] px-4 py-2 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden lg:block border border-white/10">
+            {t("watchVideo") || "Watch Trailer"}
+          </span>
+        </motion.button>
+      </div>
 
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation={true}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 6000, disableOnInteraction: false }}
         slidesPerView={1}
         loop={true}
         className="h-full heroSwiper"
@@ -57,39 +136,36 @@ export default function Hero() {
               alt="Law Office"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
             <div className="relative z-10 h-full flex items-center">
-              <div className="w-full mx-36 px-6 text-white pb-32 lg:pb-0">
-                <div className="max-w-4xl">
+              <div className="w-full ml-6 sm:ml-12 lg:ml-36 px-4 md:px-6 text-white pb-48 md:pb-0">
+                <div className="max-w-3xl">
                   <motion.h1
-                    key={`title-${index}`}
-                    initial={{ opacity: 0, y: 30 }}
+                    key={`t-${index}`}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-4xl md:text-6xl font-serif font-bold leading-[1.1] mb-8"
+                    className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif font-bold leading-[1.1] mb-6"
                   >
                     {t("title")}
                   </motion.h1>
-
                   <motion.p
-                    key={`subtitle-${index}`}
+                    key={`p-${index}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-light leading-relaxed"
+                    transition={{ delay: 0.2 }}
+                    className="text-base sm:text-lg md:text-xl text-gray-300 mb-10 max-w-xl font-light leading-relaxed"
                   >
                     {t("subtitle")}
                   </motion.p>
-
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
                   >
                     <a
                       href="#contact"
-                      className="inline-block bg-amber-600 hover:bg-amber-700 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-xs transition-all duration-300 shadow-lg"
+                      className="inline-block bg-amber-600 hover:bg-white text-white hover:text-amber-600 border-2 border-transparent hover:border-amber-600 px-8 md:px-12 py-3 md:py-4 rounded-sm font-bold uppercase tracking-widest text-[10px] md:text-xs transition-all duration-300 shadow-xl"
                     >
                       {t("cta")}
                     </a>
@@ -101,36 +177,24 @@ export default function Hero() {
         ))}
       </Swiper>
 
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] px-6 z-30 hidden lg:block translate-y-1/2">
-        <div className="flex bg-white shadow-[0_20px_50px_rgba(0,0,0,0.15)] overflow-hidden min-h-[140px]">
+      {/* Info Boxes */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1440px] px-0 sm:px-6 z-30 lg:translate-y-1/2">
+        <div className="flex bg-white shadow-2xl overflow-x-auto lg:overflow-hidden scrollbar-hide min-h-[90px] lg:min-h-[140px]">
           {translatedBoxes.map((box, index) => {
             const Icon = icons[index] || Briefcase;
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative flex-1 min-w-0 py-4 px-6 border-r border-gray-100 last:border-0 overflow-hidden flex flex-col justify-center cursor-default"
+                className="group relative flex-1 min-w-[140px] sm:min-w-[200px] lg:min-w-0 py-4 lg:py-6 px-4 border-r border-gray-100 last:border-0 flex flex-col justify-center items-center"
               >
-                <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.76,0,0.24,1] z-0" />
-                <div className="relative z-10 flex flex-col items-center justify-center">
-                  <span className="absolute -top-2 -right-2 text-gray-100/30 font-serif text-2xl group-hover:text-slate-800/30 transition-colors duration-500 select-none">
-                    0{index + 1}
-                  </span>
-                  <div className="flex items-center justify-center gap-3 w-full">
-                    <Icon
-                      className="text-amber-600 w-7 h-7 shrink-0 group-hover:text-white transition-colors duration-500"
-                      strokeWidth={1.5}
-                    />
-                    <h4 className="text-slate-900 group-hover:text-white transition-colors duration-500 font-serif font-bold text-[0.8rem] xl:text-[0.95rem] leading-tight text-center hyphens-auto break-words max-w-full">
-                      {box.title}
-                    </h4>
-                  </div>
-                  <div className="w-6 h-[1px] bg-amber-600 mt-3 group-hover:w-16 transition-all duration-700 ease-in-out" />
+                <div className="absolute inset-0 bg-slate-900 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out hidden lg:block" />
+                <div className="relative z-10 flex flex-col lg:flex-row items-center gap-2 lg:gap-4 w-full justify-center">
+                  <Icon className="text-amber-600 w-5 h-5 lg:w-7 lg:h-7 group-hover:text-white transition-colors" />
+                  <h4 className="text-slate-900 group-hover:text-white font-serif font-bold text-[0.65rem] md:text-[0.75rem] lg:text-[0.95rem] leading-tight text-center lg:text-left">
+                    {box.title}
+                  </h4>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
