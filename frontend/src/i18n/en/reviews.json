@@ -1,0 +1,19 @@
+{
+  "reviews": {
+    "tagline": "Client Testimonials",
+    "title": "Excellence in Legal Advisory",
+    "stats": "4.9/5.0 based on 40+ reviews",
+    "cta": "View all Google Reviews",
+    "items": [
+      { "id": 1, "name": "Sarah Ramezani", "text": "Friendly, respectful and professional – provides security in difficult situations.", "category": "Professionalism" },
+      { "id": 2, "name": "Joachim Rose", "text": "Professional review, clear discussion, excellent support and results.", "category": "Expertise" },
+      { "id": 3, "name": "Dr. Yadigar Genc", "text": "Competent and dedicated support, clear communication, excellent advice.", "category": "Competence" },
+      { "id": 21, "name": "Murat Kalayci", "text": "Helped with patience, solved a large problem, saved my future.", "category": "Success" },
+      { "id": 27, "name": "Klaus Barbir", "text": "Debt-free thanks to Kanzlei Lukas – all creditors agreed.", "category": "Success" },
+      { "id": 40, "name": "Sommer Falter", "text": "Once again, best advice and support in emergency situations.", "category": "Support" },
+      { "id": 40, "name": "Sommer Falter", "text": "Once again, best advice and support in emergency situations.", "category": "Support" },
+      { "id": 40, "name": "Sommer Falter", "text": "Once again, best advice and support in emergency situations.", "category": "Support" },
+      { "id": 40, "name": "Sommer Falter", "text": "Once again, best advice and support in emergency situations.", "category": "Support" }
+    ]
+  }
+}

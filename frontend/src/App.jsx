@@ -17,6 +17,7 @@ import Footer from "./sections/Footer";
 import Terms from "./pages/Terms/Terms";
 import Privacy from "./pages/Privacy/Privacy";
 import Impressum from "./pages/impressum/Impressum";
+import Reviews from "./sections/Testimonials";
 
 const MainLayout = () => {
   return (
@@ -28,6 +29,7 @@ const MainLayout = () => {
       <Services />
       <FirmOffers />
       <Team />
+      <Reviews />
       <Contact />
 
       <ScrollToTop />

@@ -8,20 +8,30 @@ import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import hero1 from "../../assets/hero_sw_01.jpg";
-import hero2 from "../../assets/hero_sw_02.jpeg";
-import hero3 from "../../assets/hero_sw_03.jpeg";
+import slide1 from "../../assets/slide_01.jpeg";
+import slide2 from "../../assets/slide_02.jpeg";
+import slide3 from "../../assets/slide_03.jpeg";
+import slide4 from "../../assets/slide_04.jpeg";
+import slide5 from "../../assets/slide_05.jpeg";
+import slide6 from "../../assets/slide_06.jpeg";
+import slide7 from "../../assets/slide_07.jpeg";
 
+import Video_Law from "../../assets/law_vid.mp4";
 export default function Hero() {
   const { t } = useTranslation("hero");
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const slides = [{ image: hero1 }, { image: hero2 }, { image: hero3 }];
+  const slides = [
+    { image: slide1 },
+    { image: slide2 },
+    { image: slide3 },
+    { image: slide4 },
+    { image: slide5 },
+    { image: slide6 },
+    { image: slide7 },
+  ];
   const icons = [Briefcase, RefreshCw, Rocket, Globe];
   const translatedBoxes = t("infoBoxes", { returnObjects: true }) || [];
-
-  // Manual ID extraction for the embed player
-  const youtubeId = "BFGOw1cwGM4";
 
   return (
     <section className="relative w-full h-screen  bg-slate-900">
@@ -45,10 +55,10 @@ export default function Hero() {
            .swiper-button-prev { left: 60px !important; }
         }
 
-        .swiper-button-next:hover, .swiper-button-prev:hover {
-          background: #d97706; 
-          transform: translateY(-50%) scale(1.1);
-        }
+        // .swiper-button-next:hover, .swiper-button-prev:hover {
+        //   background: #d97706; 
+        //   transform: translateY(-50%) scale(1.1);
+        // }
         
         @media (max-width: 1024px) { .swiper-button-next, .swiper-button-prev { display: none !important; } }
 
@@ -83,14 +93,14 @@ export default function Hero() {
               exit={{ scale: 0.9, opacity: 0 }}
               className="relative w-full max-w-5xl aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-white/10"
             >
-              <iframe
-                className="w-full h-full"
-                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <video
+                className="w-full h-full object-cover"
+                src={Video_Law}
+                controls
+                autoPlay
+                muted
+                playsInline
+              />
             </motion.div>
           </motion.div>
         )}

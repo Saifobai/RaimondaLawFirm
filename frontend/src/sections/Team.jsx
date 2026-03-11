@@ -1,1190 +1,3 @@
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-// import { motion } from "framer-motion";
-// import { Linkedin } from "lucide-react";
-// import { useTranslation } from "react-i18next";
-// import { useEffect, useRef } from "react";
-
-// export default function Team() {
-//   const { t } = useTranslation("team");
-
-//   const members = t("members", { returnObjects: true }) || [];
-//   const values = t("values", { returnObjects: true }) || [];
-//   const cta = t("cta", { returnObjects: true }) || {};
-
-//   const slides = [...members, ...members];
-
-//   const containerRef = useRef(null);
-
-//   // ⭐ Cursor spotlight effect
-//   useEffect(() => {
-//     const container = containerRef.current;
-//     if (!container) return;
-
-//     const move = (e) => {
-//       const rect = container.getBoundingClientRect();
-
-//       const x = e.clientX - rect.left;
-//       const y = e.clientY - rect.top;
-
-//       container.style.setProperty("--x", `${x}px`);
-//       container.style.setProperty("--y", `${y}px`);
-//     };
-
-//     container.addEventListener("mousemove", move);
-
-//     return () => container.removeEventListener("mousemove", move);
-//   }, []);
-
-//   return (
-//     <section
-//       id="team"
-//       ref={containerRef}
-//       className="relative bg-gradient-to-b from-white via-slate-50 to-white py-32 overflow-hidden
-//       before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_var(--x)_var(--y),rgba(249,115,22,0.08),transparent_40%)]"
-//     >
-//       <div className="max-w-7xl mx-auto relative z-10 px-6">
-//         {/* HERO */}
-
-//         <div className="text-center mb-24">
-//           <h2 className="font-serif font-light text-5xl tracking-tight text-slate-900">
-//             {t("hero.title")}
-//           </h2>
-
-//           <p className="mt-8 text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-//             {t("hero.subtitle")}
-//           </p>
-
-//           <div className="h-[2px] w-32 bg-gradient-to-r from-transparent via-orange-400 to-transparent mx-auto mt-10 animate-pulse" />
-//         </div>
-
-//         {/* SWIPER */}
-
-//         <Swiper
-//           modules={[Autoplay, Pagination]}
-//           spaceBetween={40}
-//           slidesPerView={1}
-//           loop
-//           speed={900}
-//           centeredSlides
-//           autoplay={{
-//             delay: 3200,
-//             disableOnInteraction: false,
-//           }}
-//           pagination={{ clickable: true }}
-//           breakpoints={{
-//             768: { slidesPerView: 2.2 },
-//             1200: { slidesPerView: 3 },
-//           }}
-//         >
-//           {[...slides].map((member, i) => (
-//             <SwiperSlide key={i}>
-//               <motion.div
-//                 initial={{ opacity: 0, scale: 0.9 }}
-//                 whileInView={{ opacity: 1, scale: 1 }}
-//                 transition={{ duration: 0.6 }}
-//                 className="group relative backdrop-blur-xl bg-white/70 border border-white/40 rounded-3xl p-8 flex flex-col h-[520px]
-//                 transition-all duration-700 hover:shadow-2xl hover:-translate-y-2"
-//               >
-//                 {/* Portrait */}
-
-//                 <div className="flex justify-center mb-8">
-//                   <div className="relative">
-//                     <img
-//                       src={
-//                         member.image || `https://i.pravatar.cc/400?img=${i + 3}`
-//                       }
-//                       alt={member.name}
-//                       className="w-32 h-32 rounded-full object-cover ring-4 ring-white shadow-xl transition duration-700 group-hover:scale-110"
-//                     />
-
-//                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-700" />
-//                   </div>
-//                 </div>
-
-//                 {/* Content */}
-
-//                 <div className="text-center flex flex-col flex-grow">
-//                   <h3 className="text-2xl font-light text-slate-900 font-serif">
-//                     {member.name}
-//                   </h3>
-
-//                   <p className="text-orange-500 text-sm mt-2 font-medium tracking-wide">
-//                     {member.title}
-//                   </p>
-
-//                   <p className="text-sm text-slate-500 mt-6 leading-relaxed flex-grow line-clamp-4">
-//                     {member.bio}
-//                   </p>
-
-//                   {/* Expertise */}
-
-//                   <div className="flex flex-wrap justify-center gap-2 mt-6">
-//                     {member.expertise?.slice(0, 2).map((tag, index) => (
-//                       <span
-//                         key={index}
-//                         className="text-xs border border-slate-200 px-3 py-1 rounded-full bg-white/70"
-//                       >
-//                         {tag}
-//                       </span>
-//                     ))}
-//                   </div>
-
-//                   {/* LinkedIn */}
-
-//                   {member.linkedin && (
-//                     <div className="mt-8 flex justify-center opacity-60 group-hover:opacity-100 transition">
-//                       <Linkedin size={18} />
-//                     </div>
-//                   )}
-//                 </div>
-//               </motion.div>
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-
-//         {/* VALUES */}
-
-//         <div className="grid md:grid-cols-3 gap-16 mt-32 text-center">
-//           {values.map((value, i) => (
-//             <div key={i} className="max-w-xs mx-auto">
-//               <h4 className="font-serif text-xl text-slate-900">
-//                 {value.title}
-//               </h4>
-
-//               <p className="text-slate-500 text-sm mt-4 leading-relaxed">
-//                 {value.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* CTA */}
-
-//         <div className="text-center mt-32 max-w-3xl mx-auto">
-//           <h3 className="font-serif text-3xl text-slate-900">{cta.title}</h3>
-
-//           <p className="text-slate-500 mt-6 text-lg leading-relaxed">
-//             {cta.text}
-//           </p>
-
-//           <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white px-12 py-5 rounded-2xl transition shadow-xl hover:shadow-orange-500/20">
-//             {cta.button}
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-//===============================================================
-//===============================================================
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-// import { motion, useMotionValue, useTransform } from "framer-motion";
-// import { Linkedin } from "lucide-react";
-// import { useTranslation } from "react-i18next";
-// import { useRef, useEffect } from "react";
-
-// export default function Team() {
-//   const { t } = useTranslation("team");
-//   const members = t("members", { returnObjects: true }) || [];
-//   const values = t("values", { returnObjects: true }) || [];
-//   const cta = t("cta", { returnObjects: true }) || {};
-
-//   // Duplicate for infinite carousel effect
-//   const slides = [...members, ...members];
-
-//   // Motion values for cursor spotlight effect
-//   const x = useMotionValue(0);
-//   const y = useMotionValue(0);
-//   const containerRef = useRef(null);
-
-//   useEffect(() => {
-//     const container = containerRef.current;
-//     if (!container) return;
-
-//     const move = (e) => {
-//       const rect = container.getBoundingClientRect();
-//       x.set(e.clientX - rect.left);
-//       y.set(e.clientY - rect.top);
-//     };
-//     container.addEventListener("mousemove", move);
-//     return () => container.removeEventListener("mousemove", move);
-//   }, [x, y]);
-
-//   // Transform cursor to subtle radial light
-//   const spotlight = useTransform(
-//     [x, y],
-//     ([latestX, latestY]) =>
-//       `radial-gradient(circle at ${latestX}px ${latestY}px, rgba(249,115,22,0.12), transparent 60%)`,
-//   );
-
-//   return (
-//     <section
-//       ref={containerRef}
-//       className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-32"
-//       style={{ backgroundImage: spotlight }}
-//     >
-//       <div className="max-w-7xl mx-auto px-6 relative z-10">
-//         {/* HERO */}
-//         <div className="text-center mb-24">
-//           <h2 className="font-serif font-light text-5xl tracking-tight text-slate-900">
-//             {t("hero.title")}
-//           </h2>
-//           <p className="mt-8 text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-//             {t("hero.subtitle")}
-//           </p>
-//           <div className="h-[2px] w-32 bg-gradient-to-r from-transparent via-orange-400 to-transparent mx-auto mt-10 animate-pulse" />
-//         </div>
-
-//         {/* SWIPER */}
-//         <Swiper
-//           modules={[Autoplay, Pagination]}
-//           spaceBetween={50}
-//           slidesPerView={1.2}
-//           loop
-//           speed={1000}
-//           centeredSlides
-//           autoplay={{
-//             delay: 3000,
-//             disableOnInteraction: false,
-//           }}
-//           pagination={{ clickable: true }}
-//           breakpoints={{
-//             768: { slidesPerView: 2.2 },
-//             1200: { slidesPerView: 3 },
-//           }}
-//         >
-//           {slides.map((member, i) => (
-//             <SwiperSlide key={i}>
-//               <motion.div
-//                 initial={{ opacity: 0, scale: 0.9, rotateY: 3 }}
-//                 whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-//                 transition={{ duration: 0.7 }}
-//                 className="group relative bg-white/70 backdrop-blur-xl border border-white/30 rounded-3xl p-8 flex flex-col h-[540px] transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 hover:scale-105"
-//               >
-//                 {/* Portrait */}
-//                 <div className="flex justify-center mb-8">
-//                   <div className="relative">
-//                     <img
-//                       src={
-//                         member.image || `https://i.pravatar.cc/400?img=${i + 3}`
-//                       }
-//                       alt={member.name}
-//                       className="w-32 h-32 rounded-full object-cover ring-4 ring-white shadow-xl transition-transform duration-700 group-hover:scale-110"
-//                     />
-//                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-700" />
-//                   </div>
-//                 </div>
-
-//                 {/* Content */}
-//                 <div className="text-center flex flex-col flex-grow">
-//                   <h3 className="text-2xl font-serif font-light text-slate-900">
-//                     {member.name}
-//                   </h3>
-//                   <p className="text-orange-500 text-sm mt-2 font-medium tracking-wide">
-//                     {member.title}
-//                   </p>
-//                   <p className="text-slate-500 mt-6 text-sm leading-relaxed flex-grow line-clamp-4">
-//                     {member.bio}
-//                   </p>
-
-//                   {/* Expertise */}
-//                   <div className="flex flex-wrap justify-center gap-2 mt-6">
-//                     {member.expertise?.slice(0, 3).map((tag, index) => (
-//                       <span
-//                         key={index}
-//                         className="text-xs border border-slate-200 px-3 py-1 rounded-full bg-white/80"
-//                       >
-//                         {tag}
-//                       </span>
-//                     ))}
-//                   </div>
-
-//                   {/* LinkedIn */}
-//                   {member.linkedin && (
-//                     <div className="mt-6 flex justify-center opacity-60 group-hover:opacity-100 transition">
-//                       <Linkedin size={18} />
-//                     </div>
-//                   )}
-//                 </div>
-//               </motion.div>
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-
-//         {/* VALUES */}
-//         <div className="grid md:grid-cols-3 gap-16 mt-32 text-center">
-//           {values.map((value, i) => (
-//             <div key={i} className="max-w-xs mx-auto">
-//               <h4 className="font-serif text-xl text-slate-900">
-//                 {value.title}
-//               </h4>
-//               <p className="text-slate-500 text-sm mt-4 leading-relaxed">
-//                 {value.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* CTA */}
-//         <div className="text-center mt-32 max-w-3xl mx-auto">
-//           <h3 className="font-serif text-3xl text-slate-900">{cta.title}</h3>
-//           <p className="text-slate-500 mt-6 text-lg leading-relaxed">
-//             {cta.text}
-//           </p>
-//           <button className="mt-10 bg-orange-500 hover:bg-orange-600 text-white px-12 py-5 rounded-2xl transition shadow-xl hover:shadow-orange-500/20">
-//             {cta.button}
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-//============================================================
-//============================================================
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-// import { motion, useSpring } from "framer-motion";
-// import { Linkedin } from "lucide-react";
-// import { useTranslation } from "react-i18next";
-// import { useRef, useEffect } from "react";
-
-// export default function Team() {
-//   const { t } = useTranslation("team");
-
-//   const members = t("members", { returnObjects: true }) || [];
-//   const values = t("values", { returnObjects: true }) || [];
-//   const cta = t("cta", { returnObjects: true }) || {};
-
-//   const slides = [...members, ...members];
-
-//   const containerRef = useRef(null);
-
-//   // Physics smooth cursor motion
-//   const mouseX = useSpring(0, { stiffness: 80, damping: 20 });
-//   const mouseY = useSpring(0, { stiffness: 80, damping: 20 });
-
-//   useEffect(() => {
-//     const container = containerRef.current;
-//     if (!container) return;
-
-//     const move = (e) => {
-//       const rect = container.getBoundingClientRect();
-
-//       mouseX.set(e.clientX - rect.left);
-//       mouseY.set(e.clientY - rect.top);
-//     };
-
-//     container.addEventListener("mousemove", move);
-
-//     return () => container.removeEventListener("mousemove", move);
-//   }, [mouseX, mouseY]);
-
-//   return (
-//     <section
-//       ref={containerRef}
-//       className="relative bg-gradient-to-b from-white via-slate-50 to-white py-36 overflow-hidden"
-//       style={{
-//         "--spot-x": `${mouseX.get()}px`,
-//         "--spot-y": `${mouseY.get()}px`,
-//       }}
-//     >
-//       {/* Luxury spotlight overlay */}
-
-//       <div
-//         className="
-//         pointer-events-none
-//         absolute inset-0
-//         bg-[radial-gradient(circle_at_var(--spot-x)_var(--spot-y),rgba(249,115,22,0.12),transparent_65%)]
-//         transition-opacity duration-300
-//       "
-//       />
-
-//       <div className="relative z-10 max-w-7xl mx-auto px-6">
-//         {/* HERO */}
-
-//         <div className="text-center mb-28">
-//           <h2 className="font-serif font-light text-6xl tracking-tight text-slate-900">
-//             {t("hero.title")}
-//           </h2>
-
-//           <p className="mt-10 text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-//             {t("hero.subtitle")}
-//           </p>
-
-//           <div className="h-[2px] w-36 bg-gradient-to-r from-transparent via-orange-400 to-transparent mx-auto mt-12 animate-pulse" />
-//         </div>
-
-//         {/* SWIPER PHYSICS CAROUSEL */}
-
-//         <Swiper
-//           modules={[Autoplay, Pagination]}
-//           spaceBetween={60}
-//           slidesPerView={1.2}
-//           loop
-//           speed={1200}
-//           centeredSlides
-//           autoplay={{
-//             delay: 2800,
-//             disableOnInteraction: false,
-//           }}
-//           pagination={{ clickable: true }}
-//           breakpoints={{
-//             768: { slidesPerView: 2.2 },
-//             1280: { slidesPerView: 3 },
-//           }}
-//         >
-//           {[...slides].map((member, i) => (
-//             <SwiperSlide key={i}>
-//               <motion.div
-//                 initial={{ opacity: 0, scale: 0.85, rotateY: 6 }}
-//                 whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-//                 transition={{
-//                   type: "spring",
-//                   stiffness: 70,
-//                   damping: 20,
-//                 }}
-//                 className="
-//                   group relative
-//                   bg-white/70 backdrop-blur-xl
-//                   border border-white/40
-//                   rounded-3xl
-//                   p-9
-//                   flex flex-col
-//                   h-[540px]
-//                   transition-all duration-700
-//                   hover:shadow-2xl
-//                   hover:-translate-y-3
-//                   hover:scale-[1.04]
-//                   origin-center
-//                 "
-//               >
-//                 {/* Portrait */}
-
-//                 <div className="flex justify-center mb-10">
-//                   <div className="relative">
-//                     <img
-//                       src={
-//                         member.image || `https://i.pravatar.cc/400?img=${i + 3}`
-//                       }
-//                       alt={member.name}
-//                       className="
-//                         w-36 h-36
-//                         rounded-full
-//                         object-cover
-//                         ring-4 ring-white
-//                         shadow-xl
-//                         transition-all duration-700
-//                         group-hover:scale-110
-//                       "
-//                     />
-
-//                     <div
-//                       className="
-//                       absolute inset-0
-//                       rounded-full
-//                       bg-gradient-to-tr
-//                       from-orange-500/20
-//                       to-transparent
-//                       opacity-0
-//                       group-hover:opacity-100
-//                       transition duration-700
-//                     "
-//                     />
-//                   </div>
-//                 </div>
-
-//                 {/* Content */}
-
-//                 <div className="text-center flex flex-col flex-grow">
-//                   <h3 className="text-2xl font-serif font-light text-slate-900">
-//                     {member.name}
-//                   </h3>
-
-//                   <p className="text-orange-500 text-sm mt-3 tracking-wide">
-//                     {member.title}
-//                   </p>
-
-//                   <p className="text-slate-500 mt-8 text-sm leading-relaxed flex-grow line-clamp-4">
-//                     {member.bio}
-//                   </p>
-
-//                   {/* Expertise */}
-
-//                   <div className="flex flex-wrap justify-center gap-2 mt-8">
-//                     {member.expertise?.slice(0, 3).map((tag, index) => (
-//                       <span
-//                         key={index}
-//                         className="
-//                           text-xs
-//                           border border-slate-200
-//                           px-4 py-1.5
-//                           rounded-full
-//                           bg-white/80
-//                         "
-//                       >
-//                         {tag}
-//                       </span>
-//                     ))}
-//                   </div>
-
-//                   {/* LinkedIn */}
-
-//                   {member.linkedin && (
-//                     <div
-//                       className="
-//                       mt-8
-//                       flex justify-center
-//                       opacity-50 group-hover:opacity-100
-//                       transition
-//                     "
-//                     >
-//                       <Linkedin size={18} />
-//                     </div>
-//                   )}
-//                 </div>
-//               </motion.div>
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-
-//         {/* VALUES */}
-
-//         <div className="grid md:grid-cols-3 gap-20 mt-40 text-center">
-//           {values.map((value, i) => (
-//             <div key={i} className="max-w-xs mx-auto">
-//               <h4 className="font-serif text-xl text-slate-900">
-//                 {value.title}
-//               </h4>
-
-//               <p className="text-slate-500 text-sm mt-5 leading-relaxed">
-//                 {value.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* CTA */}
-
-//         <div className="text-center mt-40 max-w-3xl mx-auto">
-//           <h3 className="font-serif text-4xl text-slate-900">{cta.title}</h3>
-
-//           <p className="text-slate-500 mt-8 text-lg leading-relaxed">
-//             {cta.text}
-//           </p>
-
-//           <button
-//             className="
-//             mt-12
-//             bg-orange-500 hover:bg-orange-600
-//             text-white
-//             px-14 py-6
-//             rounded-2xl
-//             transition
-//             shadow-xl
-//             hover:shadow-orange-500/20
-//             text-lg
-//           "
-//           >
-//             {cta.button}
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-//===============================================================
-//===============================================================
-// import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-// import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-// import { Linkedin } from "lucide-react";
-// import { useTranslation } from "react-i18next";
-
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-// // --- ANIMATION VARIANTS ---
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
-// };
-
-// const itemVariants = {
-//   hidden: { y: 20, opacity: 0 },
-//   visible: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 100 } },
-// };
-
-// // --- MAGNETIC CARD COMPONENT ---
-// const TeamMemberCard = ({ member, i }) => {
-//   const x = useMotionValue(0);
-//   const y = useMotionValue(0);
-
-//   const rotateX = useSpring(useTransform(y, [-200, 200], [10, -10]), {
-//     stiffness: 100,
-//     damping: 20,
-//   });
-//   const rotateY = useSpring(useTransform(x, [-200, 200], [-10, 10]), {
-//     stiffness: 100,
-//     damping: 20,
-//   });
-
-//   const handleMouseMove = (e) => {
-//     const rect = e.currentTarget.getBoundingClientRect();
-//     x.set(e.clientX - rect.left - rect.width / 2);
-//     y.set(e.clientY - rect.top - rect.height / 2);
-//   };
-
-//   return (
-//     <motion.div
-//       onMouseMove={handleMouseMove}
-//       onMouseLeave={() => {
-//         x.set(0);
-//         y.set(0);
-//       }}
-//       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-//       className="group relative h-[540px] w-full rounded-3xl bg-white/40 backdrop-blur-2xl border border-white/50 p-8 shadow-2xl transition-all duration-500"
-//     >
-//       <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-orange-500/30 transition-all duration-700" />
-
-//       <motion.div
-//         variants={containerVariants}
-//         initial="hidden"
-//         whileInView="visible"
-//         className="flex flex-col items-center h-full"
-//       >
-//         <motion.img
-//           variants={itemVariants}
-//           src={member.image || `https://i.pravatar.cc/400?img=${i + 3}`}
-//           className="w-32 h-32 rounded-full object-cover ring-4 ring-white shadow-lg mb-8"
-//         />
-//         <motion.h3
-//           variants={itemVariants}
-//           className="text-2xl font-serif text-slate-900"
-//         >
-//           {member.name}
-//         </motion.h3>
-//         <motion.p
-//           variants={itemVariants}
-//           className="text-orange-500 text-sm mt-2 font-medium"
-//         >
-//           {member.title}
-//         </motion.p>
-//         <motion.p
-//           variants={itemVariants}
-//           className="mt-8 text-slate-500 text-sm text-center leading-relaxed flex-grow line-clamp-4"
-//         >
-//           {member.bio}
-//         </motion.p>
-
-//         {member.linkedin && (
-//           <motion.div
-//             variants={itemVariants}
-//             className="mt-auto opacity-50 group-hover:opacity-100"
-//           >
-//             <Linkedin size={20} />
-//           </motion.div>
-//         )}
-//       </motion.div>
-//     </motion.div>
-//   );
-// };
-
-// // --- MAIN SECTION ---
-// export default function Team() {
-//   const { t } = useTranslation("team");
-//   const members = t("members", { returnObjects: true }) || [];
-//   const values = t("values", { returnObjects: true }) || [];
-//   const cta = t("cta", { returnObjects: true }) || {};
-
-//   return (
-//     <section className="relative py-36 bg-slate-50 overflow-hidden">
-//       <div className="relative z-10 max-w-7xl mx-auto px-6">
-//         {/* HERO SECTION */}
-//         <div className="text-center mb-28">
-//           <h2 className="font-serif font-light text-6xl tracking-tight text-slate-900">
-//             {t("hero.title")}
-//           </h2>
-//           <p className="mt-10 text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-//             {t("hero.subtitle")}
-//           </p>
-//           <div className="h-[2px] w-36 bg-gradient-to-r from-transparent via-orange-400 to-transparent mx-auto mt-12 animate-pulse" />
-//         </div>
-
-//         {/* SWIPER SECTION */}
-//         <Swiper
-//           modules={[Autoplay, Pagination]}
-//           spaceBetween={40}
-//           slidesPerView={1}
-//           loop
-//           centeredSlides
-//           autoplay={{ delay: 3000, disableOnInteraction: false }}
-//           pagination={{ clickable: true }}
-//           breakpoints={{
-//             768: { slidesPerView: 2.2 },
-//             1280: { slidesPerView: 3 },
-//           }}
-//           className="!pb-20"
-//         >
-//           {members.map((member, i) => (
-//             <SwiperSlide key={i}>
-//               <TeamMemberCard member={member} i={i} />
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-
-//         {/* VALUES SECTION */}
-//         <div className="grid md:grid-cols-3 gap-20 mt-40 text-center">
-//           {values.map((value, i) => (
-//             <div key={i} className="max-w-xs mx-auto">
-//               <h4 className="font-serif text-xl text-slate-900">
-//                 {value.title}
-//               </h4>
-//               <p className="text-slate-500 text-sm mt-5 leading-relaxed">
-//                 {value.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* CTA SECTION */}
-//         <div className="text-center mt-40 max-w-3xl mx-auto">
-//           <h3 className="font-serif text-4xl text-slate-900">{cta.title}</h3>
-//           <p className="text-slate-500 mt-8 text-lg leading-relaxed">
-//             {cta.text}
-//           </p>
-//           <button className="mt-12 bg-orange-500 hover:bg-orange-600 text-white px-14 py-6 rounded-2xl transition shadow-xl hover:shadow-orange-500/20 text-lg">
-//             {cta.button}
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-//===================================================
-//===================================================
-// import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-
-// import { Linkedin, Twitter, Facebook, Mail } from "lucide-react";
-
-// import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-
-// import { useTranslation } from "react-i18next";
-
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-// /* ---------------------------
-//    ANIMATION VARIANTS
-// ---------------------------- */
-
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: {
-//     opacity: 1,
-//     transition: { staggerChildren: 0.15 },
-//   },
-// };
-
-// const itemVariants = {
-//   hidden: { y: 20, opacity: 0 },
-//   visible: {
-//     y: 0,
-//     opacity: 1,
-//     transition: { type: "spring", stiffness: 100 },
-//   },
-// };
-
-// /* ---------------------------
-//    TEAM MEMBER CARD
-// ---------------------------- */
-
-// const TeamMemberCard = ({ member, i }) => {
-//   const x = useMotionValue(0);
-//   const y = useMotionValue(0);
-
-//   const rotateX = useSpring(useTransform(y, [-200, 200], [10, -10]), {
-//     stiffness: 100,
-//     damping: 20,
-//   });
-
-//   const rotateY = useSpring(useTransform(x, [-200, 200], [-10, 10]), {
-//     stiffness: 100,
-//     damping: 20,
-//   });
-
-//   const handleMouseMove = (e) => {
-//     const rect = e.currentTarget.getBoundingClientRect();
-
-//     x.set(e.clientX - rect.left - rect.width / 2);
-//     y.set(e.clientY - rect.top - rect.height / 2);
-//   };
-
-//   return (
-//     <motion.div
-//       onMouseMove={handleMouseMove}
-//       onMouseLeave={() => {
-//         x.set(0);
-//         y.set(0);
-//       }}
-//       style={{
-//         rotateX,
-//         rotateY,
-//         transformStyle: "preserve-3d",
-//       }}
-//       className="group relative h-[540px] w-full rounded-3xl bg-white/40 backdrop-blur-2xl border border-white/50 p-8 shadow-2xl transition-all duration-500"
-//     >
-//       <div className="flex flex-col items-center h-full">
-//         {/* IMAGE */}
-//         <motion.img
-//           variants={itemVariants}
-//           src={member.image || `https://i.pravatar.cc/400?img=${i + 3}`}
-//           alt={member.name}
-//           className="w-32 h-32 rounded-full object-cover ring-4 ring-white shadow-lg mb-8"
-//         />
-
-//         {/* NAME */}
-//         <motion.h3
-//           variants={itemVariants}
-//           className="text-2xl font-serif text-slate-900"
-//         >
-//           {member.name}
-//         </motion.h3>
-
-//         {/* TITLE */}
-//         <motion.p
-//           variants={itemVariants}
-//           className="text-orange-500 text-sm mt-2 font-medium"
-//         >
-//           {member.title}
-//         </motion.p>
-
-//         {/* BIO */}
-//         <motion.p
-//           variants={itemVariants}
-//           className="mt-8 text-slate-500 text-sm text-center leading-relaxed flex-grow line-clamp-4"
-//         >
-//           {member.bio}
-//         </motion.p>
-
-//         {/* SOCIAL ICONS */}
-//         <motion.div
-//           variants={itemVariants}
-//           className="flex gap-4 mt-auto opacity-0 group-hover:opacity-100 transition duration-500"
-//         >
-//           {member.linkedin && (
-//             <a
-//               href={member.linkedin}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="p-3 rounded-full bg-[#0A66C2] text-white hover:scale-110 transition"
-//             >
-//               <Linkedin size={18} />
-//             </a>
-//           )}
-
-//           {member.twitter && (
-//             <a
-//               href={member.twitter}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="p-3 rounded-full bg-black text-white hover:scale-110 transition"
-//             >
-//               <Twitter size={18} />
-//             </a>
-//           )}
-
-//           {member.facebook && (
-//             <a
-//               href={member.facebook}
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="p-3 rounded-full bg-[#1877F2] text-white hover:scale-110 transition"
-//             >
-//               <Facebook size={18} />
-//             </a>
-//           )}
-
-//           {member.email && (
-//             <a
-//               href={`mailto:${member.email}`}
-//               className="p-3 rounded-full bg-orange-500 text-white hover:scale-110 transition"
-//             >
-//               <Mail size={18} />
-//             </a>
-//           )}
-//         </motion.div>
-//       </div>
-//     </motion.div>
-//   );
-// };
-
-// /* ---------------------------
-//    MAIN TEAM SECTION
-// ---------------------------- */
-
-// export default function Team() {
-//   const { t } = useTranslation("team");
-
-//   const members = t("members", { returnObjects: true }) || [];
-//   const values = t("values", { returnObjects: true }) || [];
-//   const cta = t("cta", { returnObjects: true }) || {};
-
-//   return (
-//     <section className="relative py-36 bg-slate-50 overflow-hidden">
-//       <div className="relative z-10 max-w-7xl mx-auto px-6">
-//         {/* HERO */}
-//         <div className="text-center mb-28">
-//           <h2 className="font-serif font-light text-6xl tracking-tight text-slate-900">
-//             {t("hero.title")}
-//           </h2>
-
-//           <p className="mt-10 text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
-//             {t("hero.subtitle")}
-//           </p>
-
-//           <div className="h-[2px] w-36 bg-gradient-to-r from-transparent via-orange-400 to-transparent mx-auto mt-12 animate-pulse" />
-//         </div>
-
-//         {/* TEAM SLIDER */}
-//         <Swiper
-//           modules={[Autoplay, Pagination]}
-//           spaceBetween={40}
-//           slidesPerView={1}
-//           loop
-//           centeredSlides
-//           autoplay={{ delay: 3000, disableOnInteraction: false }}
-//           pagination={{ clickable: true }}
-//           breakpoints={{
-//             768: { slidesPerView: 2.2 },
-//             1280: { slidesPerView: 3 },
-//           }}
-//           className="!pb-20"
-//         >
-//           {members.map((member, i) => (
-//             <SwiperSlide key={i}>
-//               <TeamMemberCard member={member} i={i} />
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-
-//         {/* VALUES */}
-//         <div className="grid md:grid-cols-3 gap-20 mt-40 text-center">
-//           {values.map((value, i) => (
-//             <div key={i} className="max-w-xs mx-auto">
-//               <h4 className="font-serif text-xl text-slate-900">
-//                 {value.title}
-//               </h4>
-
-//               <p className="text-slate-500 text-sm mt-5 leading-relaxed">
-//                 {value.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* CTA */}
-//         <div className="text-center mt-40 max-w-3xl mx-auto">
-//           <h3 className="font-serif text-4xl text-slate-900">{cta.title}</h3>
-
-//           <p className="text-slate-500 mt-8 text-lg leading-relaxed">
-//             {cta.text}
-//           </p>
-
-//           <button className="mt-12 bg-orange-500 hover:bg-orange-600 text-white px-14 py-6 rounded-2xl transition shadow-xl hover:shadow-orange-500/20 text-lg">
-//             {cta.button}
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-//========================================================
-//========================================================
-// import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Autoplay, Pagination } from "swiper/modules";
-// import { Linkedin, Mail, Twitter, Facebook } from "lucide-react";
-// import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-// import { useTranslation } from "react-i18next";
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-// /* ---------------------------
-//    TEAM MEMBER CARD (Refined)
-// ---------------------------- */
-// const TeamMemberCard = ({ member, i }) => {
-//   const x = useMotionValue(0);
-//   const y = useMotionValue(0);
-
-//   const rotateX = useSpring(useTransform(y, [-200, 200], [5, -5]), {
-//     stiffness: 100,
-//     damping: 30,
-//   });
-//   const rotateY = useSpring(useTransform(x, [-200, 200], [-5, 5]), {
-//     stiffness: 100,
-//     damping: 30,
-//   });
-
-//   const handleMouseMove = (e) => {
-//     const rect = e.currentTarget.getBoundingClientRect();
-//     x.set(e.clientX - rect.left - rect.width / 2);
-//     y.set(e.clientY - rect.top - rect.height / 2);
-//   };
-
-//   return (
-//     <motion.div
-//       onMouseMove={handleMouseMove}
-//       onMouseLeave={() => {
-//         x.set(0);
-//         y.set(0);
-//       }}
-//       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-//       className="group relative h-[520px] w-full rounded-2xl bg-slate-800 border border-slate-200 p-8 shadow-sm hover:shadow-xl transition-all duration-500"
-//     >
-//       <div className="flex flex-col items-center h-full">
-//         <div className="w-28 h-28 rounded-full overflow-hidden mb-8 border border-slate-100">
-//           <img
-//             src={member.image || `https://i.pravatar.cc/400?img=${i + 3}`}
-//             alt={member.name}
-//             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"
-//           />
-//         </div>
-
-//         <h3 className="text-xl font-serif text-white">{member.name}</h3>
-//         <p className="text-amber-700 text-[10px] font-bold uppercase tracking-[0.2em] mt-2">
-//           {member.title}
-//         </p>
-
-//         <p className="mt-6 text-slate-500 text-sm text-center leading-relaxed flex-grow line-clamp-4 italic">
-//           "{member.bio}"
-//         </p>
-
-//         <div className="flex gap-4 mt-8 pt-6 border-t border-slate-100">
-//           {[
-//             { Icon: Linkedin, link: member.linkedin },
-//             { Icon: Twitter, link: member.twitter },
-//             { Icon: Facebook, link: member.facebook },
-//             {
-//               Icon: Mail,
-//               link: member.email ? `mailto:${member.email}` : null,
-//             },
-//           ].map(
-//             ({ Icon, link }, idx) =>
-//               link && (
-//                 <a
-//                   key={idx}
-//                   href={link}
-//                   className="text-slate-400 hover:text-amber-700 transition"
-//                 >
-//                   <Icon size={18} />
-//                 </a>
-//               ),
-//           )}
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
-// };
-
-// /* ---------------------------
-//    MAIN TEAM SECTION
-// ---------------------------- */
-// export default function Team() {
-//   const { t } = useTranslation("team");
-//   const members = t("members", { returnObjects: true }) || [];
-//   const values = t("values", { returnObjects: true }) || [];
-//   const cta = t("cta", { returnObjects: true }) || {};
-
-//   return (
-//     <section id="team" className="py-32 bg-yellow-100/5">
-//       <div className="max-w-7xl mx-auto px-6">
-//         {/* HERO */}
-//         <div className="text-center mb-24">
-//           <h2 className="font-serif text-5xl md:text-6xl text-slate-900 tracking-tight">
-//             {t("hero.title")}
-//           </h2>
-//           <div className="w-20 h-[2px] bg-amber-600 mx-auto mt-8" />
-//           <p className="mt-8 text-slate-600 max-w-xl mx-auto text-lg font-light leading-relaxed">
-//             {t("hero.subtitle")}
-//           </p>
-//         </div>
-
-//         {/* SWIPER */}
-//         <Swiper
-//           modules={[Autoplay, Pagination]}
-//           spaceBetween={30}
-//           slidesPerView={1}
-//           loop
-//           autoplay={{ delay: 4000, disableOnInteraction: false }}
-//           pagination={{ clickable: true, bulletActiveClass: "!bg-amber-700" }}
-//           breakpoints={{
-//             768: { slidesPerView: 2 },
-//             1024: { slidesPerView: 3 },
-//           }}
-//           className="!pb-20"
-//         >
-//           {members.map((member, i) => (
-//             <SwiperSlide key={i}>
-//               <TeamMemberCard member={member} i={i} />
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-
-//         {/* VALUES */}
-//         <div className="grid md:grid-cols-3 gap-16 mt-32 border-t border-slate-100 pt-20">
-//           {values.map((value, i) => (
-//             <div key={i} className="text-center">
-//               <span className="text-amber-700 font-serif text-3xl">
-//                 0{i + 1}.
-//               </span>
-//               <h4 className="font-semibold text-slate-900 mt-4">
-//                 {value.title}
-//               </h4>
-//               <p className="text-slate-500 text-sm mt-3 leading-relaxed">
-//                 {value.description}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* CTA */}
-//         <div className="text-center mt-32 bg-slate-950 p-20 text-white">
-//           <h3 className="font-serif text-3xl">{cta.title}</h3>
-//           <p className="text-slate-400 mt-6 max-w-lg mx-auto font-light">
-//             {cta.text}
-//           </p>
-//           <button className="mt-10 border border-white px-10 py-4 uppercase tracking-widest text-xs hover:bg-white hover:text-slate-950 transition-all duration-500">
-//             {cta.button}
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-//==========================================================
-//==========================================================
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -1193,6 +6,7 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/pagination";
+import { TEAM_IMAGES } from "../constants/teamImages";
 
 /* ---------------------------
     TEAM MEMBER CARD (Luxury Refined)
@@ -1201,55 +15,114 @@ const TeamMemberCard = ({ member, i }) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
-  const rotateX = useSpring(useTransform(y, [-200, 200], [5, -5]), {
-    stiffness: 100,
-    damping: 30,
-  });
-  const rotateY = useSpring(useTransform(x, [-200, 200], [-5, 5]), {
-    stiffness: 100,
-    damping: 30,
-  });
+  // Smooth spring physics for the tilt
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  // High-end 3D rotation
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
+
+  // The "Glint" effect that follows the mouse
+  const sheenOpacity = useTransform(
+    mouseXSpring,
+    [-0.5, 0, 0.5],
+    [0.05, 0, 0.05],
+  );
+  const sheenX = useTransform(mouseXSpring, [-0.5, 0.5], ["-100%", "100%"]);
 
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    x.set(e.clientX - rect.left - rect.width / 2);
-    y.set(e.clientY - rect.top - rect.height / 2);
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+
+    x.set(xPct);
+    y.set(yPct);
   };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  // Pull the image from our constant map using the slug
+  const memberImage = TEAM_IMAGES[member.slug];
 
   return (
     <motion.div
       onMouseMove={handleMouseMove}
-      onMouseLeave={() => {
-        x.set(0);
-        y.set(0);
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX,
+        rotateY,
+        transformStyle: "preserve-3d",
       }}
-      style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      className="group relative h-[540px] w-full rounded-sm bg-white/[0.03] border border-white/10 p-8 transition-all duration-500 hover:bg-white/[0.05]"
+      className="group relative h-[600px] w-full bg-slate-900/40 rounded-sm border border-white/10 p-10 transition-all duration-700 hover:border-[#d4af37]/40 hover:bg-slate-900/60 shadow-2xl overflow-hidden"
     >
-      <div className="flex flex-col items-center h-full">
-        {/* Profile Image with Gold Ring */}
-        <div className="relative w-32 h-32 mb-8">
-          <div className="absolute inset-0 rounded-full border border-[#d4af37]/30 group-hover:scale-110 transition-transform duration-700" />
-          <div className="w-full h-full rounded-full overflow-hidden p-1">
+      {/* 1. LUXURY SHEEN OVERLAY (The "Superpower" touch) */}
+      <motion.div
+        style={{
+          x: sheenX,
+          opacity: sheenOpacity,
+        }}
+        className="absolute inset-0 z-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12 pointer-events-none"
+      />
+
+      <div className="relative z-10 flex flex-col items-center h-full">
+        {/* 2. PROFILE IMAGE WITH DEPTH */}
+        <div
+          className="relative w-44 h-44 mb-10"
+          style={{ transform: "translateZ(80px)" }} // Pops toward the user
+        >
+          {/* Animated Outer Rings */}
+          <div className="absolute inset-0 rounded-full border border-[#d4af37]/20 group-hover:scale-125 group-hover:border-[#d4af37]/40 transition-all duration-1000" />
+          <div className="absolute inset-2 rounded-full border border-white/5 group-hover:scale-110 transition-all duration-700 delay-75" />
+
+          <div className="w-full h-full rounded-full overflow-hidden p-3 bg-slate-950 shadow-inner">
             <img
-              src={member.image || `https://i.pravatar.cc/400?img=${i + 10}`}
+              src={memberImage}
               alt={member.name}
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-700"
+              className="w-full h-full rounded-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-110 transition-all duration-[1.5s] ease-out"
             />
           </div>
         </div>
 
-        <h3 className="text-2xl font-serif italic text-white">{member.name}</h3>
-        <p className="text-[#d4af37] text-[10px] font-bold uppercase tracking-[0.3em] mt-3">
-          {member.title}
-        </p>
+        {/* 3. TYPOGRAPHY WITH PARALLAX */}
+        <div
+          className="text-center space-y-4"
+          style={{ transform: "translateZ(60px)" }}
+        >
+          <h3 className="text-3xl font-serif italic text-white tracking-tight leading-none">
+            {member.name}
+          </h3>
+          <div className="flex flex-col items-center gap-2">
+            <span className="h-px w-8 bg-[#d4af37]/40 group-hover:w-16 transition-all duration-700" />
+            <p className="text-[#d4af37] text-[10px] font-black uppercase tracking-[0.5em]">
+              {member.title}
+            </p>
+          </div>
+        </div>
 
-        <p className="mt-8 text-slate-400 text-sm text-center leading-relaxed flex-grow font-light italic opacity-80 group-hover:opacity-100 transition-opacity">
-          "{member.bio}"
-        </p>
+        {/* 4. BIO SECTION */}
+        <div
+          className="mt-8 relative"
+          style={{ transform: "translateZ(40px)" }}
+        >
+          <p className="text-slate-400 text-sm text-center leading-relaxed font-light italic opacity-60 group-hover:opacity-100 transition-opacity duration-700 max-w-[280px]">
+            "{member.bio}"
+          </p>
+        </div>
 
-        {/* Social Links */}
-        <div className="flex gap-6 mt-8 pt-6 border-t border-white/5 w-full justify-center">
+        {/* 5. FLOATING SOCIALS */}
+        <div
+          className="mt-auto pt-8 flex gap-8 justify-center w-full"
+          style={{ transform: "translateZ(100px)" }} // Highest depth
+        >
           {[
             { Icon: Linkedin, link: member.linkedin },
             {
@@ -1263,14 +136,21 @@ const TeamMemberCard = ({ member, i }) => {
                 <a
                   key={idx}
                   href={link}
-                  className="text-slate-500 hover:text-[#d4af37] transition-colors duration-300"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-600 hover:text-[#d4af37] transform hover:scale-125 hover:-translate-y-1 transition-all duration-300"
                 >
-                  <Icon size={18} strokeWidth={1.5} />
+                  <Icon size={22} strokeWidth={1} />
                 </a>
               ),
           )}
         </div>
       </div>
+
+      {/* 6. BACKGROUND MONOGRAM (Subtle design touch) */}
+      <span className="absolute -bottom-10 -right-10 text-[180px] font-serif italic text-white/[0.02] pointer-events-none select-none">
+        {member.name.charAt(0)}
+      </span>
     </motion.div>
   );
 };

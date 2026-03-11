@@ -25,7 +25,7 @@
       "cta": "Schedule appointment with Dr. Kraemer",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+      "image": "../../assets/Rai_Image.jpeg",
       "alt": "Female corporate lawyer portrait",
       "slug": "raimonda-kraemer"
     },
@@ -46,7 +46,7 @@
       "cta": "Request legal consultation",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
-      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+      "image": "../../assets/Auri_Image.jpeg",
       "alt": "Professional female lawyer portrait",
       "slug": "aurelija-maumevice"
     },
@@ -66,7 +66,7 @@
       "cta": "Contact us",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
-      "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+      "image": "../../assets/Kris_Image.jpeg",
       "alt": "Senior legal advisor portrait",
       "slug": "kristina-zindulyte"
     },
@@ -82,7 +82,7 @@
         "Client management"
       ],
       "bio": "As a business economist Ms. Hartfeld ensures smooth operational workflows within the firm and supports financial analysis for client cases.",
-      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+      "image": "../../assets/Ajlona_Image.jpeg",
       "alt": "Professional business consultant portrait",
       "slug": "aljona-hartfeld"
     },
@@ -98,7 +98,7 @@
         "Government communication"
       ],
       "bio": "Ms. Schmidt ensures that all documentation required for restructuring and advisory cases is prepared accurately and completely.",
-      "image": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e",
+      "image": "../../assets/Elke_Image.jpeg",
       "alt": "Professional office administrator portrait",
       "slug": "e-schmidt"
     }

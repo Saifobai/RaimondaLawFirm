@@ -1,0 +1,19 @@
+{
+  "reviews": {
+    "tagline": "Mandantenstimmen",
+    "title": "Exzellenz in der Beratung",
+    "stats": "4.9/5.0 basierend auf 40+ Rezensionen",
+    "cta": "Alle Google-Rezensionen ansehen",
+    "items": [
+      { "id": 1, "name": "Sarah Ramezani", "text": "Freundlich, respektvoll und professionell – vermittelt Sicherheit in schwierigen Situationen.", "category": "Professionalität" },
+      { "id": 2, "name": "Joachim Rose", "text": "Professionelle Prüfung, klare Besprechung, hervorragende Betreuung und Ergebnis.", "category": "Expertise" },
+      { "id": 3, "name": "Dr. Yadigar Genc", "text": "Kompetente und engagierte Unterstützung, klare Kommunikation, exzellente Beratung.", "category": "Kompetenz" },
+      { "id": 21, "name": "Murat Kalayci", "text": "Mit Geduld geholfen, großes Problem gelöst, Zukunft gerettet.", "category": "Erfolg" },
+      { "id": 27, "name": "Klaus Barbir", "text": "Dank Kanzlei Lukas schuldenfrei – alle Gläubiger stimmten zu.", "category": "Erfolg" },
+      { "id": 40, "name": "Sommer Falter", "text": "Erneut beste Beratung und Unterstützung in Notsituationen.", "category": "Hilfe" },
+      { "id": 40, "name": "Sommer Falter", "text": "Erneut beste Beratung und Unterstützung in Notsituationen.", "category": "Hilfe" },
+      { "id": 40, "name": "Sommer Falter", "text": "Erneut beste Beratung und Unterstützung in Notsituationen.", "category": "Hilfe" },
+      { "id": 40, "name": "Sommer Falter", "text": "Erneut beste Beratung und Unterstützung in Notsituationen.", "category": "Hilfe" }
+    ]
+  }
+}

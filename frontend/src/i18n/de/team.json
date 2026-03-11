@@ -25,7 +25,7 @@
       "cta": "Termin mit Dr. Kraemer vereinbaren",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
-      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+      "image": "../../assets/Rai_Image.jpeg",
       "alt": "Dr. jur. Raimonda Kraemer Wirtschaftsberatung Düsseldorf",
       "slug": "raimonda-kraemer"
     },
@@ -46,7 +46,7 @@
       "cta": "Rechtliche Beratung anfragen",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
-      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+      "image": "../../assets/Auri_Image.jpeg",
       "alt": "Rechtsanwältin Aurelija Maumevičė Kanzlei Kraemer Köln",
       "slug": "aurelija-maumevice"
     },
@@ -66,7 +66,7 @@
       "cta": "Kontakt aufnehmen",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
-      "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df",
+      "image": "../../assets/Kris_Image.jpeg",
       "slug": "kristina-zindulyte"
     },
     {
@@ -81,7 +81,7 @@
         "Mandantenmanagement"
       ],
       "bio": "Sie sorgt für reibungslose Abläufe und unterstützt die wirtschaftliche Analyse.",
-      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a",
+      "image": "../../assets/Ajlona_Image.jpeg",
       "slug": "aljona-hartfeld"
     },
     {
@@ -96,7 +96,7 @@
         "Behördenkommunikation"
       ],
       "bio": "Sie stellt sicher, dass alle Unterlagen für Restrukturierungen vollständig vorbereitet sind.",
-      "image": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e",
+      "image": "../../assets/Elke_Image.jpeg",
       "slug": "e-schmidt"
     }
   ],

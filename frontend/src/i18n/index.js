@@ -11,6 +11,8 @@ import enTeam from "./en/team.json";
 import enFooter from "./en/footer.json"
 import enPrivacy from "./en/privacy.json"
 import enImpressum from "./en/impressum.json"
+import enReviews from "./en/reviews.json"
+
 
 import deNavbar from "./de/navbar.json";
 import deHero from "./de/hero.json";
@@ -22,6 +24,7 @@ import deTeam from "./de/team.json";
 import deFooter from "./de/footer.json"
 import dePrivacy from "./de/privacy.json"
 import deImpressum from "./de/impressum.json"
+import deReviews from "./de/reviews.json"
 
 const resources = {
     en: {
@@ -34,7 +37,8 @@ const resources = {
         team: enTeam,
         footer: enFooter,
         privacy: enPrivacy,
-        impressum: enImpressum
+        impressum: enImpressum,
+        reviews: enReviews
     },
     de: {
         navbar: deNavbar,
@@ -46,7 +50,8 @@ const resources = {
         team: deTeam,
         footer: deFooter,
         privacy: dePrivacy,
-        impressum: deImpressum
+        impressum: deImpressum,
+        reviews: deReviews
     },
 };
 
@@ -65,7 +70,8 @@ i18n.use(initReactI18next).init({
         "team",
         "footer",
         "privacy",
-        "impressum"
+        "impressum",
+        "reviews"
     ],
     defaultNS: "navbar",
 
