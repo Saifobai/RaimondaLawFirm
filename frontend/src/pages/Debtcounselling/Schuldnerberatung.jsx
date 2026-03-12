@@ -61,16 +61,13 @@
 
 //   const submitForm = async () => {
 //     try {
-//       const res = await fetch("http://localhost:5000/api/contact/send", {
+//       const res = await fetch(`${import.meta.env.VITE_API_URL}/contact/send`, {
 //         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//         },
+//         headers: { "Content-Type": "application/json" },
 //         body: JSON.stringify(formData),
 //       });
 
 //       const data = await res.json();
-
 //       if (data.success) {
 //         alert("Message sent successfully");
 //       } else {
@@ -83,14 +80,14 @@
 //   };
 
 //   return (
-//     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col lg:flex-row">
+//     <div className="min-h-screen bg-gradient-to-b from-[#8B806D] via-[#515565] to-[#2B3041] text-slate-100 flex flex-col lg:flex-row">
 //       {/* SIDEBAR */}
-//       <div className="lg:w-1/3 p-8 lg:p-20 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-slate-800 bg-slate-900">
+//       <div className="lg:w-1/3 p-8 lg:p-20 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10 bg-[#262B3D]">
 //         <div>
 //           <h1 className="text-3xl lg:text-5xl font-serif italic mb-4 text-white">
 //             {t("title")}
 //           </h1>
-//           <p className="text-slate-400 text-base lg:text-lg">{t("subtitle")}</p>
+//           <p className="text-white/50 text-base lg:text-lg">{t("subtitle")}</p>
 //         </div>
 //         <div className="hidden lg:flex flex-col space-y-10 mt-10">
 //           <Feature
@@ -115,19 +112,19 @@
 //       <div className="flex-1 flex flex-col justify-center p-6 lg:p-24 relative">
 //         <button
 //           onClick={() => navigate(-1)}
-//           className="absolute top-6 right-6 lg:top-12 lg:right-12 text-slate-500 hover:text-white transition"
+//           className="absolute top-6 right-6 lg:top-12 lg:right-12 text-white/30 hover:text-white transition"
 //         >
 //           <X size={28} />
 //         </button>
 
 //         <div className="max-w-xl w-full mx-auto">
 //           <div className="mb-10 lg:mb-16">
-//             <div className="text-xs uppercase tracking-widest text-amber-500 mb-4">
+//             <div className="text-xs uppercase tracking-widest text-[#BA8C61] mb-4 font-bold">
 //               {step + 1} / {totalSteps}
 //             </div>
-//             <div className="h-[2px] bg-slate-800">
+//             <div className="h-[2px] bg-white/10">
 //               <motion.div
-//                 className="h-full bg-amber-500"
+//                 className="h-full bg-[#BA8C61]"
 //                 animate={{ width: `${((step + 1) / totalSteps) * 100}%` }}
 //                 transition={{ duration: 0.5 }}
 //               />
@@ -142,7 +139,7 @@
 //               exit={{ opacity: 0 }}
 //               transition={{ duration: 0.3 }}
 //             >
-//               <h2 className="text-2xl lg:text-4xl font-serif italic mb-8 lg:mb-10">
+//               <h2 className="text-2xl lg:text-4xl font-serif italic mb-8 lg:mb-10 text-white">
 //                 {
 //                   [
 //                     t("situation"),
@@ -289,7 +286,7 @@
 //                       value={formData.notes}
 //                       onChange={handleChange}
 //                       placeholder="..."
-//                       className="w-full bg-transparent border-b border-slate-700 py-4 text-lg outline-none focus:border-amber-500"
+//                       className="w-full bg-transparent border-b border-white/20 py-4 text-lg outline-none focus:border-[#BA8C61] transition-colors"
 //                     />
 //                     <Checkbox
 //                       name="privacy"
@@ -304,13 +301,13 @@
 //               <div className="flex justify-between mt-12 lg:mt-16">
 //                 <button
 //                   onClick={back}
-//                   className={`${step === 0 ? "invisible" : ""} flex items-center gap-2 text-slate-400 hover:text-white transition`}
+//                   className={`${step === 0 ? "invisible" : ""} flex items-center gap-2 text-white/40 hover:text-white transition`}
 //                 >
 //                   <ArrowLeft size={16} /> {t("back")}
 //                 </button>
 //                 <button
 //                   onClick={step === 5 ? submitForm : next}
-//                   className="bg-white text-slate-900 px-8 lg:px-10 py-3 font-bold hover:bg-amber-500 flex items-center gap-2 transition-all"
+//                   className="bg-white text-[#262B3E] px-8 lg:px-10 py-3 font-bold hover:bg-[#BA8C61] hover:text-white flex items-center gap-2 transition-all"
 //                 >
 //                   {step === 5 ? t("submit") : t("next")}{" "}
 //                   <ChevronRight size={18} />
@@ -326,22 +323,22 @@
 
 // const Input = ({ label, ...props }) => (
 //   <div>
-//     <label className="text-xs uppercase tracking-widest text-slate-500 block mb-2">
+//     <label className="text-[10px] uppercase tracking-[0.2em] text-white/40 block mb-2">
 //       {label}
 //     </label>
 //     <input
 //       {...props}
-//       className="w-full bg-transparent border-b border-slate-700 py-3 outline-none focus:border-amber-500"
+//       className="w-full bg-transparent border-b border-white/20 py-3 outline-none focus:border-[#BA8C61] transition-colors"
 //     />
 //   </div>
 // );
 
 // const Checkbox = ({ name, label, checked, onChange }) => (
-//   <label className="flex items-center gap-3 cursor-pointer">
+//   <label className="flex items-center gap-3 cursor-pointer group">
 //     <div
-//       className={`w-6 h-6 border flex items-center justify-center ${checked ? "bg-amber-500 border-amber-500" : "border-slate-700"}`}
+//       className={`w-6 h-6 border flex items-center justify-center transition-colors ${checked ? "bg-[#BA8C61] border-[#BA8C61]" : "border-white/20 group-hover:border-white/40"}`}
 //     >
-//       {checked && <Check size={14} className="text-slate-900" />}
+//       {checked && <Check size={14} className="text-[#262B3E]" />}
 //     </div>
 //     <input
 //       type="checkbox"
@@ -350,69 +347,61 @@
 //       onChange={onChange}
 //       className="hidden"
 //     />
-//     <span className="text-sm text-slate-400">{label}</span>
+//     <span className="text-sm text-white/60">{label}</span>
 //   </label>
 // );
 
-// const Select = ({ name, label, value, onChange, options }) => {
-//   return (
-//     <div className="space-y-4">
-//       <label className="text-xs uppercase tracking-widest text-slate-500 block">
-//         {label}
-//       </label>
-//       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-//         {options.map((opt) => {
-//           const isSelected = value === opt.val;
-//           return (
-//             <motion.button
-//               key={opt.val}
-//               type="button"
-//               whileHover={{ scale: 1.02 }}
-//               whileTap={{ scale: 0.98 }}
-//               onClick={() => onChange({ target: { name, value: opt.val } })}
-//               className={`relative p-5 text-left border transition-all duration-300 ${
-//                 isSelected
-//                   ? "bg-amber-500/10 border-amber-500"
-//                   : "bg-slate-900 border-slate-800 hover:border-slate-700"
-//               }`}
+// const Select = ({ name, label, value, onChange, options }) => (
+//   <div className="space-y-4">
+//     <label className="text-[10px] uppercase tracking-[0.2em] text-white/40 block">
+//       {label}
+//     </label>
+//     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+//       {options.map((opt) => {
+//         const isSelected = value === opt.val;
+//         return (
+//           <motion.button
+//             key={opt.val}
+//             type="button"
+//             whileHover={{ scale: 1.02 }}
+//             whileTap={{ scale: 0.98 }}
+//             onClick={() => onChange({ target: { name, value: opt.val } })}
+//             className={`relative p-5 text-left border transition-all duration-300 ${isSelected ? "bg-[#BA8C61]/10 border-[#BA8C61]" : "bg-white/[0.02] border-white/5 hover:border-white/10"}`}
+//           >
+//             <span
+//               className={`text-sm font-medium ${isSelected ? "text-white" : "text-white/40"}`}
 //             >
-//               <span
-//                 className={`text-sm font-medium ${isSelected ? "text-white" : "text-slate-400"}`}
+//               {opt.lab}
+//             </span>
+//             {isSelected && (
+//               <motion.div
+//                 layoutId="selection-bubble"
+//                 className="absolute top-3 right-3 text-[#BA8C61]"
 //               >
-//                 {opt.lab}
-//               </span>
-
-//               {/* Subtle checkmark indicator for that "winning" selection feel */}
-//               {isSelected && (
-//                 <motion.div
-//                   layoutId="selection-bubble"
-//                   className="absolute top-3 right-3 text-amber-500"
-//                 >
-//                   <Check size={16} />
-//                 </motion.div>
-//               )}
-//             </motion.button>
-//           );
-//         })}
-//       </div>
-//     </div>
-//   );
-// };
-
-// const Feature = ({ icon, title, desc }) => (
-//   <div className="flex items-start gap-5">
-//     <div className="text-amber-500 mt-1">{icon}</div>
-//     <div>
-//       <h4 className="font-semibold text-sm uppercase tracking-widest text-slate-200">
-//         {title}
-//       </h4>
-//       <p className="text-slate-500 text-xs mt-1">{desc}</p>
+//                 <Check size={16} />
+//               </motion.div>
+//             )}
+//           </motion.button>
+//         );
+//       })}
 //     </div>
 //   </div>
 // );
 
-//==============================================================
-//==============================================================
+// const Feature = ({ icon, title, desc }) => (
+//   <div className="flex items-start gap-5">
+//     <div className="text-[#BA8C61] mt-1">{icon}</div>
+//     <div>
+//       <h4 className="font-semibold text-[10px] uppercase tracking-[0.2em] text-white">
+//         {title}
+//       </h4>
+//       <p className="text-white/40 text-[11px] mt-1 leading-relaxed">{desc}</p>
+//     </div>
+//   </div>
+// );
+
+//=================================================================
+//=================================================================
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
@@ -481,13 +470,10 @@ export default function Schuldnerberatung() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
       const data = await res.json();
-      if (data.success) {
-        alert("Message sent successfully");
-      } else {
-        alert("Failed to send message");
-      }
+      data.success
+        ? alert("Message sent successfully")
+        : alert("Failed to send message");
     } catch (error) {
       console.error("Submit error:", error);
       alert("Server error");
@@ -496,8 +482,8 @@ export default function Schuldnerberatung() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#8B806D] via-[#515565] to-[#2B3041] text-slate-100 flex flex-col lg:flex-row">
-      {/* SIDEBAR */}
-      <div className="lg:w-1/3 p-8 lg:p-20 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10 bg-[#262B3D]">
+      {/* SIDEBAR - Fixed mobile width */}
+      <div className="w-full lg:w-1/3 p-8 lg:p-20 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10 bg-[#262B3D]">
         <div>
           <h1 className="text-3xl lg:text-5xl font-serif italic mb-4 text-white">
             {t("title")}
@@ -523,16 +509,16 @@ export default function Schuldnerberatung() {
         </div>
       </div>
 
-      {/* FORM AREA */}
-      <div className="flex-1 flex flex-col justify-center p-6 lg:p-24 relative">
+      {/* FORM AREA - Added scrollable container */}
+      <div className="flex-1 flex flex-col justify-start lg:justify-center p-6 lg:p-24 relative overflow-y-auto">
         <button
           onClick={() => navigate(-1)}
-          className="absolute top-6 right-6 lg:top-12 lg:right-12 text-white/30 hover:text-white transition"
+          className="fixed top-6 right-6 lg:absolute lg:top-12 lg:right-12 text-white/30 hover:text-white transition z-50"
         >
           <X size={28} />
         </button>
 
-        <div className="max-w-xl w-full mx-auto">
+        <div className="max-w-xl w-full mx-auto mt-10 lg:mt-0">
           <div className="mb-10 lg:mb-16">
             <div className="text-xs uppercase tracking-widest text-[#BA8C61] mb-4 font-bold">
               {step + 1} / {totalSteps}
@@ -713,7 +699,7 @@ export default function Schuldnerberatung() {
                 )}
               </div>
 
-              <div className="flex justify-between mt-12 lg:mt-16">
+              <div className="flex justify-between mt-12 lg:mt-16 pb-12 lg:pb-0">
                 <button
                   onClick={back}
                   className={`${step === 0 ? "invisible" : ""} flex items-center gap-2 text-white/40 hover:text-white transition`}
