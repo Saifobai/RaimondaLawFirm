@@ -1,59 +1,105 @@
 {
   "title": "Anfrage Schuldnerberatung",
   "subtitle": "Ausfüllen und kostenlose Erstberatung sichern",
-  "situation": "Ihre Situation",
+  "start": "Jetzt loslegen",
 
-  "familyStatus": "Familienstand",
-  "jobBackground": "Beruflicher Hintergrund",
-  "additional": "Zusatzangaben",
+  "steps": {
+    "situation": "Ihre Situation",
+    "statements": "Welche Aussagen treffen auf Sie zu?",
+    "contact": "Ihre Kontaktdaten",
+    "notes": "Ihre Anmerkungen"
+  },
 
-  "select": "Bitte auswählen",
+  "buttons": {
+    "back": "Zurück",
+    "next": "Weiter",
+    "submit": "Jetzt absenden"
+  },
 
-  "single": "ledig",
-  "married": "verheiratet",
-  "relationship": "Lebensgemeinschaft",
-  "separated": "getrennt lebend",
-  "divorced": "geschieden",
-  "widowed": "verwitwet",
+  "fields": {
+    "debt": "Wie hoch ist Ihre Schuldsumme?",
+    "debtPlaceholder": "z.B. 9.000€",
 
-  "jobField": "Berufsfeld",
-  "job": "Aktueller Beruf",
-  "unemployed": "Ich bin aktuell arbeitsuchend",
+    "claims": "Wie viele offene Forderungen haben Sie?",
+    "claimsPlaceholder": "z.B. 4",
 
-  "statements": "Welche Aussagen treffen auf Sie zu?",
+    "income": "Wie hoch ist Ihr Nettoeinkommen?",
+    "incomePlaceholder": "z.B. 1.800€",
 
-  "selfEmployed": "Ich bin aktuell selbstständig tätig",
-  "garnished": "Bei mir wird bereits gepfändet",
-  "vehicle": "Ich besitze ein Fahrzeug",
-  "property": "Ich besitze eine Immobilie",
-  "knowCreditors": "Ich weiß, wer meine Gläubiger sind",
+    "marital": "Wie ist Ihr Familienstand?",
 
-  "contact": "Ihre Kontaktdaten",
+    "children": "Haben Sie unterhaltsberechtigte Kinder (bis 18 oder anschl. Schule, Studium)?",
 
-  "firstname": "Vorname",
-  "lastname": "Nachname",
-  "email": "E-Mail",
-  "phone": "Mobilnummer",
+    "jobField": "In welchem Berufsfeld arbeiten Sie?",
+    "job": "Welchen Beruf üben Sie aus?",
+    "jobPlaceholder": "Aktueller Beruf (z.B. Sachbearbeiter/in)",
 
-  "notes": "Ihre Anmerkungen",
-  "privacy": "Ich akzeptiere die Datenschutzbestimmungen.",
+    "unemployed": "Ich bin aktuell arbeitsuchend",
 
-  "debt": "Geschätzte Gesamtschulden",
-  "claims": "Anzahl der Gläubiger",
-  "income": "Netto-Einkommen (Monat)",
+    "salutation": "Anrede",
+    "firstname": "Vorname",
+    "lastname": "Nachname",
+    "email": "E-Mail",
+    "phone": "Mobilnummer",
 
-  "back": "Zurück",
-  "next": "Weiter",
-  "submit": "Jetzt absenden",
+    "notes": "Anmerkung",
 
-  "features": {
-    "privacyTitle": "Datenschutz",
-    "privacyDesc": "Ihre Daten werden verschlüsselt gespeichert.",
+    "privacy": "Ich akzeptiere die Datenschutzbestimmungen."
+  },
 
-    "legalTitle": "Rechtssicherheit",
-    "legalDesc": "Beratung gemäß aktueller Insolvenzordnung.",
+  "options": {
+    "marital": {
+      "single": "ledig",
+      "married": "verheiratet",
+      "relationship": "Lebensgemeinschaft",
+      "separated": "getrennt lebend",
+      "divorced": "geschieden",
+      "widowed": "verwitwet"
+    },
 
-    "confidentialTitle": "Vertraulichkeit",
-    "confidentialDesc": "Diskrete Behandlung Ihrer Situation."
-  }
+    "children": {
+      "0": "keine Kinder",
+      "1": "1 Kind",
+      "2": "2 Kinder",
+      "3": "3 Kinder",
+      "4": "4 Kinder",
+      "5": "5 Kinder",
+      "6": "mehr als 5 Kinder"
+    },
+
+    "jobFields": [
+      "Ich möchte keine Angabe machen",
+      "Bauwesen (Architekt, Gerüstbauer, Vermessung usw.)",
+      "Elektronik (Ingenieure, Elektriker usw.)",
+      "Gesundheitswesen (Medizin, Pflege, Rettungsdienst usw.)",
+      "IT & Computer (Fachinformatiker, Entwickler usw.)",
+      "Kunst, Kultur & Gestaltung",
+      "Landwirtschaft",
+      "Medien",
+      "Metall & Maschinenbau",
+      "Pädagogik",
+      "Produktion & Fertigung",
+      "Verkehr & Logistik",
+      "Wirtschaft & Verwaltung"
+    ],
+
+    "salutation": {
+      "mr": "Herr",
+      "mrs": "Frau",
+      "diverse": "Divers"
+    }
+  },
+
+  "statements": {
+    "selfEmployed": "Ich bin aktuell selbstständig tätig",
+    "garnished": "Bei mir wird bereits gepfändet",
+    "vehicle": "Ich besitze (ein) Fahrzeug(e)",
+    "property": "Ich besitze (eine) Immobilie(n)",
+    "knowCreditors": "Ich weiß, wer meine Gläubiger sind"
+  },
+  "validation": {
+  "required": "Dieses Feld ist erforderlich",
+  "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+  "acceptPrivacy": "Bitte akzeptieren Sie die Datenschutzbestimmungen"
+}
 }

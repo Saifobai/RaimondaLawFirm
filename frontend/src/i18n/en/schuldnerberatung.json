@@ -1,59 +1,105 @@
 {
   "title": "Debt Counseling Request",
-  "subtitle": "Fill out the form to receive a free consultation",
-  "situation": "Your Situation",
+  "subtitle": "Fill out the form and secure a free initial consultation",
+  "start": "Get Started",
 
-  "familyStatus": "Marital Status",
-  "jobBackground": "Professional Background",
-  "additional": "Additional Information",
+  "steps": {
+    "situation": "Your Situation",
+    "statements": "Which statements apply to you?",
+    "contact": "Your Contact Details",
+    "notes": "Your Notes"
+  },
 
-  "select": "Please select",
+  "buttons": {
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit Now"
+  },
 
-  "single": "Single",
-  "married": "Married",
-  "relationship": "Partnership",
-  "separated": "Separated",
-  "divorced": "Divorced",
-  "widowed": "Widowed",
+  "fields": {
+    "debt": "How much is your total debt?",
+    "debtPlaceholder": "e.g. €9,000",
 
-  "jobField": "Job field",
-  "job": "Current job",
-  "unemployed": "I am currently unemployed",
+    "claims": "How many open claims do you have?",
+    "claimsPlaceholder": "e.g. 4",
 
-  "statements": "Which statements apply to you?",
+    "income": "What is your net monthly income?",
+    "incomePlaceholder": "e.g. €1,800",
 
-  "selfEmployed": "I am self-employed",
-  "garnished": "My income is already garnished",
-  "vehicle": "I own a vehicle",
-  "property": "I own property",
-  "knowCreditors": "I know my creditors",
+    "marital": "What is your marital status?",
 
-  "contact": "Your Contact Details",
+    "children": "Do you have dependent children (under 18 or still in education)?",
 
-  "firstname": "First name",
-  "lastname": "Last name",
-  "email": "Email",
-  "phone": "Mobile number",
+    "jobField": "In which professional field do you work?",
+    "job": "What profession do you practice?",
+    "jobPlaceholder": "Current job (e.g. office clerk)",
 
-  "notes": "Your Notes",
-  "privacy": "I accept the privacy policy.",
+    "unemployed": "I am currently unemployed",
 
-  "debt": "Estimated total debt",
-  "claims": "Number of creditors",
-  "income": "Monthly net income",
+    "salutation": "Salutation",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "email": "Email",
+    "phone": "Mobile Number",
 
-  "back": "Back",
-  "next": "Next",
-  "submit": "Submit",
+    "notes": "Notes",
 
-  "features": {
-    "privacyTitle": "Data Protection",
-    "privacyDesc": "Your data is stored using secure encryption.",
+    "privacy": "I accept the privacy policy."
+  },
 
-    "legalTitle": "Legal Security",
-    "legalDesc": "Advice according to the current insolvency law.",
+  "options": {
+    "marital": {
+      "single": "Single",
+      "married": "Married",
+      "relationship": "Relationship",
+      "separated": "Separated",
+      "divorced": "Divorced",
+      "widowed": "Widowed"
+    },
 
-    "confidentialTitle": "Confidentiality",
-    "confidentialDesc": "Your financial situation is handled discreetly."
+    "children": {
+      "0": "No children",
+      "1": "1 child",
+      "2": "2 children",
+      "3": "3 children",
+      "4": "4 children",
+      "5": "5 children",
+      "6": "More than 5 children"
+    },
+
+    "jobFields": [
+      "Prefer not to say",
+      "Construction",
+      "Electronics",
+      "Healthcare",
+      "IT & Computers",
+      "Arts & Design",
+      "Agriculture",
+      "Media",
+      "Metal & Mechanical Engineering",
+      "Education",
+      "Production & Manufacturing",
+      "Transport & Logistics",
+      "Business & Administration"
+    ],
+
+    "salutation": {
+      "mr": "Mr.",
+      "mrs": "Mrs.",
+      "diverse": "Diverse"
+    }
+  },
+
+  "statements": {
+    "selfEmployed": "I am currently self-employed",
+    "garnished": "My income is already being garnished",
+    "vehicle": "I own a vehicle",
+    "property": "I own property",
+    "knowCreditors": "I know who my creditors are"
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "acceptPrivacy": "You must accept the privacy policy to continue"
   }
 }
