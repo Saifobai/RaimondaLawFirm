@@ -1,0 +1,50 @@
+{
+  "services": {
+    "sectionTitle": "Unsere Leistungen im Überblick",
+    "subheading": "Ob Privatperson oder Unternehmen – wir bieten Ihnen maßgeschneiderte Lösungen aus den Bereichen Wirtschaft, Recht und Sanierung.",
+    "items": [
+      {
+        "id": "01",
+        "title": "Wirtschaftsberatung",
+        "subtitle": "Fundierte Entscheidungen vorbereiten",
+        "content": "Unsere Wirtschaftsberatung richtet sich an Unternehmer und Privatpersonen, die rechtliche und wirtschaftliche Entscheidungen fundiert vorbereiten möchten. Wir analysieren betriebswirtschaftliche Strukturen, begleiten Verhandlungen und entwickeln strategische Lösungen zur Stabilisierung und Optimierung Ihrer Geschäftsprozesse.",
+        "slug": "wirtschaftsberatung"
+      },
+      {
+        "id": "02",
+        "title": "Rechtsberatung",
+        "subtitle": "Rechtssicher und praxisorientiert",
+        "content": "Wir bieten kompetente rechtliche Beratung im Zivil-, Handels- und Gesellschaftsrecht sowie in Fragen der wirtschaftlichen Stabilisierung und Schuldenregulierung. Unser Ziel: rechtssichere und praxisorientierte Lösungen, die Ihren individuellen Bedürfnissen entsprechen.",
+        "slug": "rechtsberatung"
+      },
+      {
+        "id": "03",
+        "title": "Insolvenzberatung",
+        "subtitle": "Oft noch zu vermeiden!",
+        "content": "Die Insolvenzberatung ist Ihr wichtigster Dienst, wenn eine finanzielle Krise droht oder bereits eingetreten ist. Wichtig zu wissen: Eine Insolvenz ist keine unumgängliche Tatsache, sondern oft noch zu vermeiden! Wir entwickeln Sanierungsstrategien und prüfen außergerichtliche Einigungen.",
+        "slug": "insolvenzberatung"
+      },
+      {
+        "id": "04",
+        "title": "Unternehmenssanierung",
+        "subtitle": "Ihr Unternehmen retten",
+        "content": "Unsere Sanierungsstrategie ist modular: Wir setzen den StaRUG-Rahmen für eine diskrete Frühsanierung ein. Bei Insolvenzreife nutzen wir vorrangig die Eigenverwaltung (ESUG). Die Regelinsolvenz ist stets der letzte Schritt – unser Ziel ist die nachhaltige Zukunftssicherung.",
+        "slug": "unternehmenssanierung"
+      },
+      {
+        "id": "05",
+        "title": "Unternehmensgründung",
+        "subtitle": "Das richtige Fundament",
+        "content": "Die Wahl der Rechtsform entscheidet über Erfolg oder Scheitern. Viele Gründer haften im schlimmsten Fall privat mit ihrem gesamten Vermögen. Wir helfen Ihnen, von Anfang an das richtige Fundament zu legen: für Ihre Sicherheit und Ihren maximalen Erfolg.",
+        "slug": "unternehmensgruendung"
+      },
+      {
+        "id": "06",
+        "title": "Internationales Recht",
+        "subtitle": "Deutschland & Litauen",
+        "content": "Handel zwischen Deutschland und Litauen bietet Wachstumspotenzial, birgt aber juristische Risiken. Mit Rechtsanwältin Aurelija Maumeviče bieten wir zweisprachige Verträge, Forderungsdurchsetzung und Markteintrittsberatung aus einer Hand.",
+        "slug": "internationales-recht"
+      }
+    ]
+  }
+}

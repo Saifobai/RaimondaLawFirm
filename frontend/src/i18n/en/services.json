@@ -1,0 +1,50 @@
+{
+  "services": {
+    "sectionTitle": "Our Services at a Glance",
+    "subheading": "Whether individual or company – we offer tailor-made solutions in the areas of business, law, and restructuring.",
+    "items": [
+      {
+        "id": "01",
+        "title": "Business Consulting",
+        "subtitle": "Preparing Sound Decisions",
+        "content": "Our business consultancy is aimed at entrepreneurs and individuals who wish to prepare legal and economic decisions on a sound basis. We analyze corporate structures, accompany negotiations, and develop strategic solutions to optimize your business processes.",
+        "slug": "business-consulting"
+      },
+      {
+        "id": "02",
+        "title": "Legal Advice",
+        "subtitle": "Legally Secure & Practical",
+        "content": "We offer competent legal advice in civil, commercial, and corporate law, as well as issues regarding economic stabilization and debt regulation. Our goal: practical solutions that meet your individual needs.",
+        "slug": "legal-advice"
+      },
+      {
+        "id": "03",
+        "title": "Insolvency Counseling",
+        "subtitle": "Often Still Avoidable!",
+        "content": "Insolvency counseling is your most important service when a financial crisis looms or has already occurred. Important to know: Insolvency is not an inevitable fact, but often still avoidable through restructuring strategies and out-of-court settlements.",
+        "slug": "insolvency-counseling"
+      },
+      {
+        "id": "04",
+        "title": "Corporate Restructuring",
+        "subtitle": "Saving Your Business",
+        "content": "Our strategy is modular: we use the StaRUG framework for discrete early restructuring. In cases of insolvency, we prioritize self-administration (ESUG). Standard insolvency is always the final step—our goal is to keep your company sustainable and operational.",
+        "slug": "corporate-restructuring"
+      },
+      {
+        "id": "05",
+        "title": "Business Formation",
+        "subtitle": "The Right Foundation",
+        "content": "The choice of legal form determines success or failure. Many founders risk their private assets due to poor structuring. We help you lay the right foundation from the very beginning for your security and maximum success.",
+        "slug": "business-formation"
+      },
+      {
+        "id": "06",
+        "title": "International Law",
+        "subtitle": "Germany & Lithuania",
+        "content": "Trade between Germany and Lithuania offers enormous potential but carries legal risks. With Attorney Aurelija Maumeviče, we provide bilingual contracts, debt enforcement, and market entry consultancy from a single source.",
+        "slug": "international-law"
+      }
+    ]
+  }
+}

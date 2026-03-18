@@ -19,6 +19,7 @@ import Impressum from "./pages/impressum/Impressum";
 import Reviews from "./sections/Testimonials";
 import TopBar from "./components/navbar/TopBar";
 import Highlights from "./sections/Highlights";
+import Services from "./sections/Services";
 
 const MainLayout = () => {
   return (
@@ -28,6 +29,7 @@ const MainLayout = () => {
       <Home />
       <RequestButton />
       <Highlights />
+      <Services />
       <DebtWay />
       <Team />
       <Reviews />
