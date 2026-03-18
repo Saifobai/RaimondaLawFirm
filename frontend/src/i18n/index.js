@@ -3,7 +3,7 @@ import { initReactI18next } from "react-i18next";
 
 import enNavbar from "./en/navbar.json";
 import enHero from "./en/hero.json";
-import enServices from "./en/services.json";
+import enHighlights from "./en/highlights.json";
 import enContact from "./en/contact.json";
 import enSchuldnerberatung from "./en/schuldnerberatung.json";
 import enOffer from "./en/offer.json";
@@ -16,7 +16,7 @@ import enReviews from "./en/reviews.json"
 
 import deNavbar from "./de/navbar.json";
 import deHero from "./de/hero.json";
-import deServices from "./de/services.json";
+import deHighlights from "./de/highlights.json";
 import deContact from "./de/contact.json";
 import deSchuldnerberatung from "./de/schuldnerberatung.json";
 import deOffer from "./de/offer.json";
@@ -30,7 +30,7 @@ const resources = {
     en: {
         navbar: enNavbar,
         hero: enHero,
-        services: enServices,
+        highlights: enHighlights,
         contact: enContact,
         schuldnerberatung: enSchuldnerberatung,
         offer: enOffer,
@@ -43,7 +43,7 @@ const resources = {
     de: {
         navbar: deNavbar,
         hero: deHero,
-        services: deServices,
+        highlights: deHighlights,
         contact: deContact,
         schuldnerberatung: deSchuldnerberatung,
         offer: deOffer,
@@ -63,7 +63,7 @@ i18n.use(initReactI18next).init({
     ns: [
         "navbar",
         "hero",
-        "services",
+        "hightlights",
         "contact",
         "schuldnerberatung",
         "offer",

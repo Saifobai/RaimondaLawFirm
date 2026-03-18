@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/navbar/Navbar";
 
-import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 
 import ScrollToTop from "./components/ScrollToTop";
@@ -18,16 +17,17 @@ import Terms from "./pages/Terms/Terms";
 import Privacy from "./pages/Privacy/Privacy";
 import Impressum from "./pages/impressum/Impressum";
 import Reviews from "./sections/Testimonials";
+import TopBar from "./components/navbar/TopBar";
+import Highlights from "./sections/Highlights";
 
 const MainLayout = () => {
   return (
     <>
       <Toaster position="top-right" />
       <Navbar />
-
       <Home />
       <RequestButton />
-      <Services />
+      <Highlights />
       <FirmOffers />
       <Team />
       <Reviews />

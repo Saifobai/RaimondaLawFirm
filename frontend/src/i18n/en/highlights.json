@@ -1,4 +1,9 @@
 {
+  "intro": {
+  "text1": "Wirtschaft & Recht aus einer Hand. Damit Sie Ihre finanzielle Kontrolle zurückgewinnen.",
+  "text2": "Sie stehen vor schwierigen wirtschaftlichen Entscheidungen, kämpfen mit Schulden oder planen den Schritt nach Litauen?",
+  "text3": "Wir sind die Kanzlei, die wirtschaftliche Expertise mit anwaltlicher Präzision verbindet – für Privatpersonen und Unternehmen in Deutschland und Litauen."
+},
   "value": {
     "title1": "Holistic Approach",
     "desc1": "We merge law and economics to create sustainable, long-term solutions.",
@@ -36,6 +41,29 @@
       }
     ]
   },
+  
+  "advantages": {
+  "title": "Your Advantages at a Glance",
+  "items": [
+    {
+      "title": "No Waiting Time",
+      "description": "Appointments often available within 48 hours. No long waiting times when you need support."
+    },
+    {
+      "title": "Free Initial Assessment",
+      "description": "Get to know us and explore your options – completely without financial risk."
+    },
+    {
+      "title": "Fair Pricing",
+      "description": "Transparent cost structure. No hidden fees. Installment payments often possible."
+    },
+    {
+      "title": "Germany & Lithuania",
+      "description": "Business and law from a single source. International experience for your security."
+    }
+  ]
+},
+
   "process": {
     "title": "Your Path to a Solution in 4 Steps"
   },

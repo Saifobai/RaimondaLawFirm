@@ -1,4 +1,9 @@
 {
+  "intro": {
+  "text1": "Business and Law from a Single Source. Helping You Regain Financial Control.",
+  "text2": "Are you facing difficult financial decisions, dealing with debt, or planning your expansion into Lithuania?",
+  "text3": "We are the firm that combines economic expertise with legal precision – for individuals and businesses in Germany and Lithuania."
+},
   "value": {
     "title1": "Ganzheitlicher Ansatz",
     "desc1": "Wir vereinen Recht und Wirtschaft für nachhaltige Lösungen.",
@@ -36,6 +41,29 @@
       }
     ]
   },
+
+  "advantages": {
+  "title": "Ihre Vorteile auf einen Blick",
+  "items": [
+    {
+      "title": "Keine Wartezeit",
+      "description": "Termine oft innerhalb von 48 Stunden. Keine wochenlangen Wartezeiten, wenn Sie Hilfe brauchen."
+    },
+    {
+      "title": "Kostenlose Ersteinschätzung",
+      "description": "Lernen Sie uns und Ihre Handlungsoptionen kennen – ganz ohne finanzielles Risiko."
+    },
+    {
+      "title": "Faires Honorar",
+      "description": "Transparente Kostenstruktur. Keine versteckten Gebühren. Ratenzahlung oft möglich."
+    },
+    {
+      "title": "Deutschland & Litauen",
+      "description": "Wirtschaft & Recht aus einer Hand. Internationale Erfahrung für Ihre Sicherheit."
+    }
+  ]
+},
+
   "process": {
     "title": "In 4 Schritten zu Ihrer Lösung"
   },
