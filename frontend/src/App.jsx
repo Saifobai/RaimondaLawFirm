@@ -10,7 +10,7 @@ import RequestButton from "./components/RequestQuestions/RequestButton";
 
 import Home from "./pages/Home/Home";
 import Schuldnerberatung from "./pages/Debtcounselling/Schuldnerberatung";
-import FirmOffers from "./sections/FirmOffers";
+import DebtWay from "./sections/DebtWay";
 import Team from "./sections/Team";
 import Footer from "./sections/Footer";
 import Terms from "./pages/Terms/Terms";
@@ -28,7 +28,7 @@ const MainLayout = () => {
       <Home />
       <RequestButton />
       <Highlights />
-      <FirmOffers />
+      <DebtWay />
       <Team />
       <Reviews />
       <Contact />

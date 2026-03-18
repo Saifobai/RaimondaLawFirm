@@ -6,7 +6,7 @@ import enHero from "./en/hero.json";
 import enHighlights from "./en/highlights.json";
 import enContact from "./en/contact.json";
 import enSchuldnerberatung from "./en/schuldnerberatung.json";
-import enOffer from "./en/offer.json";
+import enDebtway from "./en/debtway.json";
 import enTeam from "./en/team.json";
 import enFooter from "./en/footer.json"
 import enPrivacy from "./en/privacy.json"
@@ -19,7 +19,7 @@ import deHero from "./de/hero.json";
 import deHighlights from "./de/highlights.json";
 import deContact from "./de/contact.json";
 import deSchuldnerberatung from "./de/schuldnerberatung.json";
-import deOffer from "./de/offer.json";
+import deDebtway from "./de/debtway.json";
 import deTeam from "./de/team.json";
 import deFooter from "./de/footer.json"
 import dePrivacy from "./de/privacy.json"
@@ -33,7 +33,7 @@ const resources = {
         highlights: enHighlights,
         contact: enContact,
         schuldnerberatung: enSchuldnerberatung,
-        offer: enOffer,
+        debtway: enDebtway,
         team: enTeam,
         footer: enFooter,
         privacy: enPrivacy,
@@ -46,7 +46,7 @@ const resources = {
         highlights: deHighlights,
         contact: deContact,
         schuldnerberatung: deSchuldnerberatung,
-        offer: deOffer,
+        debtway: deDebtway,
         team: deTeam,
         footer: deFooter,
         privacy: dePrivacy,
@@ -66,7 +66,7 @@ i18n.use(initReactI18next).init({
         "hightlights",
         "contact",
         "schuldnerberatung",
-        "offer",
+        "debtway",
         "team",
         "footer",
         "privacy",

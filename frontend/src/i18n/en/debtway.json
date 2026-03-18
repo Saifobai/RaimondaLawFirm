@@ -1,0 +1,65 @@
+{
+  "sectionLabel": "Your way out of debt",
+  "sectionSubtitle": "Focus: Private Individuals & Crisis Help",
+  "servicesSection": {
+    "title": "Ways out of the Debt Trap",
+    "clusters": [
+      {
+        "headline": "Out-of-Court Settlement",
+        "title": "Debt-free without insolvency",
+        "content": "Negotiating with creditors for the best possible result without court proceedings. We handle all correspondence for you.",
+        "keywords": ["Discreet", "No Court", "Individual Negotiation"],
+        "cta": "Learn more"
+      },
+      {
+        "headline": "Private Insolvency",
+        "title": "Regulated Debt Discharge",
+        "content": "Legal process according to InsO. Achieve complete debt freedom after just three years by complying with all requirements.",
+        "keywords": ["3 Years", "Legally Regulated", "Debt Discharge"],
+        "cta": "Learn more"
+      },
+      {
+        "headline": "Keep Your Property",
+        "title": "Home Protection Despite Debt",
+        "content": "We reduce debt and installments so that you can keep your home permanently. Act quickly against foreclosures.",
+        "keywords": ["Home Protection", "Rate Adjustment", "Stop Foreclosure"],
+        "cta": "Learn more"
+      },
+      {
+        "headline": "Garnishment Help",
+        "title": "Immediate Aid for Blocks",
+        "content": "Immediate support for account and wage garnishment. Setting up P-Accounts and checking garnishment exemption limits.",
+        "keywords": ["P-Account", "Wage Garnishment", "Immediate Aid"],
+        "cta": "Emergency Help"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "Our Consultation Process",
+    "items": [
+      {
+        "title": "Initial Contact",
+        "description": "Contact us via form or phone. We review your options and get back to you by the next business day at the latest."
+      },
+      {
+        "title": "Free Consultation",
+        "description": "Non-binding analysis (phone, video, or in-office). You will receive an individual solution proposal for your situation."
+      },
+      {
+        "title": "Negotiations",
+        "description": "We handle all communication, obtain actual claim amounts, and conduct out-of-court settlement negotiations."
+      },
+      {
+        "title": "Debt Relief",
+        "description": "After successful negotiations, you pay adjusted installments. The end result is debt freedom or a §305 InsO certificate."
+      }
+    ]
+  },
+  "liveFeedLabel": "CURRENT STATUS",
+  "liveFeedItem1": "Out-of-court settlement: -85% debt burden",
+  "liveFeedItem2": "Foreclosure successfully halted",
+  "liveFeedItem3": "P-Konto protection activated",
+  "liveFeedItem4": "Residual debt discharge confirmed",
+  "strategyLabel": "STRATEGY MODE",
+  "contactButton": "Request Consultation Now"
+}

@@ -1,0 +1,65 @@
+{
+  "sectionLabel": "Ihre Wege aus der Schuldenkrise",
+  "sectionSubtitle": "Fokus: Privatpersonen & Krisenhilfe",
+  "servicesSection": {
+    "title": "Wege aus der Schuldenfalle",
+    "clusters": [
+      {
+        "headline": "Außergerichtliche Einigung",
+        "title": "Schuldenfrei ohne Insolvenz",
+        "content": "Verhandlungen mit Gläubigern für das bestmögliche Ergebnis, ohne gerichtliches Verfahren. Wir übernehmen die komplette Korrespondenz.",
+        "keywords": ["Diskreter", "Kein Gericht", "Individuelle Verhandlung"],
+        "cta": "Mehr erfahren"
+      },
+      {
+        "headline": "Privatinsolvenz",
+        "title": "Geregelte Restschuldbefreiung",
+        "content": "Gesetzliches Verfahren nach InsO. Erreichen Sie die vollständige Schuldenfreiheit nach bereits drei Jahren bei Einhaltung aller Auflagen.",
+        "keywords": ["3 Jahre", "Gesetzlich geregelt", "Restschuldbefreiung"],
+        "cta": "Mehr erfahren"
+      },
+      {
+        "headline": "Immobilie behalten",
+        "title": "Hausrettung trotz Schulden",
+        "content": "Wir reduzieren Schulden und Raten so, dass Sie Ihr Eigenheim dauerhaft halten können. Handeln Sie schnell gegen Zwangsversteigerungen.",
+        "keywords": ["Hausrettung", "Ratenanpassung", "Stopp Zwangsversteigerung"],
+        "cta": "Mehr erfahren"
+      },
+      {
+        "headline": "Hilfe bei Pfändung",
+        "title": "Soforthilfe bei Sperren",
+        "content": "Sofortige Unterstützung bei Konto- und Lohnpfändung. Einrichtung von P-Konten und Prüfung der Pfändungsfreibeträge.",
+        "keywords": ["P-Konto", "Lohnpfändung", "Soforthilfe"],
+        "cta": "Notfall-Hilfe"
+      }
+    ]
+  },
+  "advantages": {
+    "title": "So läuft unsere Beratung ab",
+    "items": [
+      {
+        "title": "Kontaktaufnahme",
+        "description": "Sie melden sich per Formular oder Telefon. Wir prüfen Ihre Optionen und melden uns spätestens am nächsten Werktag zurück."
+      },
+      {
+        "title": "Kostenloses Gespräch",
+        "description": "Unverbindliche Analyse Ihrer Situation (Telefon, Video oder Kanzlei). Sie erhalten einen individuellen Lösungsvorschlag."
+      },
+      {
+        "title": "Verhandlungen",
+        "description": "Wir übernehmen die komplette Kommunikation, holen Forderungshöhen ein und führen die außergerichtlichen Vergleiche durch."
+      },
+      {
+        "title": "Entschuldung",
+        "description": "Nach erfolgreichen Vergleichen zahlen Sie angepasste Raten. Am Ende steht die Schuldenfreiheit oder die Bescheinigung nach §305 InsO."
+      }
+    ]
+  },
+  "liveFeedLabel": "AKTUELLER STATUS",
+  "liveFeedItem1": "Außergerichtlicher Vergleich: -85% Schuldenlast",
+  "liveFeedItem2": "Zwangsversteigerung erfolgreich gestoppt",
+  "liveFeedItem3": "P-Konto Schutz aktiviert",
+  "liveFeedItem4": "Restschuldbefreiung bestätigt",
+  "strategyLabel": "STRATEGIE-MODUS",
+  "contactButton": "Jetzt Beratung anfordern"
+}
