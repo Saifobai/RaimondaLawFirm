@@ -1,9 +1,11 @@
 {
   "intro": {
-  "text1": "Business and Law from a Single Source. Helping You Regain Financial Control.",
-  "text2": "Are you facing difficult financial decisions, dealing with debt, or planning your expansion into Lithuania?",
-  "text3": "We are the firm that combines economic expertise with legal precision – for individuals and businesses in Germany and Lithuania."
+    "text1": "Wirtschaft & Recht aus einer Hand. Damit Sie Ihre finanzielle Kontrolle zurückgewinnen.",
+  "text2": "Sie stehen vor schwierigen wirtschaftlichen Entscheidungen, kämpfen mit Schulden oder planen den Schritt nach Litauen?",
+  "text3": "Wir sind die Kanzlei, die wirtschaftliche Expertise mit anwaltlicher Präzision verbindet – für Privatpersonen und Unternehmen in Deutschland und Litauen."
+  
 },
+
   "value": {
     "title1": "Ganzheitlicher Ansatz",
     "desc1": "Wir vereinen Recht und Wirtschaft für nachhaltige Lösungen.",
@@ -14,6 +16,15 @@
   },
   "servicesSection": {
     "title": "Unsere Schwerpunkte für Ihren Erfolg",
+    "slide":"Zum Erkunden wischen",
+    "area":"Tätigkeitsbereich",
+    "secure":"Sichern Sie Ihre Zukunft",
+    "conversation":"ein Gespräch beginnen",
+    "choose":"Warum uns wählen",
+    "legacy":"eine tradition, die auf aufbaut",
+    "trust":"vertrauen",
+    "and":"und",
+    "strategy":"strategie",
     "sideTitle": "Wenige Schritte zu den besten juristischen Lösungen für Ihr Unternehmen.",
     "contactButton": "Kontaktieren Sie uns",
     "clusters": [

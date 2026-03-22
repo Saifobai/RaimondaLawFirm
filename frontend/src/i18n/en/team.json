@@ -120,6 +120,7 @@
   "cta": {
     "title": "Would you like to meet our team personally?",
     "text": "Use our free initial consultation to speak directly with one of our experts about your case.",
-    "button": "Book your free consultation now"
+    "button": "Book your free consultation now",    
+    "expert":"Expert Associate"
   }
 }
