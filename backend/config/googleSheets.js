@@ -1,10 +1,18 @@
 import { google } from "googleapis";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const auth = new google.auth.JWT(
-    process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    null,
-    process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
-    ["https://www.googleapis.com/auth/spreadsheets"]
-);
+// Fix __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-export const sheets = google.sheets({ version: "v4", auth });
+// Point to your JSON key file
+const auth = new google.auth.GoogleAuth({
+    keyFile: path.join(__dirname, "service-account.json"),
+    scopes: ["https://www.googleapis.com/auth/spreadsheets"],
+});
+
+export const sheets = google.sheets({
+    version: "v4",
+    auth,
+});

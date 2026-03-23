@@ -1,7 +1,6 @@
 import { sheets } from "../config/googleSheets.js";
 
 export const appendAnfrageRow = async (data) => {
-
     const values = [[
         new Date().toISOString(),
         data.firstname,
@@ -12,6 +11,7 @@ export const appendAnfrageRow = async (data) => {
         data.claims,
         data.income,
         data.marital,
+        data.children,
         data.jobField,
         data.job,
         data.unemployed,
@@ -20,13 +20,15 @@ export const appendAnfrageRow = async (data) => {
         data.vehicle,
         data.property,
         data.knowCreditors,
-        data.notes
+        data.notes,
     ]];
 
-    await sheets.spreadsheets.values.append({
+    const response = await sheets.spreadsheets.values.append({
         spreadsheetId: process.env.GOOGLE_SHEET_ID,
         range: "Anfragen!A1",
         valueInputOption: "USER_ENTERED",
         resource: { values },
     });
+
+    return response;
 };
