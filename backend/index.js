@@ -13,7 +13,11 @@ const app = express();
 // MIDDLEWARES
 // ======================
 app.use(cors({
-    origin: ["http://localhost:5173"],
+    origin:
+        ["http://localhost:5173",
+            "http://kanzlei-dr-jura-kraemer.com",
+            "http://www.kanzlei-dr-jura-kraemer.com"
+        ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
