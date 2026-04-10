@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import NavLogo from "../../assets/NavLogo.jpeg";
+import NavLogo from "../../assets/NavLogo.png";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {

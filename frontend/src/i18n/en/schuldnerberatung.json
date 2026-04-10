@@ -10,6 +10,17 @@
     "notes": "Your Notes"
   },
 
+ "features": {
+    "privacyTitle": "Privacy",
+    "privacyDesc": "Your data is handled securely and transparently.",
+
+    "legalTitle": "Legal",
+    "legalDesc": "All processes comply with applicable legal regulations.",
+
+    "confidentialTitle": "Confidentiality",
+    "confidentialDesc": "Your information remains strictly confidential."
+  },
+
   "buttons": {
     "back": "Back",
     "next": "Next",

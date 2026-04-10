@@ -19,13 +19,7 @@ export default function Hero() {
   const { t } = useTranslation("hero");
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const slides = [
-    { image: slide1 },
-    { image: slide2 },
-    { image: slide3 },
-    { image: slide4 },
-    { image: slide5 },
-  ];
+  const slides = [{ image: slide1 }, { image: slide2 }, { image: slide3 }];
   const icons = [Briefcase, RefreshCw, Rocket, Globe];
   const translatedBoxes = t("infoBoxes", { returnObjects: true }) || [];
 
@@ -117,15 +111,15 @@ export default function Hero() {
             <div className="relative z-10 h-full flex items-center">
               {/* Responsive width and alignment */}
               <div className="w-full md:w-1/2 px-6 lg:ml-36 lg:px-4 text-white pb-32 md:pb-0 text-center md:text-left">
-                <h2 className="text-4xl lg:text-7xl font-serif italic leading-[1.1] mb-6">
+                <h2 className="text-4xl lg:text-5xl font-serif italic leading-[1.1] mb-6 max-w-2xl text-balance">
                   {t("title")}
                 </h2>
-                <p className="text-gray-300 mb-10 max-w-xl mx-auto md:mx-0 font-light text-lg">
+                <p className="text-gray-300 mb-10 max-w-xl mx-auto md:mx-0 font-light text-xl">
                   {t("subtitle")}
                 </p>
                 <a
                   href="#contact"
-                  className="inline-block bg-[#C9B38C] hover:bg-white hover:text-[#C9B38C] text-white px-12 py-4 rounded-sm font-bold uppercase tracking-[0.2em] text-xs transition-all duration-500 shadow-xl"
+                  className="inline-block bg-[#C9B38C] hover:bg-white hover:text-[#C9B38C] text-white px-12 py-4 rounded-sm font-bold uppercase tracking-[0.2em] text-[14px] transition-all duration-500 shadow-xl"
                 >
                   {t("cta")}
                 </a>
