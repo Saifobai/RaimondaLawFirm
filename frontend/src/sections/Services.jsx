@@ -1,152 +1,3 @@
-// import React, { useState, useRef } from "react";
-// import { useTranslation } from "react-i18next";
-// import { motion } from "framer-motion";
-// import { ArrowUpRight } from "lucide-react";
-// import gsap from "gsap";
-
-// export default function Services() {
-//   const { t } = useTranslation("services");
-//   const [hoveredIndex, setHoveredIndex] = useState(null);
-//   const cardsRef = useRef([]);
-
-//   const services = t("services.items", { returnObjects: true }) || [];
-
-//   const handleMouseMove = (e, index) => {
-//     const card = cardsRef.current[index];
-//     if (!card) return;
-//     const rect = card.getBoundingClientRect();
-
-//     // Calculate mouse position relative to card center for a 3D tilt
-//     const x = e.clientX - rect.left;
-//     const y = e.clientY - rect.top;
-//     const centerX = rect.width / 2;
-//     const centerY = rect.height / 2;
-
-//     const rotateX = (y - centerY) / 25;
-//     const rotateY = (centerX - x) / 25;
-
-//     gsap.to(card, {
-//       rotateX: rotateX,
-//       rotateY: rotateY,
-//       duration: 0.5,
-//       ease: "power2.out",
-//       transformPerspective: 1000,
-//     });
-//   };
-
-//   const handleMouseLeave = (index) => {
-//     setHoveredIndex(null);
-//     gsap.to(cardsRef.current[index], {
-//       rotateX: 0,
-//       rotateY: 0,
-//       duration: 1,
-//       ease: "elastic.out(1, 0.3)",
-//     });
-//   };
-
-//   return (
-//     <section className="relative bg-[#262B3E] py-40 px-6 overflow-hidden">
-//       {/* --- ARCHITECTURAL BACKGROUND --- */}
-//       <div className="absolute inset-0 opacity-10 pointer-events-none">
-//         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#BA8C61_0.5px,transparent_0.5px)] [background-size:40px_40px]" />
-//       </div>
-
-//       <div className="max-w-[1500px] mx-auto relative z-10">
-//         {/* --- THE MASTER HEADER --- */}
-//         <div className="flex flex-col md:flex-row items-end justify-between mb-32 gap-10">
-//           <div className="space-y-6">
-//             <div className="h-px w-24 bg-[#BA8C61]" />
-//             <h2 className="text-7xl lg:text-[5vw] font-serif italic text-white leading-[0.8] tracking-tighter uppercase">
-//               {t("services.sectionTitle")}
-//             </h2>
-//           </div>
-//         </div>
-
-//         {/* --- UNIFORM FLEX ENGINE --- */}
-//         <div className="flex flex-wrap gap-4 lg:gap-0 border border-white/10 bg-white/[0.02]">
-//           {services.map((service, idx) => (
-//             <div
-//               key={idx}
-//               ref={(el) => (cardsRef.current[idx] = el)}
-//               onMouseMove={(e) => handleMouseMove(e, idx)}
-//               onMouseLeave={() => handleMouseLeave(idx)}
-//               onMouseEnter={() => setHoveredIndex(idx)}
-//               /* FLEX LOGIC:
-//                 On LG screens, exactly 3 per row (33.33%).
-//                 Border-right creates a seamless grid look without gaps.
-//               */
-//               className="relative flex-grow basis-full md:basis-[48%] lg:basis-[33.33%] min-h-[650px] p-12 lg:border-r lg:border-b border-white/10 flex flex-col justify-between group overflow-hidden transition-all duration-700 hover:bg-[#2D334A]"
-//             >
-//               {/* Idle State: Big Number */}
-//               <div className="relative z-10">
-//                 <div className="flex justify-between items-start">
-//                   <span className="text-6xl font-serif italic text-white/5 group-hover:text-[#BA8C61]/20 transition-colors duration-500">
-//                     0{idx + 1}
-//                   </span>
-//                   <ArrowUpRight className="text-white/10 group-hover:text-[#BA8C61] transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-//                 </div>
-
-//                 <div className="mt-20 space-y-6">
-//                   <h3 className="text-[#BA8C61] font-mono text-[9px] tracking-[0.6em] uppercase">
-//                     {service.subtitle}
-//                   </h3>
-//                   {/* FLUID TYPE: Text scales so it NEVER overflows the container */}
-//                   <h4 className="text-[clamp(2rem,3vw,3.5rem)] font-serif italic text-white leading-none tracking-tight break-words hyphens-auto">
-//                     {service.title}
-//                   </h4>
-//                 </div>
-//               </div>
-
-//               {/* Hover State: Reveal Description */}
-//               <div className="relative z-10 mt-auto pt-10 border-t border-white/5 overflow-hidden">
-//                 <motion.p
-//                   animate={{
-//                     y: hoveredIndex === idx ? 0 : 20,
-//                     opacity: hoveredIndex === idx ? 1 : 0.3,
-//                   }}
-//                   className="text-white/60 text-lg font-light leading-relaxed italic"
-//                 >
-//                   {service.content}
-//                 </motion.p>
-
-//                 <div className="mt-8 flex items-center gap-4">
-//                   <div className="h-[1px] flex-grow bg-white/5" />
-//                   {/* <span className="text-[9px] font-black tracking-[0.4em] uppercase text-[#BA8C61]">
-//                     Initiate
-//                   </span> */}
-//                 </div>
-//               </div>
-
-//               {/* THE "AWARD" GLOW: Follows mouse indirectly */}
-//               <motion.div
-//                 animate={{
-//                   opacity: hoveredIndex === idx ? 0.4 : 0,
-//                   scale: hoveredIndex === idx ? 1.2 : 0.8,
-//                 }}
-//                 className="absolute -inset-10 bg-[radial-gradient(circle_at_center,_#BA8C61_0%,_transparent_70%)] blur-[80px] pointer-events-none z-0"
-//               />
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* --- FOOTER CTA --- */}
-//         <div className="mt-32 flex flex-col items-center">
-//           <motion.div
-//             initial={{ scaleX: 0 }}
-//             whileInView={{ scaleX: 1 }}
-//             className="w-full h-px bg-gradient-to-r from-transparent via-[#BA8C61] to-transparent mb-12"
-//           />
-//           <button className="px-20 py-10 bg-white text-[#262B3E] font-black text-[11px] tracking-[1em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500">
-//             {t("services.btn")}
-//           </button>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-//====================================================================
-//====================================================================
 import React, { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -207,7 +58,7 @@ export default function Services() {
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-20 md:mb-32 gap-6">
           <div className="space-y-6">
             <div className="h-px w-16 md:w-24 bg-[#BA8C61]" />
-            <h2 className="text-5xl sm:text-6xl lg:text-[5vw] font-serif italic text-white leading-[0.9] tracking-tighter uppercase">
+            <h2 className="text-5xl sm:text-6xl lg:text-[3vw] font-serif italic text-white leading-[0.9] tracking-tighter uppercase">
               {t("services.sectionTitle")}
             </h2>
           </div>
@@ -235,14 +86,14 @@ export default function Services() {
                   <span className="text-5xl md:text-6xl font-serif italic text-white/5 group-hover:text-[#BA8C61]/20 transition-colors duration-500">
                     0{idx + 1}
                   </span>
-                  <ArrowUpRight className="text-white/20 lg:text-white/10 group-hover:text-[#BA8C61] transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <ArrowUpRight className="text-white/70 lg:text-white/60 group-hover:text-[#BA8C61] transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
 
                 <div className="mt-12 md:mt-20 space-y-4 md:space-y-6">
-                  <h3 className="text-[#BA8C61] font-mono text-[8px] md:text-[9px] tracking-[0.5em] md:tracking-[0.6em] uppercase">
+                  <h3 className="text-[#BA8C61] font-mono text-[8px] md:text-[10px] tracking-[0.5em] md:tracking-[0.6em] uppercase">
                     {service.subtitle}
                   </h3>
-                  <h4 className="text-3xl md:text-[clamp(2rem,3vw,3.5rem)] font-serif italic text-white leading-tight md:leading-none tracking-tight break-words">
+                  <h4 className="text-3xl md:text-[clamp(1.5rem,2vw,2rem)] font-serif italic text-white leading-tight md:leading-none tracking-tight break-words">
                     {service.title}
                   </h4>
                 </div>
@@ -259,7 +110,7 @@ export default function Services() {
                       transition: { duration: 0.8, ease: "circOut" },
                     },
                   }}
-                  className="text-white/60 text-base md:text-lg font-light leading-relaxed italic"
+                  className="text-white/80 text-base md:text-lg font-light leading-relaxed italic"
                 >
                   {service.content}
                 </motion.p>
