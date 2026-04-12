@@ -105,7 +105,7 @@ export default function Contact() {
                 {t("title")}
               </span>
             </div>
-            <h2 className="text-5xl md:text-8xl font-serif italic text-white tracking-tighter leading-[0.9]">
+            <h2 className="text-5xl md:text-5xl font-serif italic text-white tracking-tighter leading-[0.9]">
               {t("subtitle")}
             </h2>
           </motion.div>
@@ -148,7 +148,7 @@ export default function Contact() {
                       className="peer w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-[#BA8C61] text-white transition-all duration-500"
                     />
                     <label
-                      className="absolute left-0 top-4 text-white/40 text-[10px] uppercase tracking-widest transition-all 
+                      className="absolute left-0 top-4 text-white/70 text-[10px] uppercase tracking-widest transition-all 
                       peer-placeholder-shown:text-sm peer-placeholder-shown:top-4 
                       peer-focus:-top-4 peer-focus:text-[#BA8C61]
                       peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[#BA8C61]"
@@ -170,8 +170,8 @@ export default function Contact() {
                   className="peer w-full bg-transparent border-b border-white/20 py-4 resize-none outline-none focus:border-[#BA8C61] text-white transition-all duration-500"
                 />
                 <label
-                  className="absolute left-0 top-4 text-white/40 text-[10px] uppercase tracking-widest transition-all 
-                  peer-placeholder-shown:text-sm peer-placeholder-shown:top-4 
+                  className="absolute left-0 top-4 text-white/70 text-[13px] uppercase tracking-widest transition-all 
+                  peer-placeholder-shown:text-[15px] peer-placeholder-shown:top-4 
                   peer-focus:-top-4 peer-focus:text-[#BA8C61]
                   peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[#BA8C61]"
                 >
@@ -179,7 +179,7 @@ export default function Contact() {
                 </label>
               </div>
 
-              <div className="flex items-start gap-4 text-[17px] text-white/40 leading-relaxed group cursor-pointer">
+              <div className="flex items-start gap-4 text-[17px] text-white/70 leading-relaxed group cursor-pointer">
                 <input
                   type="checkbox"
                   required
@@ -205,12 +205,12 @@ export default function Contact() {
                     : "hover:gap-16"
                 }`}
               >
-                <span className="text-[11px] font-black uppercase tracking-[0.4em] text-white group-hover:text-[#BA8C61] transition-colors">
+                <span className="text-[13px] font-black uppercase tracking-[0.4em] text-white group-hover:text-[#BA8C61] transition-colors">
                   {loading ? "Sending..." : t("form.send")}
                 </span>
-                <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-white/10 group-hover:border-[#BA8C61] transition-all">
+                <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-white/50 group-hover:border-[#BA8C61] transition-all">
                   <ArrowRight
-                    size={18}
+                    size={22}
                     className="group-hover:translate-x-1 transition-transform"
                   />
                 </div>
@@ -239,19 +239,19 @@ export default function Contact() {
                   <MapPin
                     size={20}
                     className={
-                      activeKey === key ? "text-[#BA8C61]" : "text-white/20"
+                      activeKey === key ? "text-[#BA8C61]" : "text-white/50"
                     }
                   />
                 </div>
-                <p className="text-white/50 font-light mb-8 text-sm leading-relaxed max-w-[200px]">
+                <p className="text-white/70 font-light mb-8 text-lg leading-relaxed max-w-[200px]">
                   {loc.address}
                 </p>
                 <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-6 mt-4">
-                  <div className="flex items-center gap-3 text-[10px] tracking-widest uppercase text-white/40">
-                    <Phone size={12} className="text-[#BA8C61]/50" /> {loc.tel}
+                  <div className="flex items-center gap-3 text-[15px] tracking-widest uppercase text-white/70">
+                    <Phone size={20} className="text-[#BA8C61]/80" /> {loc.tel}
                   </div>
-                  <div className="flex items-center gap-3 text-[10px] tracking-widest uppercase text-white/40">
-                    <Printer size={12} className="text-[#BA8C61]/50" />{" "}
+                  <div className="flex items-center gap-3 text-[15px] tracking-widest uppercase text-white/70">
+                    <Printer size={20} className="text-[#BA8C61]/80" />{" "}
                     {loc.fax}
                   </div>
                 </div>
@@ -261,20 +261,20 @@ export default function Contact() {
             <div className="p-10 bg-white/[0.02] border border-white/5 flex flex-col gap-6">
               <div className="flex items-center gap-6 group">
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#BA8C61] transition-colors">
-                  <Mail size={16} className="text-[#BA8C61]" />
+                  <Mail size={20} className="text-[#BA8C61]" />
                 </div>
-                <span className="text-sm tracking-widest font-light text-white/70">
+                <span className="text-[19px] tracking-widest font-light text-white/70">
                   info@wjk-recht.de
                 </span>
               </div>
-              <div className="flex items-center gap-6 group">
+              {/* <div className="flex items-center gap-6 group">
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#BA8C61] transition-colors">
                   <Clock size={16} className="text-[#BA8C61]" />
                 </div>
-                <span className="text-[11px] text-white/40 uppercase tracking-widest">
+                <span className="text-[15px] text-white/70 uppercase tracking-widest">
                   {t("office.hours")}
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

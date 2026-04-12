@@ -58,7 +58,7 @@ export default function Services() {
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-20 md:mb-32 gap-6">
           <div className="space-y-6">
             <div className="h-px w-16 md:w-24 bg-[#BA8C61]" />
-            <h2 className="text-5xl sm:text-6xl lg:text-[3vw] font-serif italic text-white leading-[0.9] tracking-tighter uppercase">
+            <h2 className="text-5xl sm:text-6xl lg:text-[2.5vw] font-serif italic text-white leading-[0.9] tracking-tighter uppercase">
               {t("services.sectionTitle")}
             </h2>
           </div>

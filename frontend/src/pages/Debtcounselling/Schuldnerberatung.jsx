@@ -159,24 +159,25 @@ export default function Schuldnerberatung() {
             {t("title")}
           </h1>
 
-          <p className="text-white/50 text-base lg:text-lg">{t("subtitle")}</p>
+          <p className="text-white/70 text-base lg:text-xl">{t("subtitle")}</p>
         </div>
 
-        <div className="hidden lg:flex flex-col space-y-10 mt-10">
+        {/* Updated Feature Section: Responsive & Enhanced Typography */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-y-12 lg:gap-y-10 lg:mt-10">
           <Feature
-            icon={<ShieldCheck size={24} />}
+            icon={<ShieldCheck size={32} className="text-[#BA8C61]" />}
             title={t("features.privacyTitle")}
             desc={t("features.privacyDesc")}
           />
 
           <Feature
-            icon={<Scale size={24} />}
+            icon={<Scale size={32} className="text-[#BA8C61]" />}
             title={t("features.legalTitle")}
             desc={t("features.legalDesc")}
           />
 
           <Feature
-            icon={<Lock size={24} />}
+            icon={<Lock size={32} className="text-[#BA8C61]" />}
             title={t("features.confidentialTitle")}
             desc={t("features.confidentialDesc")}
           />
@@ -188,7 +189,7 @@ export default function Schuldnerberatung() {
       <div className="flex-1 flex flex-col justify-start lg:justify-center p-6 lg:p-24 relative overflow-y-auto">
         <button
           onClick={() => navigate(-1)}
-          className="fixed top-6 right-6 lg:absolute lg:top-12 lg:right-12 text-white/30 hover:text-white transition z-50"
+          className="fixed top-6 right-6 lg:absolute lg:top-12 lg:right-12 text-white/60 hover:text-white transition z-50"
         >
           <X size={28} />
         </button>
@@ -424,7 +425,7 @@ export default function Schuldnerberatung() {
 
 const Input = ({ label, error, ...props }) => (
   <div>
-    <label className="text-[10px] uppercase tracking-[0.2em] text-white/40 block mb-2">
+    <label className="text-[14px] uppercase tracking-[0.2em] text-white/60 block mb-2">
       {label}
     </label>
 
@@ -435,7 +436,7 @@ const Input = ({ label, error, ...props }) => (
       }`}
     />
 
-    {error && <p className="text-red-400 text-xs mt-2">{error}</p>}
+    {error && <p className="text-red-400 text-lg mt-2">{error}</p>}
   </div>
 );
 
@@ -448,16 +449,16 @@ const Checkbox = ({ name, label, checked, onChange, error }) => (
         checked={checked}
         onChange={onChange}
       />
-      <span className="text-sm text-white/60">{label}</span>
+      <span className="text-lg text-white/60">{label}</span>
     </label>
 
-    {error && <p className="text-red-400 text-xs mt-2">{error}</p>}
+    {error && <p className="text-red-400 text-lg mt-2">{error}</p>}
   </div>
 );
 
 const Select = ({ name, label, value, onChange, options, error }) => (
   <div>
-    <label className="text-[10px] uppercase tracking-[0.2em] text-white/40 block mb-3">
+    <label className="text-[14px] uppercase tracking-[0.2em] text-white/60 block mb-3">
       {label}
     </label>
 
@@ -485,11 +486,11 @@ const Feature = ({ icon, title, desc }) => (
     <div className="text-[#BA8C61] mt-1">{icon}</div>
 
     <div>
-      <h4 className="font-semibold text-[10px] uppercase tracking-[0.2em] text-white">
+      <h4 className="font-semibold text-[20px] uppercase tracking-[0.2em] text-white">
         {title}
       </h4>
 
-      <p className="text-white/40 text-[11px] mt-1 leading-relaxed">{desc}</p>
+      <p className="text-white/70 text-[16px] mt-1 leading-relaxed">{desc}</p>
     </div>
   </div>
 );
