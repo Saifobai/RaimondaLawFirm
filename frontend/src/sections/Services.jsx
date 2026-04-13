@@ -47,7 +47,10 @@ export default function Services() {
   };
 
   return (
-    <section className="relative bg-[#262B3E] py-24 md:py-40 px-5 md:px-6 overflow-hidden">
+    <section
+      id="services"
+      className="relative bg-[#262B3E] py-24 md:py-40 px-5 md:px-6 overflow-hidden"
+    >
       {/* --- ARCHITECTURAL BACKGROUND --- */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#BA8C61_0.5px,transparent_0.5px)] [background-size:30px_30px] md:[background-size:40px_40px]" />

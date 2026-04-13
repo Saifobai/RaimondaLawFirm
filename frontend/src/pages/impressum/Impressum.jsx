@@ -1,74 +1,125 @@
+// import { useTranslation } from "react-i18next";
+// import { motion } from "framer-motion";
+
+// export default function Impressum() {
+//   const { t } = useTranslation("impressum");
+//   const content = t("hero.content", { returnObjects: true }) || [];
+
+//   return (
+//     <section className="bg-[#050c18] text-slate-300 py-24 md:py-36 px-6">
+//       <div className="max-w-[850px] mx-auto">
+//         {/* HEADER */}
+//         <div className="mb-20">
+//           <p className="text-[10px] tracking-[0.35em] uppercase text-[#BA8C61] mb-6">
+//             Impressum
+//           </p>
+//           <div className="h-[1px] w-20 bg-[#BA8C61]" />
+//         </div>
+
+//         {/* CONTENT */}
+//         <div className="space-y-4">
+//           {content.map((line, i) => {
+//             const isHeadline =
+//               line.length < 60 &&
+//               !line.includes(":") &&
+//               !line.includes("@") &&
+//               !line.match(/\d{5}/) &&
+//               !line.startsWith("-");
+
+//             const isList = line.startsWith("-");
+
+//             return (
+//               <motion.p
+//                 key={i}
+//                 initial={{ opacity: 0, y: 10 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 transition={{ duration: 0.4, delay: i * 0.02 }}
+//                 className={`
+//                   leading-relaxed
+//                   ${isHeadline ? "text-white font-serif italic text-2xl mt-10" : ""}
+//                   ${isList ? "pl-6 text-[#BA8C61]" : "text-slate-400 text-lg"}
+//                 `}
+//               >
+//                 {line}
+//               </motion.p>
+//             );
+//           })}
+//         </div>
+
+//         {/* FOOTER */}
+//         <div className="mt-20 h-px bg-gradient-to-r from-[#BA8C61]/50 to-transparent" />
+//       </div>
+//     </section>
+//   );
+// }
+
+//=======================================================================
+import { useLayoutEffect } from "react"; // Add this
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-
+import gsap from "gsap"; // Add this
+import { ScrollTrigger } from "gsap/ScrollTrigger"; // Add this
+import ScrollToTop from "../../components/ScrollToTop";
 export default function Impressum() {
   const { t } = useTranslation("impressum");
+  const content = t("hero.content", { returnObjects: true }) || [];
 
-  const sections = t("sections", { returnObjects: true });
-  const safeSections = Array.isArray(sections) ? sections : [];
+  // --- FORCE SCROLL TO TOP ---
+  useLayoutEffect(() => {
+    // 1. Reset window to absolute top
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+
+    // 2. Clear out any GSAP pinning/scrolling math from the home page
+    ScrollTrigger.getAll().forEach((t) => t.kill());
+    ScrollTrigger.refresh();
+  }, []);
 
   return (
-    <section className="bg-[#050c18] text-slate-300 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        {/* Header Section with Law Firm Branding */}
-        <motion.header
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-12 md:mb-20 border-l-4 border-amber-600 pl-5 md:pl-8"
-        >
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-white mb-4 md:mb-6 leading-tight">
-            {t("hero.title")}
-          </h1>
-          <p className="text-amber-500 font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs">
-            Angaben gemäß § 5 TMG
+    <section className="bg-[#050c18] text-slate-300 py-24 md:py-36 px-6 min-h-screen">
+      <div className="max-w-[850px] mx-auto">
+        {/* HEADER */}
+        <div className="mb-20">
+          <p className="text-[10px] tracking-[0.35em] uppercase text-[#BA8C61] mb-6">
+            Impressum
           </p>
-        </motion.header>
-
-        {/* Content Sections */}
-        <div className="space-y-12 md:space-y-16">
-          {safeSections.map((section, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group"
-            >
-              <h2 className="text-lg md:text-xl font-serif font-bold text-white mb-4 md:mb-6 flex items-start">
-                {/* Visual marker consistent with Privacy page */}
-                <span className="w-1 md:w-1.5 h-6 md:h-8 bg-amber-600 mr-3 md:mr-4 mt-1 shrink-0 transition-all duration-300 group-hover:bg-white group-hover:h-10 hidden sm:block" />
-                <span className="leading-tight">{section.title}</span>
-              </h2>
-
-              <div className="space-y-3 md:space-y-4 leading-relaxed text-slate-400 pl-0 sm:pl-5 md:pl-6">
-                {section.content.map((line, index) => (
-                  <p
-                    key={index}
-                    className="text-base md:text-lg font-light break-words"
-                  >
-                    {/* Check if line contains an email-like structure to apply subtle styling */}
-                    {line.includes("@") ? (
-                      <span className="text-amber-500/80">{line}</span>
-                    ) : (
-                      line
-                    )}
-                  </p>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+          <div className="h-[1px] w-20 bg-[#BA8C61]" />
         </div>
 
-        {/* Professional Footer Divider */}
-        <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8 }}
-          className="mt-20 md:mt-24 h-px bg-gradient-to-r from-amber-600/50 via-slate-800 to-transparent"
-        />
+        {/* CONTENT */}
+        <div className="space-y-4">
+          {content.map((line, i) => {
+            const isHeadline =
+              line.length < 60 &&
+              !line.includes(":") &&
+              !line.includes("@") &&
+              !line.match(/\d{5}/) &&
+              !line.startsWith("-");
+
+            const isList = line.startsWith("-");
+
+            return (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} // Ensures animation only runs once
+                transition={{ duration: 0.4, delay: i * 0.02 }}
+                className={`
+                  leading-relaxed
+                  ${isHeadline ? "text-white font-serif italic text-2xl mt-10" : ""}
+                  ${isList ? "pl-6 text-[#BA8C61]" : "text-slate-400 text-lg"}
+                `}
+              >
+                {line}
+              </motion.p>
+            );
+          })}
+        </div>
+
+        {/* FOOTER */}
+        <div className="mt-20 h-px bg-gradient-to-r from-[#BA8C61]/50 to-transparent" />
       </div>
+      <ScrollToTop /> {/* Add this */}
     </section>
   );
 }

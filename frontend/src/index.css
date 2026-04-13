@@ -8,6 +8,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /* arrow icon */
 .heroSwiper .swiper-button-next::after,
 .heroSwiper .swiper-button-prev::after {
