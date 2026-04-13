@@ -139,7 +139,7 @@ export default function DebtWay() {
                   className={`text-3xl lg:text-5xl font-serif italic transition-all duration-700 ${
                     activeTab === idx
                       ? "text-white translate-x-2"
-                      : "text-white/30"
+                      : "text-white/80"
                   }`}
                 >
                   {service.headline}
@@ -212,9 +212,6 @@ export default function DebtWay() {
               ))}
             </div>
           </div>
-          <p className="text-[10px] font-mono text-white/20 uppercase tracking-[0.2em]">
-            System Cycle: {activeTab + 1} / {services.length}
-          </p>
         </footer>
       </div>
     </div>

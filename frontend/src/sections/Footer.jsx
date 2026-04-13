@@ -16,38 +16,14 @@ export default function Footer() {
             <h2 className="text-2xl font-serif italic tracking-wider text-white">
               {t("brand.name")}
             </h2>
-            <p className="text-white/80 text-md leading-relaxed max-w-xs font-light">
+            <p className="text-white/80 text-xl leading-relaxed max-w-xs font-light">
               {t("brand.tagline")}
             </p>
           </div>
 
-          {/* CONTACT */}
-          <div className="space-y-6">
-            <h4 className="text-[#BA8C61] uppercase tracking-[0.4em] text-[15px] font-bold">
-              {t("contact.title")}
-            </h4>
-            <div className="space-y-4 text-sm text-white/80 font-light">
-              <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-[#BA8C61]/80 shrink-0" />{" "}
-                {t("contact.address")}
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone size={18} className="text-[#BA8C61]/80 shrink-0" />{" "}
-                {t("contact.phone")}
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail size={18} className="text-[#BA8C61]/80 shrink-0" />{" "}
-                {t("contact.email")}
-              </div>
-            </div>
-          </div>
-
           {/* LINKS */}
           <div className="space-y-6">
-            <h4 className="text-[#BA8C61] uppercase tracking-[0.2em] text-[15px] font-bold">
-              Resources
-            </h4>
-            <ul className="space-y-3 text-sm text-white/80 font-light">
+            <ul className="space-y-3 text-xl text-white/80 font-light">
               <li>
                 <Link
                   to="/impressum"
@@ -62,11 +38,6 @@ export default function Footer() {
                   className="hover:text-[#BA8C61] transition-colors"
                 >
                   {t("links.privacy")}
-                </Link>
-              </li>
-              <li>
-                <Link to="/" className="hover:text-[#BA8C61] transition-colors">
-                  {t("links.sitemap")}
                 </Link>
               </li>
             </ul>
@@ -97,8 +68,7 @@ export default function Footer() {
         {/* BOTTOM SECTION */}
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[14px] text-white/80 uppercase tracking-[0.3em] font-medium">
-            © {new Date().getFullYear()} {t("brand.name")}.{" "}
-            {t("brand.rights") || "All rights reserved."}
+            Dr. jur. Kraemer GmbH
           </p>
           <div className="h-px w-12 bg-[#BA8C61]/50 hidden md:block" />
         </div>

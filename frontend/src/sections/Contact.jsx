@@ -101,7 +101,7 @@ export default function Contact() {
           >
             <div className="flex items-center gap-6 mb-8">
               <span className="h-px w-16 bg-[#BA8C61]/40" />
-              <span className="text-[#BA8C61] uppercase tracking-[0.5em] text-[10px] font-bold">
+              <span className="text-[#BA8C61] uppercase tracking-[0.5em] text-[14px] font-bold">
                 {t("title")}
               </span>
             </div>
@@ -110,7 +110,7 @@ export default function Contact() {
             </h2>
           </motion.div>
           <div className="lg:col-span-4 flex items-end">
-            <p className="text-white/50 text-lg font-light leading-relaxed italic border-l border-white/10 pl-8">
+            <p className="text-white/80 text-lg font-light leading-relaxed italic border-l border-white/10 pl-8">
               {t("description")}
             </p>
           </div>
@@ -264,17 +264,17 @@ export default function Contact() {
                   <Mail size={20} className="text-[#BA8C61]" />
                 </div>
                 <span className="text-[19px] tracking-widest font-light text-white/70">
-                  info@wjk-recht.de
+                  info@kanzlei-dr-jura-kraemer.de
                 </span>
               </div>
-              {/* <div className="flex items-center gap-6 group">
+              <div className="flex items-center gap-6 group">
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#BA8C61] transition-colors">
-                  <Clock size={16} className="text-[#BA8C61]" />
+                  <Mail size={20} className="text-[#BA8C61]" />
                 </div>
-                <span className="text-[15px] text-white/70 uppercase tracking-widest">
-                  {t("office.hours")}
+                <span className="text-[19px] tracking-widest font-light text-white/70">
+                  info@kanzlei-dr-jura-kraemer.com
                 </span>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

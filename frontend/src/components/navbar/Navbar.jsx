@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import NavLogo from "../../assets/NavLogo.png";
+import NavLogo from "../../assets/NavLogo.jpeg";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
   const navLinks = [
     { name: t("home"), href: "#" },
     { name: t("services"), href: "#services" },
-    { name: t("offer"), href: "#offers" },
+
     { name: t("team"), href: "#team" },
     { name: t("contact"), href: "#contact" },
   ];
