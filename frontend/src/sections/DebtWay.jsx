@@ -85,9 +85,6 @@ export default function DebtWay() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BA8C61] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#BA8C61]"></span>
               </div>
-              <span className="text-[10px] tracking-widest uppercase font-bold text-white/70">
-                {t("strategyLabel")} • Auto-Sync On
-              </span>
             </div>
           </div>
         </header>

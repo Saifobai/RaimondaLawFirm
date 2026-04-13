@@ -254,7 +254,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleSmoothScroll(e, link.href)}
-                className="text-white/80 hover:text-[#C9B38C] text-[13px] xl:text-[14px] uppercase tracking-[0.2em] font-medium transition-all duration-300 whitespace-nowrap"
+                className="text-white hover:text-[#C9B38C] text-[13px] xl:text-[26px] uppercase tracking-[0.2em] font-medium transition-all duration-300 whitespace-nowrap"
               >
                 {link.name}
               </a>

@@ -110,7 +110,7 @@ export default function Contact() {
             </h2>
           </motion.div>
           <div className="lg:col-span-4 flex items-end">
-            <p className="text-white/80 text-lg font-light leading-relaxed italic border-l border-white/10 pl-8">
+            <p className="text-white text-lg font-light leading-relaxed italic border-l border-white/10 pl-8">
               {t("description")}
             </p>
           </div>
@@ -148,7 +148,7 @@ export default function Contact() {
                       className="peer w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-[#BA8C61] text-white transition-all duration-500"
                     />
                     <label
-                      className="absolute left-0 top-4 text-white/70 text-[10px] uppercase tracking-widest transition-all 
+                      className="absolute left-0 top-4 text-white text-[10px] uppercase tracking-widest transition-all 
                       peer-placeholder-shown:text-sm peer-placeholder-shown:top-4 
                       peer-focus:-top-4 peer-focus:text-[#BA8C61]
                       peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[#BA8C61]"
@@ -170,7 +170,7 @@ export default function Contact() {
                   className="peer w-full bg-transparent border-b border-white/20 py-4 resize-none outline-none focus:border-[#BA8C61] text-white transition-all duration-500"
                 />
                 <label
-                  className="absolute left-0 top-4 text-white/70 text-[13px] uppercase tracking-widest transition-all 
+                  className="absolute left-0 top-4 text-white text-[13px] uppercase tracking-widest transition-all 
                   peer-placeholder-shown:text-[15px] peer-placeholder-shown:top-4 
                   peer-focus:-top-4 peer-focus:text-[#BA8C61]
                   peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-[#BA8C61]"
@@ -179,7 +179,7 @@ export default function Contact() {
                 </label>
               </div>
 
-              <div className="flex items-start gap-4 text-[17px] text-white/70 leading-relaxed group cursor-pointer">
+              <div className="flex items-start gap-4 text-[17px] text-white leading-relaxed group cursor-pointer">
                 <input
                   type="checkbox"
                   required
@@ -190,7 +190,7 @@ export default function Contact() {
                 />
                 <label
                   htmlFor="consent"
-                  className="group-hover:text-white/70 transition-colors"
+                  className="group-hover:text-white transition-colors"
                 >
                   {t("consent")}
                 </label>
@@ -199,16 +199,16 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={!isValid || loading}
-                className={`group relative inline-flex items-center gap-12 pt-4 transition-all ${
+                className={`group relative text-white inline-flex items-center gap-12 pt-4 transition-all ${
                   !isValid || loading
-                    ? "opacity-30 cursor-not-allowed"
+                    ? "opacity-90 cursor-not-allowed"
                     : "hover:gap-16"
                 }`}
               >
                 <span className="text-[13px] font-black uppercase tracking-[0.4em] text-white group-hover:text-[#BA8C61] transition-colors">
                   {loading ? "Sending..." : t("form.send")}
                 </span>
-                <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-white/50 group-hover:border-[#BA8C61] transition-all">
+                <div className="relative flex items-center justify-center w-12 h-12 rounded-full border border-white group-hover:border-[#BA8C61] transition-all">
                   <ArrowRight
                     size={22}
                     className="group-hover:translate-x-1 transition-transform"

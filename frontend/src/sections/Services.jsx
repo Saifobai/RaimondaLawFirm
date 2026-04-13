@@ -137,7 +137,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="w-full h-px bg-gradient-to-r from-transparent via-[#BA8C61] to-transparent mb-12"
           />
-          <button className="w-full md:w-auto px-10 md:px-20 py-8 md:py-10 bg-white text-[#262B3E] font-black text-[10px] md:text-[11px] tracking-[0.6em] md:tracking-[1em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500">
+          <button className="w-full md:w-auto px-10 md:px-20 py-8 md:py-10 bg-white text-[#262B3E] font-black text-[10px] md:text-[26px] tracking-[0.6em] md:tracking-[0.5em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500">
             {t("services.btn")}
           </button>
         </div>

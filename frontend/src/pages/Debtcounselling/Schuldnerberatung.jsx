@@ -151,7 +151,7 @@ export default function Schuldnerberatung() {
           <h1 className="text-3xl lg:text-5xl font-serif italic mb-4 text-white">
             {t("title")}
           </h1>
-          <p className="text-white/70 text-base lg:text-xl">{t("subtitle")}</p>
+          <p className="text-white text-base lg:text-2xl">{t("subtitle")}</p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-y-12 lg:gap-y-10 lg:mt-10">
@@ -177,14 +177,14 @@ export default function Schuldnerberatung() {
       <div className="flex-1 flex flex-col justify-start lg:justify-center p-6 lg:p-24 relative overflow-y-auto">
         <button
           onClick={() => navigate(-1)}
-          className="fixed top-6 right-6 lg:absolute lg:top-12 lg:right-12 text-white/60 hover:text-white transition z-50"
+          className="fixed top-6 right-6 lg:absolute lg:top-12 lg:right-12 text-white hover:text-white transition z-50"
         >
           <X size={28} />
         </button>
 
         <div className="max-w-xl w-full mx-auto mt-10 lg:mt-0">
           <div className="mb-10 lg:mb-16">
-            <div className="text-xs uppercase tracking-widest text-[#BA8C61] mb-4 font-bold">
+            <div className="text-2xl uppercase tracking-widest text-[#BA8C61] mb-4 font-bold">
               {step + 1} / {totalSteps}
             </div>
             <div className="h-[2px] bg-white/10">
@@ -385,9 +385,9 @@ export default function Schuldnerberatung() {
               <div className="flex justify-between mt-16 pb-12">
                 <button
                   onClick={back}
-                  className={`${step === 0 ? "invisible" : ""} flex items-center gap-2 text-white/40`}
+                  className={`${step === 0 ? "invisible" : ""} flex items-center gap-2 text-white text-xl`}
                 >
-                  <ArrowLeft size={16} /> {t("buttons.back")}
+                  <ArrowLeft size={28} /> {t("buttons.back")}
                 </button>
 
                 <button
@@ -409,7 +409,7 @@ export default function Schuldnerberatung() {
 // Sub-components kept as they were
 const Input = ({ label, error, ...props }) => (
   <div className="w-full">
-    <label className="text-[14px] uppercase tracking-[0.2em] text-white/80 block mb-2">
+    <label className="text-[17px] uppercase tracking-[0.2em] text-white block mb-2">
       {label}
     </label>
     <input
@@ -430,7 +430,7 @@ const Checkbox = ({ name, label, checked, onChange, error }) => (
         onChange={onChange}
         className="accent-[#BA8C61] w-4 h-4"
       />
-      <span className="text-base text-white/80 group-hover:text-white transition-colors">
+      <span className="text-xl text-white group-hover:text-white transition-colors">
         {label}
       </span>
     </label>
@@ -440,7 +440,7 @@ const Checkbox = ({ name, label, checked, onChange, error }) => (
 
 const Select = ({ name, label, value, onChange, options, error }) => (
   <div>
-    <label className="text-[12px] uppercase tracking-[0.2em] text-white/80 block mb-4">
+    <label className="text-[17px] uppercase tracking-[0.2em] text-white block mb-4">
       {label}
     </label>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -449,7 +449,7 @@ const Select = ({ name, label, value, onChange, options, error }) => (
           key={opt.val}
           type="button"
           onClick={() => onChange({ target: { name, value: opt.val } })}
-          className={`p-4 border text-sm transition-all ${value === opt.val ? "border-[#BA8C61] bg-[#BA8C61]/10 text-white" : "border-white/10 text-white/70 hover:border-white/30"}`}
+          className={`p-4 border text-2xl transition-all ${value === opt.val ? "border-[#BA8C61] bg-[#BA8C61]/10 text-white" : "border-white/10 text-white/70 hover:border-white/30"}`}
         >
           {opt.lab}
         </button>
@@ -466,7 +466,7 @@ const Feature = ({ icon, title, desc }) => (
       <h4 className="font-semibold text-[17px] uppercase tracking-[0.2em] text-white">
         {title}
       </h4>
-      <p className="text-white/80 text-[17px] mt-2 leading-relaxed">{desc}</p>
+      <p className="text-white text-[17px] mt-2 leading-relaxed">{desc}</p>
     </div>
   </div>
 );

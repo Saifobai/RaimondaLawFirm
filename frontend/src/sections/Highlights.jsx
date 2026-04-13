@@ -654,12 +654,12 @@ export default function Highlights() {
               <h2 className="text-5xl md:text-8xl lg:text-[5rem] font-serif italic mb-8 lg:mb-12 leading-tight">
                 {t("servicesSection.title")}
               </h2>
-              <div className="flex items-center gap-6 text-white/80 group">
-                <span className="text-[10px] lg:text-sm tracking-[0.3em] uppercase font-semibold">
+              <div className="flex items-center gap-6 text-white group">
+                <span className="text-[13px] lg:text-xl tracking-[0.3em] uppercase font-semibold">
                   {t("servicesSection.slide")}
                 </span>
                 <ArrowRight
-                  size={18}
+                  size={36}
                   className="group-hover:translate-x-3 transition-transform"
                 />
               </div>
@@ -686,7 +686,7 @@ export default function Highlights() {
                   <h3 className="text-3xl md:text-5xl lg:text-6xl font-serif italic">
                     {service.headline || service.title}
                   </h3>
-                  <p className="text-white/80 text-xl font-light leading-relaxed">
+                  <p className="text-white text-2xl font-light leading-relaxed">
                     {service.content}
                   </p>
                 </div>

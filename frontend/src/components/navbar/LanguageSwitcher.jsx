@@ -87,10 +87,10 @@ export default function LanguageSwitcher({ closeMenu }) {
                     className="relative flex items-center justify-between px-4 py-4 group transition-colors hover:bg-white/[0.03]"
                   >
                     <span
-                      className={`text-[10px] font-bold tracking-[0.2em] transition-colors ${
+                      className={`text-[14px] font-bold tracking-[0.2em] transition-colors ${
                         i18n.language === l.code
                           ? "text-[#BA8C61]"
-                          : "text-white/40 group-hover:text-white"
+                          : "text-white group-hover:text-white"
                       }`}
                     >
                       {l.label}
