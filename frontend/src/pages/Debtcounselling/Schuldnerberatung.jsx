@@ -7,11 +7,34 @@ import {
   Scale,
   ChevronRight,
   ArrowLeft,
-  Check,
   Lock,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import toast, { Toaster } from "react-hot-toast"; // 1. Import Toast
+
+// Initial state for clearing the form later
+const initialFormState = {
+  debt: "",
+  claims: "",
+  income: "",
+  marital: "",
+  children: "",
+  jobField: "",
+  job: "",
+  unemployed: false,
+  selfEmployed: false,
+  garnished: false,
+  vehicle: false,
+  property: false,
+  knowCreditors: false,
+  firstname: "",
+  lastname: "",
+  email: "",
+  phone: "",
+  notes: "",
+  privacy: false,
+};
 
 export default function Schuldnerberatung() {
   const { t } = useTranslation("schuldnerberatung");
@@ -19,93 +42,51 @@ export default function Schuldnerberatung() {
 
   const [step, setStep] = useState(0);
   const totalSteps = 7;
-
   const [errors, setErrors] = useState({});
-
-  const [formData, setFormData] = useState({
-    debt: "",
-    claims: "",
-    income: "",
-    marital: "",
-    children: "",
-    jobField: "",
-    job: "",
-    unemployed: false,
-    selfEmployed: false,
-    garnished: false,
-    vehicle: false,
-    property: false,
-    knowCreditors: false,
-    firstname: "",
-    lastname: "",
-    email: "",
-    phone: "",
-    notes: "",
-    privacy: false,
-  });
+  const [formData, setFormData] = useState(initialFormState);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
-
-    setErrors((prev) => ({
-      ...prev,
-      [name]: "",
-    }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const validateStep = () => {
     const newErrors = {};
-
     if (step === 0) {
       if (!formData.debt) newErrors.debt = t("validation.required");
       if (!formData.claims) newErrors.claims = t("validation.required");
       if (!formData.income) newErrors.income = t("validation.required");
     }
-
-    if (step === 1) {
+    if (step === 1)
       if (!formData.marital) newErrors.marital = t("validation.required");
-    }
-
-    if (step === 2) {
+    if (step === 2)
       if (!formData.children) newErrors.children = t("validation.required");
-    }
-
     if (step === 3) {
       if (!formData.jobField) newErrors.jobField = t("validation.required");
       if (!formData.job && !formData.unemployed)
         newErrors.job = t("validation.required");
     }
-
     if (step === 5) {
       if (!formData.firstname) newErrors.firstname = t("validation.required");
       if (!formData.lastname) newErrors.lastname = t("validation.required");
-
       if (!formData.email) newErrors.email = t("validation.required");
       else if (!/\S+@\S+\.\S+/.test(formData.email))
         newErrors.email = t("validation.invalidEmail");
-
       if (!formData.phone) newErrors.phone = t("validation.required");
     }
-
     if (step === 6) {
       if (!formData.privacy) newErrors.privacy = t("validation.acceptPrivacy");
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const next = () => {
-    if (validateStep()) {
-      setStep((s) => Math.min(s + 1, totalSteps - 1));
-    }
-  };
-
+  const next = () =>
+    validateStep() && setStep((s) => Math.min(s + 1, totalSteps - 1));
   const back = () => setStep((s) => Math.max(s - 1, 0));
 
   useEffect(() => {
@@ -116,8 +97,12 @@ export default function Schuldnerberatung() {
     );
   }, [step]);
 
+  // 2. Updated Submit Function
   const submitForm = async () => {
     if (!validateStep()) return;
+
+    // Create a loading toast
+    const loadingToast = toast.loading("Sending request...");
 
     try {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/anfrage/send`, {
@@ -129,13 +114,19 @@ export default function Schuldnerberatung() {
       const data = await res.json();
 
       if (data.success) {
-        alert("Message sent successfully");
+        toast.success("Anfrage erfolgreich gesendet!", { id: loadingToast });
+
+        // 3. Clear fields & Reset
+        setFormData(initialFormState);
+        setStep(0);
       } else {
-        alert("Failed to send message");
+        toast.error("Error sending message.", { id: loadingToast });
       }
     } catch (error) {
       console.error("Submit error:", error);
-      alert("Server error");
+      toast.error("Server error. Please try again later.", {
+        id: loadingToast,
+      });
     }
   };
 
@@ -151,31 +142,29 @@ export default function Schuldnerberatung() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#8B806D] via-[#515565] to-[#2B3041] text-slate-100 flex flex-col lg:flex-row">
-      {/* SIDEBAR */}
+      {/* 4. Add the Toaster component here (Top Right) */}
+      <Toaster position="top-right" reverseOrder={false} />
 
+      {/* SIDEBAR */}
       <div className="w-full lg:w-1/3 p-8 lg:p-20 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10 bg-[#262B3D]">
         <div>
           <h1 className="text-3xl lg:text-5xl font-serif italic mb-4 text-white">
             {t("title")}
           </h1>
-
           <p className="text-white/70 text-base lg:text-xl">{t("subtitle")}</p>
         </div>
 
-        {/* Updated Feature Section: Responsive & Enhanced Typography */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-y-12 lg:gap-y-10 lg:mt-10">
           <Feature
             icon={<ShieldCheck size={32} className="text-[#BA8C61]" />}
             title={t("features.privacyTitle")}
             desc={t("features.privacyDesc")}
           />
-
           <Feature
             icon={<Scale size={32} className="text-[#BA8C61]" />}
             title={t("features.legalTitle")}
             desc={t("features.legalDesc")}
           />
-
           <Feature
             icon={<Lock size={32} className="text-[#BA8C61]" />}
             title={t("features.confidentialTitle")}
@@ -184,8 +173,7 @@ export default function Schuldnerberatung() {
         </div>
       </div>
 
-      {/* FORM */}
-
+      {/* FORM AREA */}
       <div className="flex-1 flex flex-col justify-start lg:justify-center p-6 lg:p-24 relative overflow-y-auto">
         <button
           onClick={() => navigate(-1)}
@@ -195,13 +183,10 @@ export default function Schuldnerberatung() {
         </button>
 
         <div className="max-w-xl w-full mx-auto mt-10 lg:mt-0">
-          {/* PROGRESS */}
-
           <div className="mb-10 lg:mb-16">
             <div className="text-xs uppercase tracking-widest text-[#BA8C61] mb-4 font-bold">
               {step + 1} / {totalSteps}
             </div>
-
             <div className="h-[2px] bg-white/10">
               <motion.div
                 className="h-full bg-[#BA8C61]"
@@ -275,15 +260,10 @@ export default function Schuldnerberatung() {
                     value={formData.children}
                     onChange={handleChange}
                     error={errors.children}
-                    options={[
-                      { val: "0", lab: t("options.children.0") },
-                      { val: "1", lab: t("options.children.1") },
-                      { val: "2", lab: t("options.children.2") },
-                      { val: "3", lab: t("options.children.3") },
-                      { val: "4", lab: t("options.children.4") },
-                      { val: "5", lab: t("options.children.5") },
-                      { val: "6", lab: t("options.children.6") },
-                    ]}
+                    options={["0", "1", "2", "3", "4", "5", "6"].map((v) => ({
+                      val: v,
+                      lab: t(`options.children.${v}`),
+                    }))}
                   />
                 )}
 
@@ -384,9 +364,12 @@ export default function Schuldnerberatung() {
                   <>
                     <textarea
                       name="notes"
+                      placeholder={
+                        t("steps.notesPlaceholder") || "Ihre Nachricht..."
+                      }
                       value={formData.notes}
                       onChange={handleChange}
-                      className="w-full bg-transparent border-b border-white/20 py-4 outline-none"
+                      className="w-full bg-white/5 border border-white/10 p-4 outline-none h-32 text-white"
                     />
                     <Checkbox
                       name="privacy"
@@ -409,7 +392,7 @@ export default function Schuldnerberatung() {
 
                 <button
                   onClick={step === 6 ? submitForm : next}
-                  className="bg-white text-[#262B3E] px-10 py-3 font-bold hover:bg-[#BA8C61] hover:text-white flex items-center gap-2"
+                  className="bg-white text-[#262B3E] px-10 py-3 font-bold hover:bg-[#BA8C61] hover:text-white flex items-center gap-2 transition-colors"
                 >
                   {step === 6 ? t("buttons.submit") : t("buttons.next")}
                   <ChevronRight size={18} />
@@ -423,74 +406,67 @@ export default function Schuldnerberatung() {
   );
 }
 
+// Sub-components kept as they were
 const Input = ({ label, error, ...props }) => (
-  <div>
-    <label className="text-[14px] uppercase tracking-[0.2em] text-white/60 block mb-2">
+  <div className="w-full">
+    <label className="text-[14px] uppercase tracking-[0.2em] text-white/80 block mb-2">
       {label}
     </label>
-
     <input
       {...props}
-      className={`w-full bg-transparent border-b py-3 outline-none ${
-        error ? "border-red-400" : "border-white/20"
-      }`}
+      className={`w-full bg-transparent border-b py-3 outline-none transition-colors ${error ? "border-red-400" : "border-white/20 focus:border-[#BA8C61]"}`}
     />
-
     {error && <p className="text-red-400 text-lg mt-2">{error}</p>}
   </div>
 );
 
 const Checkbox = ({ name, label, checked, onChange, error }) => (
   <div>
-    <label className="flex items-center gap-3 cursor-pointer">
+    <label className="flex items-center gap-3 cursor-pointer group">
       <input
         type="checkbox"
         name={name}
         checked={checked}
         onChange={onChange}
+        className="accent-[#BA8C61] w-4 h-4"
       />
-      <span className="text-lg text-white/60">{label}</span>
+      <span className="text-base text-white/80 group-hover:text-white transition-colors">
+        {label}
+      </span>
     </label>
-
     {error && <p className="text-red-400 text-lg mt-2">{error}</p>}
   </div>
 );
 
 const Select = ({ name, label, value, onChange, options, error }) => (
   <div>
-    <label className="text-[14px] uppercase tracking-[0.2em] text-white/60 block mb-3">
+    <label className="text-[12px] uppercase tracking-[0.2em] text-white/80 block mb-4">
       {label}
     </label>
-
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {options.map((opt) => (
         <button
           key={opt.val}
           type="button"
           onClick={() => onChange({ target: { name, value: opt.val } })}
-          className={`p-4 border ${
-            value === opt.val ? "border-[#BA8C61]" : "border-white/20"
-          }`}
+          className={`p-4 border text-sm transition-all ${value === opt.val ? "border-[#BA8C61] bg-[#BA8C61]/10 text-white" : "border-white/10 text-white/70 hover:border-white/30"}`}
         >
           {opt.lab}
         </button>
       ))}
     </div>
-
-    {error && <p className="text-red-400 text-xs mt-2">{error}</p>}
+    {error && <p className="text-red-400 text-lg mt-2">{error}</p>}
   </div>
 );
 
 const Feature = ({ icon, title, desc }) => (
   <div className="flex items-start gap-5">
-    <div className="text-[#BA8C61] mt-1">{icon}</div>
-
+    <div className="text-[#BA8C61] mt-1 shrink-0">{icon}</div>
     <div>
-      <h4 className="font-semibold text-[20px] uppercase tracking-[0.2em] text-white">
+      <h4 className="font-semibold text-[17px] uppercase tracking-[0.2em] text-white">
         {title}
       </h4>
-
-      <p className="text-white/70 text-[16px] mt-1 leading-relaxed">{desc}</p>
+      <p className="text-white/80 text-[17px] mt-2 leading-relaxed">{desc}</p>
     </div>
   </div>
 );
