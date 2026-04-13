@@ -145,13 +145,12 @@ export default function Team() {
             freeMode={true}
             speed={8000}
             autoplay={{ delay: 0, disableOnInteraction: false }}
-            // REDUCED WIDTH: Increasing slidesPerView makes each card narrower
-            slidesPerView={1.4}
-            spaceBetween={30}
+            slidesPerView={1.2}
+            spaceBetween={40}
             breakpoints={{
-              640: { slidesPerView: 2.2 },
-              1024: { slidesPerView: 3.5 },
-              1400: { slidesPerView: 4.5 }, // Shows more cards, making each one "skinnier"
+              640: { slidesPerView: 1.5 },
+              1024: { slidesPerView: 2.8 },
+              1400: { slidesPerView: 3.5 },
             }}
             className="overflow-visible swiper-linear"
           >
@@ -162,12 +161,12 @@ export default function Team() {
                   onMouseLeave={() => setHoveredSlug(null)}
                   className="group cursor-default h-full"
                 >
-                  {/* Card: Reduced horizontal padding (p-6) to allow image to be larger */}
-                  <div className="relative bg-white/[0.02] border border-white/5 p-6 lg:p-8 h-[580px] lg:h-[680px] flex flex-col items-center text-center transition-all duration-700 lg:group-hover:bg-white/[0.04] lg:group-hover:border-[#BA8C61]/20">
-                    {/* Top Aesthetic Line */}
+                  {/* Card Container: Added items-center and text-center */}
+                  <div className="relative bg-white/[0.02] border border-white/5 p-10 lg:p-14 h-[600px] lg:h-[700px] flex flex-col items-center text-center transition-all duration-700 lg:group-hover:bg-white/[0.04] lg:group-hover:border-[#BA8C61]/20">
+                    {/* Aesthetic Top Vertical Line */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2">
                       <div
-                        className={`w-[1px] h-12 transition-colors duration-1000 ${
+                        className={`w-[1px] h-16 transition-colors duration-1000 ${
                           hoveredSlug === a.slug || isGlobalActive
                             ? "bg-[#BA8C61]"
                             : "bg-white/10"
@@ -175,8 +174,8 @@ export default function Team() {
                       />
                     </div>
 
-                    {/* MASSIVE IMAGE: Takes up most of the card width now */}
-                    <div className="relative mt-8 mb-10 w-36 h-36 lg:w-52 lg:h-52 shrink-0">
+                    {/* MUCH BIGGER IMAGE: w-32 to w-40 */}
+                    <div className="relative mt-6 mb-12 w-32 h-32 lg:w-44 lg:h-44 shrink-0">
                       <motion.div
                         animate={{
                           borderColor:
@@ -184,10 +183,11 @@ export default function Team() {
                               ? "#BA8C61"
                               : "rgba(255,255,255,0.1)",
                           rotate: hoveredSlug === a.slug ? 90 : 0,
+                          scale: hoveredSlug === a.slug ? 1.05 : 1,
                         }}
                         className="absolute inset-0 border-2 rounded-2xl transition-all duration-700"
                       />
-                      <div className="w-full h-full p-2 overflow-hidden rounded-2xl">
+                      <div className="w-full h-full p-3 overflow-hidden rounded-2xl">
                         <motion.img
                           src={TEAM_IMAGES[a.slug]}
                           animate={{
@@ -195,43 +195,42 @@ export default function Team() {
                               hoveredSlug === a.slug || isGlobalActive
                                 ? "grayscale(0%)"
                                 : "grayscale(100%)",
-                            scale: hoveredSlug === a.slug ? 1.1 : 1,
+                            scale: hoveredSlug === a.slug ? 1.15 : 1,
                           }}
-                          className="w-full h-full object-cover rounded-xl"
+                          className="w-full h-full object-cover rounded-xl shadow-2xl"
                         />
                       </div>
                     </div>
 
-                    {/* Content Area */}
-                    <div className="flex-grow flex flex-col justify-start w-full">
-                      <p className="text-[#BA8C61] font-mono text-[8px] tracking-[0.4em] uppercase mb-3">
-                        Security_Verified
-                      </p>
+                    {/* Centered Content Area */}
+                    <div className="flex-grow flex flex-col justify-start w-full space-y-8">
+                      <div className="space-y-3">
+                        <h4 className="text-3xl lg:text-5xl font-serif italic text-white leading-tight tracking-tight">
+                          {a.name}
+                        </h4>
+                        <div className="w-12 h-[1px] bg-[#BA8C61]/30 mx-auto mt-4" />
+                      </div>
 
-                      <h4 className="text-2xl lg:text-3xl font-serif italic text-white leading-tight mb-4">
-                        {a.name}
-                      </h4>
-
-                      <p className="text-white/40 font-mono text-[9px] tracking-widest uppercase mb-6">
+                      <p className="text-white/80 font-mono text-[17px] tracking-[0.2em] uppercase">
                         {a.title}
                       </p>
 
-                      {/* Bio Section: line-clamp-3 ensures it doesn't grow too long */}
-                      <div className="px-2">
-                        <p className="text-white/50 text-[11px] lg:text-xs font-light leading-relaxed italic line-clamp-3">
+                      {/* Bio Section: Fixed height to keep cards uniform */}
+                      <div className="min-h-[100px] flex items-center justify-center px-4">
+                        <p className="text-white/80 text-sm lg:text-xl font-light leading-relaxed italic line-clamp-4">
                           "{a.bio}"
                         </p>
                       </div>
                     </div>
 
-                    {/* Bottom Section */}
-                    <div className="w-full mt-auto pt-6 border-t border-white/5 flex justify-between items-center opacity-20">
-                      <span className="font-mono text-[8px] tracking-widest">
-                        #{a.slug.substring(0, 4).toUpperCase()}
+                    {/* Bottom Detail Section */}
+                    <div className="w-full mt-10 pt-10 border-t border-white/5 flex justify-between items-center opacity-20 group-hover:opacity-60 transition-all duration-500">
+                      <span className="font-mono text-[9px] tracking-[0.3em] uppercase">
+                        Ref_{a.slug.substring(0, 4)}
                       </span>
-                      <div className="flex gap-1.5">
-                        <div className="w-1 h-1 bg-white rounded-full" />
-                        <div className="w-1 h-1 bg-[#BA8C61] rounded-full" />
+                      <div className="flex gap-2">
+                        <div className="w-1.5 h-1.5 bg-white rounded-full opacity-20" />
+                        <div className="w-1.5 h-1.5 bg-[#BA8C61] rounded-full animate-pulse" />
                       </div>
                     </div>
                   </div>
