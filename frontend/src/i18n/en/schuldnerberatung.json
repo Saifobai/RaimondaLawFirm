@@ -1,7 +1,6 @@
 {
   "title": "Debt Counseling Request",
-  "subtitle": "Fill out the form and secure a free initial consultation",
-  "start": "Get Started",
+  "subtitle": "Fill out the form and get a free evaluation",
 
   "steps": {
     "situation": "Your Situation",
@@ -10,52 +9,39 @@
     "notes": "Your Notes"
   },
 
- "features": {
+  "features": {
     "privacyTitle": "Privacy",
     "privacyDesc": "Your data is handled securely and transparently.",
-
     "legalTitle": "Legal",
     "legalDesc": "All processes comply with applicable legal regulations.",
-
     "confidentialTitle": "Confidentiality",
     "confidentialDesc": "Your information remains strictly confidential."
+    
   },
 
   "buttons": {
     "back": "Back",
     "next": "Next",
-    "submit": "Submit Now"
+    "submit": "Submit"
   },
 
   "fields": {
-    "debt": "How much is your total debt?",
-    "debtPlaceholder": "e.g. €9,000",
+    "debt": "Total debt amount",
+    "claims": "Number of claims",
+    "income": "Monthly income",
 
-    "claims": "How many open claims do you have?",
-    "claimsPlaceholder": "e.g. 4",
+    "marital": "Marital status",
+    "children": "Children",
 
-    "income": "What is your net monthly income?",
-    "incomePlaceholder": "e.g. €1,800",
+    "jobField": "Select your professional field",
+    "job": "Your profession",
 
-    "marital": "What is your marital status?",
-
-    "children": "Do you have dependent children (under 18 or still in education)?",
-
-    "jobField": "In which professional field do you work?",
-    "job": "What profession do you practice?",
-    "jobPlaceholder": "Current job (e.g. office clerk)",
-
-    "unemployed": "I am currently unemployed",
-
-    "salutation": "Salutation",
-    "firstname": "First Name",
-    "lastname": "Last Name",
+    "firstname": "First name",
+    "lastname": "Last name",
     "email": "Email",
-    "phone": "Mobile Number",
+    "phone": "Phone",
 
-    "notes": "Notes",
-
-    "privacy": "I accept the privacy policy."
+    "privacy": "I accept the privacy policy"
   },
 
   "options": {
@@ -75,7 +61,7 @@
       "3": "3 children",
       "4": "4 children",
       "5": "5 children",
-      "6": "More than 5 children"
+      "6": "More than 5"
     },
 
     "jobFields": [
@@ -87,30 +73,49 @@
       "Arts & Design",
       "Agriculture",
       "Media",
-      "Metal & Mechanical Engineering",
+      "Metal & Engineering",
       "Education",
-      "Production & Manufacturing",
-      "Transport & Logistics",
-      "Business & Administration"
-    ],
+      "Production",
+      "Logistics",
+      "Business"
+    ]
+  },
 
-    "salutation": {
-      "mr": "Mr.",
-      "mrs": "Mrs.",
-      "diverse": "Diverse"
+  "extendedStatements": {
+    "unemployed": "I am currently unemployed",
+    "selfEmployed": "I am self-employed",
+    "garnished": "My income is being garnished",
+
+    "garnishOptions": {
+      "account": "Account garnishment",
+      "salary": "Salary garnishment",
+      "assignment": "Wage assignment",
+      "unknown": "I don't know"
+    },
+
+    "vehicle": "I own a vehicle",
+    "vehicleDocs": "Where are your vehicle documents?",
+
+    "vehicleDocsOptions": {
+      "self": "With me",
+      "bank": "At the bank"
+    },
+
+    "property": "I own property",
+    "knowCreditors": "I know my creditors",
+
+    "creditorTypes": "Do any of these belong to your creditors?",
+
+    "creditorOptions": {
+      "tax": "Tax office",
+      "insurance": "Health insurance",
+      "landlord": "Landlord"
     }
   },
 
-  "statements": {
-    "selfEmployed": "I am currently self-employed",
-    "garnished": "My income is already being garnished",
-    "vehicle": "I own a vehicle",
-    "property": "I own property",
-    "knowCreditors": "I know who my creditors are"
-  },
   "validation": {
-    "required": "This field is required",
-    "invalidEmail": "Please enter a valid email address",
-    "acceptPrivacy": "You must accept the privacy policy to continue"
+    "required": "Required field",
+    "invalidEmail": "Invalid email",
+    "acceptPrivacy": "Accept privacy policy"
   }
 }

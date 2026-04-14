@@ -110,7 +110,7 @@ export default function Contact() {
             </h2>
           </motion.div>
           <div className="lg:col-span-4 flex items-end">
-            <p className="text-white text-lg font-light leading-relaxed italic border-l border-white/10 pl-8">
+            <p className="text-white text-xl font-light leading-relaxed italic border-l border-white/10 pl-8">
               {t("description")}
             </p>
           </div>
@@ -243,14 +243,14 @@ export default function Contact() {
                     }
                   />
                 </div>
-                <p className="text-white/70 font-light mb-8 text-lg leading-relaxed max-w-[200px]">
+                <p className="text-white font-light mb-8 text-lg leading-relaxed max-w-[200px]">
                   {loc.address}
                 </p>
                 <div className="grid grid-cols-2 gap-4 border-t border-white/5 pt-6 mt-4">
-                  <div className="flex items-center gap-3 text-[15px] tracking-widest uppercase text-white/70">
+                  <div className="flex items-center gap-3 text-[15px] tracking-widest uppercase text-white">
                     <Phone size={20} className="text-[#BA8C61]/80" /> {loc.tel}
                   </div>
-                  <div className="flex items-center gap-3 text-[15px] tracking-widest uppercase text-white/70">
+                  <div className="flex items-center gap-3 text-[15px] tracking-widest uppercase text-white">
                     <Printer size={20} className="text-[#BA8C61]/80" />{" "}
                     {loc.fax}
                   </div>
@@ -263,7 +263,7 @@ export default function Contact() {
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#BA8C61] transition-colors">
                   <Mail size={20} className="text-[#BA8C61]" />
                 </div>
-                <span className="text-[19px] tracking-widest font-light text-white/70">
+                <span className="text-[20px] tracking-widest font-light text-white">
                   info@kanzlei-dr-jura-kraemer.de
                 </span>
               </div>
@@ -271,7 +271,7 @@ export default function Contact() {
                 <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#BA8C61] transition-colors">
                   <Mail size={20} className="text-[#BA8C61]" />
                 </div>
-                <span className="text-[19px] tracking-widest font-light text-white/70">
+                <span className="text-[20px] tracking-widest font-light text-white">
                   info@kanzlei-dr-jura-kraemer.com
                 </span>
               </div>

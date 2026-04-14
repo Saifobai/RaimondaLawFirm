@@ -52,6 +52,7 @@ export default function DebtWay() {
 
   return (
     <div
+      id="debtway"
       ref={containerRef}
       className="relative min-h-screen bg-[#262B3E] text-white overflow-hidden font-sans selection:bg-[#BA8C61]"
     >

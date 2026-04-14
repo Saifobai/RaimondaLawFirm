@@ -46,6 +46,21 @@ export default function Services() {
     });
   };
 
+  const scrollToContact = (e) => {
+    e.preventDefault();
+    const elem = document.getElementById("contact");
+    if (elem) {
+      const offset = 80; // Matches your Navbar height
+      const elementPosition = elem.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section
       id="services"
@@ -137,7 +152,10 @@ export default function Services() {
             viewport={{ once: true }}
             className="w-full h-px bg-gradient-to-r from-transparent via-[#BA8C61] to-transparent mb-12"
           />
-          <button className="w-full md:w-auto px-10 md:px-20 py-8 md:py-10 bg-white text-[#262B3E] font-black text-[10px] md:text-[26px] tracking-[0.6em] md:tracking-[0.5em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500">
+          <button
+            onClick={scrollToContact}
+            className="w-full md:w-auto px-10 md:px-20 py-8 md:py-10 bg-white text-[#262B3E] font-black text-[10px] md:text-[26px] tracking-[0.6em] md:tracking-[0.5em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500"
+          >
             {t("services.btn")}
           </button>
         </div>

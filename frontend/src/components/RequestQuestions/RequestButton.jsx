@@ -2,8 +2,10 @@ import { FileText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function RequestButton() {
+  const { t } = useTranslation("extra");
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -31,13 +33,13 @@ export default function RequestButton() {
           whileHover={{ scale: 1.1, backgroundColor: "#C9B38C" }}
           whileTap={{ scale: 0.9 }}
           onClick={() => navigate("/schuldnerberatung")}
-          className="fixed right-6 md:right-6 top-1/2 -translate-y-1/2 z-[90] bg-[#BA8C61] text-[#262B3E] p-4 rounded-full shadow-[0_0_20px_rgba(186,140,97,0.3)] transition-colors group"
+          className="fixed right-6 md:right-4 top-1/2 -translate-y-1/2 z-[90] bg-[#BA8C61] text-[#262B3E] p-4 rounded-full shadow-[0_0_20px_rgba(186,140,97,0.3)] transition-colors group"
         >
-          <FileText size={24} strokeWidth={2.5} />
+          <FileText size={30} strokeWidth={2.5} />
 
           {/* Tooltip that appears on hover */}
-          <span className="absolute right-full mr-5 top-1/2 -translate-y-1/2 bg-[#262B3E] text-white text-[10px] uppercase tracking-[0.2em] px-3 py-2 rounded border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-            Anfrage stellen
+          <span className="absolute right-full mr-5 top-1/2 -translate-y-1/2 bg-[#262B3E] text-white text-[17px] uppercase tracking-[0.2em] px-3 py-2 rounded border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            {t("questionary")}
           </span>
         </motion.button>
       )}

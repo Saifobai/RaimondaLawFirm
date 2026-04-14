@@ -13,6 +13,7 @@ import enPrivacy from "./en/privacy.json"
 import enImpressum from "./en/impressum.json"
 import enReviews from "./en/reviews.json"
 import enServices from "./en/services.json"
+import enExtra from "./en/extra.json"
 
 
 import deNavbar from "./de/navbar.json";
@@ -27,6 +28,7 @@ import dePrivacy from "./de/privacy.json"
 import deImpressum from "./de/impressum.json"
 import deReviews from "./de/reviews.json"
 import deServices from "./de/services.json"
+import deExtra from "./de/extra.json"
 
 const resources = {
     en: {
@@ -41,7 +43,8 @@ const resources = {
         privacy: enPrivacy,
         impressum: enImpressum,
         reviews: enReviews,
-        services: enServices
+        services: enServices,
+        extra: enExtra
     },
     de: {
         navbar: deNavbar,
@@ -55,7 +58,8 @@ const resources = {
         privacy: dePrivacy,
         impressum: deImpressum,
         reviews: deReviews,
-        services: deServices
+        services: deServices,
+        extra: deExtra
     },
 };
 
@@ -76,7 +80,8 @@ i18n.use(initReactI18next).init({
         "privacy",
         "impressum",
         "reviews",
-        "services"
+        "services",
+        "extra"
     ],
     defaultNS: "navbar",
 

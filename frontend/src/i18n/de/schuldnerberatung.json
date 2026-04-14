@@ -1,7 +1,6 @@
 {
   "title": "Anfrage Schuldnerberatung",
   "subtitle": "Ausfüllen und kostenlose Ersteinschätzung sichern",
-  "start": "Jetzt loslegen",
 
   "steps": {
     "situation": "Ihre Situation",
@@ -13,10 +12,8 @@
   "features": {
     "privacyTitle": "Datenschutz",
     "privacyDesc": "Ihre Daten werden sicher und transparent verarbeitet.",
-
     "legalTitle": "Rechtliches",
     "legalDesc": "Alle Prozesse entsprechen den geltenden gesetzlichen Vorschriften.",
-
     "confidentialTitle": "Vertraulichkeit",
     "confidentialDesc": "Ihre Informationen bleiben streng vertraulich."
   },
@@ -29,31 +26,19 @@
 
   "fields": {
     "debt": "Wie hoch ist Ihre Schuldsumme?",
-    "debtPlaceholder": "z.B. 9.000€",
-
     "claims": "Wie viele offene Forderungen haben Sie?",
-    "claimsPlaceholder": "z.B. 4",
-
     "income": "Wie hoch ist Ihr Nettoeinkommen?",
-    "incomePlaceholder": "z.B. 1.800€",
 
     "marital": "Wie ist Ihr Familienstand?",
+    "children": "Haben Sie unterhaltsberechtigte Kinder?",
 
-    "children": "Haben Sie unterhaltsberechtigte Kinder (bis 18 oder anschl. Schule, Studium)?",
-
-    "jobField": "In welchem Berufsfeld arbeiten Sie?",
+    "jobField": "Berufsfeld wählen (m/w/d)",
     "job": "Welchen Beruf üben Sie aus?",
-    "jobPlaceholder": "Aktueller Beruf (z.B. Sachbearbeiter/in)",
 
-    "unemployed": "Ich bin aktuell arbeitsuchend",
-
-    "salutation": "Anrede",
     "firstname": "Vorname",
     "lastname": "Nachname",
     "email": "E-Mail",
     "phone": "Mobilnummer",
-
-    "notes": "Anmerkung",
 
     "privacy": "Ich akzeptiere die Datenschutzbestimmungen."
   },
@@ -82,7 +67,7 @@
       "Ich möchte keine Angabe machen",
       "Bauwesen (Architekt, Gerüstbauer, Vermessung usw.)",
       "Elektronik (Ingenieure, Elektriker usw.)",
-      "Gesundheitswesen (Medizin, Pflege, Rettungsdienst usw.)",
+      "Gesundheitswesen (Medizin, Pflege, Rettungsdienst, Sport & Bewegung usw.)",
       "IT & Computer (Fachinformatiker, Entwickler usw.)",
       "Kunst, Kultur & Gestaltung",
       "Landwirtschaft",
@@ -92,25 +77,44 @@
       "Produktion & Fertigung",
       "Verkehr & Logistik",
       "Wirtschaft & Verwaltung"
-    ],
+    ]
+  },
 
-    "salutation": {
-      "mr": "Herr",
-      "mrs": "Frau",
-      "diverse": "Divers"
+  "extendedStatements": {
+    "unemployed": "Ich bin aktuell arbeitsuchend",
+    "selfEmployed": "Ich bin aktuell selbständig",
+    "garnished": "Bei mir wird bereits gepfändet",
+
+    "garnishOptions": {
+      "account": "Kontopfändung",
+      "salary": "Lohnpfändung",
+      "assignment": "Lohnabtretung",
+      "unknown": "Weiß ich nicht"
+    },
+
+    "vehicle": "Ich besitze (ein) Fahrzeug(e)",
+    "vehicleDocs": "Wo befinden sich Ihre Zulassungsbescheinigungen Teil II (Kfz-Briefe)?",
+
+    "vehicleDocsOptions": {
+      "self": "Bei mir",
+      "bank": "Bei der Bank"
+    },
+
+    "property": "Ich besitze (eine) Immobilie(n)",
+    "knowCreditors": "Ich weiß, wer meine Gläubiger sind",
+
+    "creditorTypes": "Gehört eine der folgenden Institutionen zu Ihren Gläubigern?",
+
+    "creditorOptions": {
+      "tax": "Finanzamt",
+      "insurance": "Krankenkasse",
+      "landlord": "Vermieter"
     }
   },
 
-  "statements": {
-    "selfEmployed": "Ich bin aktuell selbstständig tätig",
-    "garnished": "Bei mir wird bereits gepfändet",
-    "vehicle": "Ich besitze (ein) Fahrzeug(e)",
-    "property": "Ich besitze (eine) Immobilie(n)",
-    "knowCreditors": "Ich weiß, wer meine Gläubiger sind"
-  },
   "validation": {
-  "required": "Dieses Feld ist erforderlich",
-  "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-  "acceptPrivacy": "Bitte akzeptieren Sie die Datenschutzbestimmungen"
-}
+    "required": "Dieses Feld ist erforderlich",
+    "invalidEmail": "Bitte gültige E-Mail eingeben",
+    "acceptPrivacy": "Bitte Datenschutz akzeptieren"
+  }
 }
