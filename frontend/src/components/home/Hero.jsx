@@ -13,13 +13,15 @@ import slide2 from "../../assets/slide_02.jpeg";
 import slide3 from "../../assets/slide_03.jpeg";
 import slide4 from "../../assets/slide_04.jpeg";
 import slide5 from "../../assets/slide_05.jpeg";
+import slide7 from "../../assets/slide_d_01.webp";
+import slide8 from "../../assets/slide_d_02.webp";
 import Video_Law from "../../assets/law_vid.mp4";
 
 export default function Hero() {
   const { t } = useTranslation("hero");
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const slides = [{ image: slide1 }, { image: slide2 }, { image: slide3 }];
+  const slides = [{ image: slide8 }, { image: slide7 }];
   const icons = [Briefcase, RefreshCw, Rocket, Globe];
   const translatedBoxes = t("infoBoxes", { returnObjects: true }) || [];
 
