@@ -15,7 +15,9 @@
     "legalTitle": "Rechtliches",
     "legalDesc": "Alle Prozesse entsprechen den geltenden gesetzlichen Vorschriften.",
     "confidentialTitle": "Vertraulichkeit",
-    "confidentialDesc": "Ihre Informationen bleiben streng vertraulich."
+    "confidentialDesc": "Ihre Informationen bleiben streng vertraulich.",
+    "toastQuestionary":"Vielen Dank für Ihr Vertrauen. Wir melden uns zeitnah persönlich bei Ihnen",
+    "toastQuestionaryFailure":"Beim Absenden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
   },
 
   "buttons": {
