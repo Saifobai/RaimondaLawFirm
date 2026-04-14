@@ -139,7 +139,7 @@ export const sendAnfrage = async (req, res) => {
         doc
             .fillColor(gold)
             .fontSize(20)
-            .text("RAIMONDA LAWS", 50, 30);
+            .text("Dr. jur. Kraemer GmbH", 50, 30);
 
         doc
             .fillColor("white")
@@ -260,8 +260,8 @@ export const sendAnfrage = async (req, res) => {
         // 📧 EMAIL
         // =========================
         await contactMail.sendMail({
-            from: `"Raimonda Laws" <${process.env.CONTACT_MAIL_USER}>`,
-            to: "sam@lovely.com.de",
+            from: `"Dr. jur. Kraemer GmbH" <no-reply@kanzlei-dr-jura-kraemer.com>`,
+            to: "info@kanzlei-dr-jura-kraemer.com",
             replyTo: safe(data.email),
             subject: `Neue Anfrage - ${safe(data.firstname)} ${safe(data.lastname)}`,
             html: `

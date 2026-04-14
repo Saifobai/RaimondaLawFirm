@@ -714,7 +714,7 @@ export default function Team() {
     <section
       id="team"
       ref={containerRef}
-      className="py-24 lg:py-40 bg-[#0D0F16] text-white overflow-hidden relative"
+      className="py-24 lg:py-40 bg-[#282D40] text-white overflow-hidden relative"
     >
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
