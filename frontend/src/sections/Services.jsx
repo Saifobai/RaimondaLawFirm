@@ -71,7 +71,7 @@ export default function Services() {
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#BA8C61_0.5px,transparent_0.5px)] [background-size:30px_30px] md:[background-size:40px_40px]" />
       </div>
 
-      <div className="max-w-[1500px] mx-auto relative z-10">
+      <div className="max-w-[1400px] mx-auto relative z-10">
         {/* --- THE MASTER HEADER --- */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-20 md:mb-32 gap-6">
           <div className="space-y-6">
@@ -154,7 +154,7 @@ export default function Services() {
           />
           <button
             onClick={scrollToContact}
-            className="w-full md:w-auto px-10 md:px-20 py-8 md:py-10 bg-white text-[#262B3E] font-black text-[10px] md:text-[26px] tracking-[0.6em] md:tracking-[0.5em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500"
+            className="w-full md:w-auto px-10 md:px-20 py-8 md:py-10 bg-white text-[#262B3E] font-black text-[10px] md:text-[18px] tracking-[0.5em] md:tracking-[0.4em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500"
           >
             {t("services.btn")}
           </button>

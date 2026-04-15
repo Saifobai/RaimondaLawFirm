@@ -17,5 +17,21 @@
     "titleDuesseldorf": "Zweigstelle Düsseldorf",
     "hours": "Mo — Fr: 09:00 — 18:00",
     "email": "E-Mail"
+  },
+  "map": {
+    "title": "Unsere Standorte",
+    "offices": [
+      {
+        "city": "Berlin",
+        "address": "Musterstraße 123, 10117 Berlin, Deutschland",
+        "label": "Hauptsitz"
+      },
+      {
+        "city": "Wilna",
+        "address": "Gedimino pr. 1, 01103 Vilnius, Litauen",
+        "label": "Zweigstelle"
+      }
+    ]
   }
+
 }

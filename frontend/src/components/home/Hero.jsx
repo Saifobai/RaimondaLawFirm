@@ -21,7 +21,7 @@ export default function Hero() {
   const { t } = useTranslation("hero");
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const slides = [{ image: slide8 }, { image: slide7 }];
+  const slides = [{ image: slide1 }, { image: slide7 }];
   const icons = [Briefcase, RefreshCw, Rocket, Globe];
   const translatedBoxes = t("infoBoxes", { returnObjects: true }) || [];
 

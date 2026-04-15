@@ -17,5 +17,20 @@
     "titleDuesseldorf": "Branch Office Düsseldorf",
     "hours": "Mon — Fri: 09:00 — 18:00",
     "email": "Email"
+  },
+  "map": {
+    "title": "Our Locations",
+    "offices": [
+      {
+        "city": "Berlin",
+        "address": "Sample Street 123, 10117 Berlin, Germany",
+        "label": "Main Office"
+      },
+      {
+        "city": "Vilnius",
+        "address": "Gedimino pr. 1, 01103 Vilnius, Lithuania",
+        "label": "Satellite Office"
+      }
+    ]
   }
 }
