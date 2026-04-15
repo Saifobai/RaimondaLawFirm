@@ -84,16 +84,23 @@ export default function Highlights() {
         <div className="max-w-[1400px] w-full grid lg:grid-cols-12 gap-10 items-center z-10">
           <div className="lg:col-span-6 space-y-8 order-2 lg:order-1 text-left">
             <h1
-              className="font-serif italic leading-[0.9] text-white "
-              style={{ fontSize: "clamp(2.5rem, 5vw, 3.2rem)" }} // SCALING FIX
+              className="font-serif italic text-white leading-[1.1]"
+              style={{ fontSize: "clamp(2.5rem, 5vw, 3.2rem)" }}
             >
               {t("intro.text1")
                 .split(" ")
                 .map((word, i) => (
-                  <span key={i} className="inline-block overflow-hidden mr-3">
+                  <span
+                    key={i}
+                    /* pb-4 gives space for descenders (g, q, y, p)
+           -mb-4 ensures the line spacing remains tight 
+        */
+                    className="inline-block overflow-hidden mr-3 pb-4 -mb-4"
+                  >
                     <motion.span
                       initial={{ y: "100%" }}
                       whileInView={{ y: 0 }}
+                      viewport={{ once: true }}
                       transition={{
                         duration: 1,
                         delay: i * 0.1,

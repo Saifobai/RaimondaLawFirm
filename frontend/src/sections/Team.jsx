@@ -141,7 +141,7 @@ export default function Team() {
 
         {/* --- ASSISTANTS SECTION (The Fix) --- */}
         <div className="relative pt-16 border-t border-white/10">
-          <div className="flex flex-col items-center mb-12 lg:mb-20 space-y-4">
+          <div className="flex flex-col items-center mb-12 lg:mb-18 space-y-4">
             <motion.div
               animate={{ width: isGlobalActive ? "100px" : "50px" }}
               transition={{ duration: 2, ease: "easeInOut" }}
@@ -182,10 +182,6 @@ export default function Team() {
                     /* Height Fixes */
                     min-h-[580px] lg:min-h-[715px]"
                   >
-                    <span className="absolute top-6 font-mono text-[10px] text-white/20 tracking-widest uppercase">
-                      REF_{idx % assistants.length}
-                    </span>
-
                     <div className="relative mb-8 w-full aspect-[4/5] max-w-[220px] shrink-0">
                       <motion.div
                         animate={{

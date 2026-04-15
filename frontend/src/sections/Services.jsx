@@ -104,11 +104,11 @@ export default function Services() {
                   <span className="text-5xl md:text-6xl font-serif italic text-white/5 group-hover:text-[#BA8C61]/20 transition-colors duration-500">
                     0{idx + 1}
                   </span>
-                  <ArrowUpRight className="text-white/70 lg:text-white/60 group-hover:text-[#BA8C61] transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <ArrowUpRight className="text-white/90 lg:text-white/90 group-hover:text-[#BA8C61] transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
 
                 <div className="mt-12 md:mt-20 space-y-4 md:space-y-6">
-                  <h3 className="text-[#BA8C61] font-mono text-[8px] md:text-[10px] tracking-[0.5em] md:tracking-[0.6em] uppercase">
+                  <h3 className="text-[#BA8C61] font-mono text-[8px] md:text-[13px] tracking-[0.5em] md:tracking-[0.2em] uppercase">
                     {service.subtitle}
                   </h3>
                   <h4 className="text-3xl md:text-[clamp(1.5rem,2vw,2rem)] font-serif italic text-white leading-tight md:leading-none tracking-tight break-words">
@@ -154,7 +154,7 @@ export default function Services() {
           />
           <button
             onClick={scrollToContact}
-            className="w-full md:w-auto px-10 md:px-20 py-8 md:py-10 bg-white text-[#262B3E] font-black text-[10px] md:text-[18px] tracking-[0.5em] md:tracking-[0.4em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500"
+            className="w-full md:w-auto px-10 md:px-20 py-6 md:py-8 bg-white text-[#262B3E] font-black text-[10px] md:text-[15px] tracking-[0.5em] md:tracking-[0.3em] uppercase hover:bg-[#BA8C61] hover:text-white transition-all duration-500"
           >
             {t("services.btn")}
           </button>
