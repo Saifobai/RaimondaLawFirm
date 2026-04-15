@@ -339,7 +339,7 @@ export default function Schuldnerberatung() {
                     >
                       <div className="mt-4 pt-4 border-t border-white/5">
                         <p
-                          className={`text-lg uppercase tracking-widest font-bold mb-3 transition-colors ${formData.vehicle ? "text-white" : "text-white/50"}`}
+                          className={`text-lg  tracking-widest  mb-3 transition-colors ${formData.vehicle ? "text-white" : "text-white/50"}`}
                         >
                           {t("extendedStatements.vehicleDocs")}
                         </p>

@@ -67,7 +67,7 @@ export default function Footer() {
 
         {/* BOTTOM SECTION */}
         <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[14px] text-white/80 uppercase tracking-[0.3em] font-medium">
+          <p className="text-[14px] text-white/80  tracking-[0.3em] font-medium">
             Dr. jur. Kraemer GmbH
           </p>
           <div className="h-px w-12 bg-[#BA8C61]/50 hidden md:block" />

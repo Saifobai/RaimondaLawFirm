@@ -196,9 +196,6 @@ export default function DebtWay() {
         {/* --- FOOTER --- */}
         <footer className="pb-16 flex justify-between items-center px-8 lg:px-0 border-t border-white/5 pt-10">
           <div className="flex items-center gap-6">
-            <span className="text-[10px] text-white/20 uppercase tracking-widest">
-              Master Protocol
-            </span>
             <div className="flex gap-2">
               {[...Array(services.length)].map((_, i) => (
                 <div
