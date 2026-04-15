@@ -93,9 +93,6 @@ export default function Privacy() {
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-white mb-4 md:mb-6 leading-tight">
             {t("hero.title")}
           </h1>
-          <p className="text-amber-500 font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs">
-            {t("hero.dateLabel") || "Stand: März 2026"}
-          </p>
         </motion.header>
 
         {/* Content Sections */}

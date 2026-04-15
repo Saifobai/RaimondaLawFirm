@@ -89,7 +89,7 @@ export default function Hero() {
         <motion.button
           onClick={() => setIsVideoOpen(true)}
           style={{ animation: "pulse-gold 2s infinite" }}
-          className="flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-[#C9B38C] hover:bg-white text-white hover:text-[#C9B38C] rounded-full shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#C9B38C] group"
+          className="flex items-center justify-center w-14 h-14 md:w-20 md:h-20 bg-[#BA8C61] hover:bg-white text-white hover:text-[#C9B38C] rounded-full shadow-2xl transition-all duration-300 border-2 border-transparent hover:border-[#C9B38C] group"
         >
           <Play fill="currentColor" className="ml-1 w-5 h-5 md:w-8 md:h-8" />
         </motion.button>
@@ -121,11 +121,11 @@ export default function Hero() {
                 </p>
                 <a
                   href="#contact"
-                  className="inline-block bg-[#C9B38C] hover:bg-white hover:text-[#C9B38C] text-white 
-  px-5 sm:px-6 md:px-8 lg:px-12 
+                  className="inline-block bg-[#BA8C61] hover:bg-white hover:text-[#C9B38C] text-white 
+  px-5 sm:px-6 md:px-8 lg:px-4 
   py-3 sm:py-4 md:py-5 lg:py-6 
   rounded-sm font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] 
-  text-sm sm:text-base md:text-[16px] lg:text-[18px] 
+  text-sm sm:text-base md:text-[16px] lg:text-[15px] 
   transition-all duration-500 shadow-xl"
                 >
                   {t("cta")}
