@@ -113,15 +113,20 @@ export default function Hero() {
             <div className="relative z-10 h-full flex items-center">
               {/* Responsive width and alignment */}
               <div className="w-full md:w-1/2 px-6 lg:ml-36 lg:px-4 text-white pb-32 md:pb-0 text-center md:text-left">
-                <h2 className="text-4xl lg:text-6xl font-serif italic leading-[1.1] mb-6 max-w-2xl text-balance">
+                <h2 className="text-4xl lg:text-4xl font-serif italic leading-[1.1] mb-6 max-w-2xl text-balance">
                   {t("title")}
                 </h2>
-                <p className="text-white mb-10 max-w-xl mx-auto md:mx-0 font-light text-3xl">
+                <p className="text-white mb-10 max-w-xl mx-auto md:mx-0 font-light text-xl">
                   {t("subtitle")}
                 </p>
                 <a
                   href="#contact"
-                  className="inline-block bg-[#C9B38C] hover:bg-white hover:text-[#C9B38C] text-white px-12 py-6 rounded-sm font-bold uppercase tracking-[0.2em] text-[18px] transition-all duration-500 shadow-xl"
+                  className="inline-block bg-[#C9B38C] hover:bg-white hover:text-[#C9B38C] text-white 
+  px-5 sm:px-6 md:px-8 lg:px-12 
+  py-3 sm:py-4 md:py-5 lg:py-6 
+  rounded-sm font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] 
+  text-sm sm:text-base md:text-[16px] lg:text-[18px] 
+  transition-all duration-500 shadow-xl"
                 >
                   {t("cta")}
                 </a>
