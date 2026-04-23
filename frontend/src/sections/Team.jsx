@@ -91,14 +91,14 @@ export default function Team() {
                 <div className="space-y-1">
                   <h3
                     className="font-serif italic text-white tracking-tight"
-                    style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}
+                    style={{ fontSize: "clamp(1.75rem, 3vw, 2rem)" }}
                   >
                     {f.name}
                   </h3>
                 </div>
                 <ArrowUpRight className="text-[#BA8C61]" size={28} />
               </div>
-              <p className="mt-4 text-white/90 font-light italic leading-relaxed text-sm lg:text-base">
+              <p className="mt-4 text-white/90 font-light italic leading-relaxed text-sm lg:text-lg">
                 {f.bio}
               </p>
             </div>
