@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import slide7 from "../../assets/slide_d_01.webp";
+import slide1 from "../../assets/slide_01.jpeg";
 
 import Video_Law from "../../assets/law_vid.mp4";
 
@@ -16,7 +16,7 @@ export default function Hero() {
   const { t } = useTranslation("hero");
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const slides = [{ image: slide7 }];
+  const slides = [{ image: slide1 }];
   const icons = [Briefcase, RefreshCw, Rocket, Globe];
   const translatedBoxes = t("infoBoxes", { returnObjects: true }) || [];
 
