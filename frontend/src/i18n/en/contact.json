@@ -8,7 +8,9 @@
     "phone": "Phone Number",
     "message": "Message",
     "caseDescription": "Brief description of your case",
-    "send": "Send Inquiry"
+    "send": "Send Inquiry",
+    "minCharacters": "Minimum 6 characters required",
+    "allFieldsRequired": "All fields are required"
   },
   "consent": "I consent to the processing of my data for contact purposes. I understand that I can revoke this consent at any time.",
   "requiredFields": "* Required fields",

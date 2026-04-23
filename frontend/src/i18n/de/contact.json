@@ -8,10 +8,13 @@
     "phone": "Telefonnummer",
     "message": "Nachricht",
     "caseDescription": "Kurze Beschreibung Ihres Anliegens",
-    "send": "Anfrage senden"
+    "send": "Anfrage senden",
+    "minCharacters": "Mindestens 6 Zeichen erforderlich",
+    "allFieldsRequired": "Alle Felder sind erforderlich"
   },
   "consent": "Ich bin damit einverstanden, dass diese Daten zum Zweck der Kontaktaufnahme gespeichert und verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.",
   "requiredFields": "* Kennzeichnet erforderliche Felder",
+
   "office": {
     "titleCologne": "Hauptsitz Köln",
     "titleDuesseldorf": "Zweigstelle Düsseldorf",
