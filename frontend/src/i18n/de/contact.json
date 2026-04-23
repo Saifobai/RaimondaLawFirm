@@ -8,9 +8,11 @@
     "phone": "Telefonnummer",
     "message": "Nachricht",
     "caseDescription": "Kurze Beschreibung Ihres Anliegens",
-    "send": "Anfrage senden",
+    "send": "Nachricht senden",
     "minCharacters": "Mindestens 6 Zeichen erforderlich",
-    "allFieldsRequired": "Alle Felder sind erforderlich"
+    "allFieldsRequired": "Alle Felder sind erforderlich",
+    "requiredError": "Bitte füllen Sie dieses Feld aus.",
+    "consent": "Bitte kreuzen Sie dieses Kästchen an, wenn Sie fortfahren möchten."
   },
   "consent": "Ich bin damit einverstanden, dass diese Daten zum Zweck der Kontaktaufnahme gespeichert und verarbeitet werden. Mir ist bekannt, dass ich meine Einwilligung jederzeit widerrufen kann.",
   "requiredFields": "* Kennzeichnet erforderliche Felder",
