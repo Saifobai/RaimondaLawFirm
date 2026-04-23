@@ -76,7 +76,7 @@ export default function Team() {
             <div
               key={f.slug}
               /* Added max-w-xl to make founder images more refined/smaller */
-              className={`founder-card relative w-full max-w-xl mx-auto ${i === 1 ? "lg:mt-24" : ""}`}
+              className={`founder-card relative w-full max-w-xl mx-auto `}
             >
               <div className="relative aspect-[4/5] bg-[#161923] overflow-hidden border border-white/5 shadow-2xl">
                 <img
@@ -105,7 +105,7 @@ export default function Team() {
           ))}
         </div>
 
-        {/* --- ASSISTANTS HORIZONTAL SLIDER --- */}
+        {/* --- ASSISTANTS SECTION --- */}
         <div className="relative pt-16 border-t border-white/10">
           <div className="flex flex-col mb-12 space-y-4">
             <h3
@@ -133,18 +133,18 @@ export default function Team() {
           >
             {assistants.map((a) => (
               <SwiperSlide key={a.slug}>
-                <div className="bg-[#161923] border border-white/5 flex flex-col lg:flex-row items-stretch min-h-[500px] lg:h-[650px]">
-                  {/* Left: Image (Padding added to prevent head clipping) */}
-                  <div className="w-full lg:w-[45%] relative h-[450px] lg:h-auto shrink-0 p-4 lg:p-8 bg-[#1a1d29]">
-                    <div className="w-full h-full overflow-hidden rounded-sm shadow-inner bg-[#161923]">
+                <div className="bg-[#262B3E] border border-white/10 flex flex-col lg:flex-row items-stretch min-h-[500px] lg:h-[650px]">
+                  {/* Left: Image with Premium White Block Frame */}
+                  <div className="w-full lg:w-[45%] relative h-[450px] lg:h-auto shrink-0 p-5 lg:p-8 bg-white">
+                    <div className="w-full h-full overflow-hidden shadow-2xl relative">
                       <img
                         src={TEAM_IMAGES[a.slug]}
-                        /* object-top ensures heads are prioritized in the crop */
                         className="w-full h-full object-cover object-top"
                         alt={a.name}
                       />
                     </div>
-                    <div className="absolute inset-0 pointer-events-none border-[12px] border-[#161923] lg:border-[24px]" />
+                    {/* The Dark Outer Border overlay to keep the slide shape uniform */}
+                    <div className="absolute inset-0 pointer-events-none border-[12px] border-[#282D40] lg:border-[24px]" />
                   </div>
 
                   {/* Right: Content */}
@@ -167,6 +167,7 @@ export default function Team() {
                       "{a.bio}"
                     </p>
 
+                    {/* Navigation Buttons (Desktop) */}
                     <div className="mt-12 hidden lg:flex gap-4">
                       <button className="swiper-prev w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#BA8C61] hover:border-[#BA8C61] transition-all group">
                         <ArrowLeft
@@ -187,7 +188,7 @@ export default function Team() {
             ))}
           </Swiper>
 
-          {/* Custom Navigation for Mobile */}
+          {/* Navigation (Mobile) */}
           <div className="flex lg:hidden justify-center gap-10 mt-10">
             <button className="swiper-prev text-[#BA8C61] flex items-center gap-2 font-mono text-xs tracking-widest uppercase">
               <ArrowLeft size={16} /> Prev
