@@ -4,14 +4,14 @@
     "description": "Lernen Sie unser interdisziplinäres Team kennen. Experten für Wirtschaftsrecht, Insolvenzrecht und deutsch-litauische Rechtsberatung in Köln & Düsseldorf."
   },
   "hero": {
-    "title": "Expertise, die Ihre Zukunft sichert",
-    "subtitle": "Hinter jedem Erfolg steht ein starkes Team. Wir vereinen juristische Präzision mit wirtschaftlichem Weitblick und interkultureller Kompetenz."
+    "title": "Expertise, die Vertrauen schafft.",
+    "subtitle": "Persönliche Beratung mit wirtschaftlichem Verständnis, internationaler Erfahrung und klarer rechtlicher Struktur."
   },
   "members": [
     {
       "name": "Dr. jur. Raimonda Kraemer, LL.M.",
       "role": "founder",
-      "title": "Wirtschaftsjuristin & Unternehmensberaterin",
+      "title": "Wirtschaft & Strategie",
       "location": "Düsseldorf",
       "languages": ["Deutsch", "Englisch", "Litauisch"],
       "expertise": [
@@ -20,9 +20,9 @@
         "Stiftungsgründung",
         "Restrukturierung"
       ],
-      "bio": "Seit 2008 begleitet Dr. Kraemer Unternehmen durch komplexe Verhandlungsprozesse und wirtschaftliche Krisen.",
+      "bio": "Dr. jur. Raimonda Kraemer, LL.M. ist promovierte Juristin und Master of Law mit langjähriger Erfahrung in Wirtschaftsberatung, Konfliktmanagement und Stiftungsgründung. Ihr Schwerpunkt liegt auf der strategischen Beratung von Unternehmen, insbesondere in komplexen Verhandlungs-, Vertrags- und Restrukturierungsfragen. Mit analytischer Präzision, Diskretion und Zielorientierung entwickelt sie maßgeschneiderte Lösungen, die rechtliche, wirtschaftliche und organisatorische Aspekte verbinden. ",
       "quote": "Strategische Weitsicht für Ihr Unternehmen.",
-      "cta": "Termin mit Dr. Kraemer vereinbaren",
+      "cta": "Termin mit Dr. jur. Kraemer vereinbaren",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
       "image": "../../assets/Rai_Image.jpeg",
@@ -32,7 +32,7 @@
     {
       "name": "Aurelija Maumevičė, LL.M.",
       "role": "lawyer",
-      "title": "Rechtsanwältin (Advokat, Litauen) & Mediatorin",
+      "title": "Europäische Rechtsanwältin / Internationale Rechtsberatung",
       "location": "Köln",
       "languages": ["Deutsch", "Englisch", "Litauisch"],
       "expertise": [
@@ -41,7 +41,7 @@
         "Deutschland-Litauen Expansion",
         "Schuldenberatung"
       ],
-      "bio": "Frau Maumevičė ist die Brücke zwischen Deutschland und Litauen für grenzüberschreitende Rechtsfragen.",
+      "bio": "Aurelija Maumevičė, LL.M. ist in Deutschland zugelassene europäische Rechtsanwältin nach § 2 EuRAG und verfügt über langjährige internationale Erfahrung im Zivil-, Handels- und Gesellschaftsrecht sowie in wirtschaftlicher Restrukturierung und Schuldenberatung. Sie berät Privatpersonen und Unternehmen bei wirtschaftlichen Schwierigkeiten, außergerichtlichen Einigungen mit Gläubigern und grenzüberschreitenden Rechtsfragen.",
       "quote": "Ihre Expertin für internationales Recht & Mediation.",
       "cta": "Rechtliche Beratung anfragen",
       "email": "info@kanzlei-kraemer.de",
@@ -53,7 +53,7 @@
     {
       "name": "Kristina Zindulyte-Krickl",
       "role": "advisor",
-      "title": "Referentin & Expertin für Schuldnerberatung",
+      "title": "Mandantenservice & Verfahrenskoordination",
       "location": "Köln",
       "languages": ["Deutsch", "Litauisch"],
       "expertise": [
@@ -61,18 +61,18 @@
         "Gläubigerverhandlungen",
         "§305 InsO Bescheinigungen"
       ],
-      "bio": "Mit über 15 Jahren Erfahrung begleitet sie Mandanten empathisch durch den Prozess der Entschuldung.",
+      "bio": "Kristina unterstützt Mandanten in der ersten Kommunikation, bei der Aufnahme von Anliegen und in der strukturierten Begleitung laufender Verfahren. Sie sorgt für klare Abläufe, verlässliche Abstimmung und eine professionelle Betreuung im Kanzleialltag.",
       "quote": "Langjährige Erfahrung in der Entschuldung.",
       "cta": "Kontakt aufnehmen",
       "email": "info@kanzlei-kraemer.de",
       "linkedin": "#",
       "image": "../../assets/Kris_Image.jpeg",
-      "slug": "kristina-zindulyte"
+      "slug": "kristina-zindulyte-krickl"
     },
     {
       "name": "Aljona Hartfeld",
       "role": "operations",
-      "title": "Diplom-Betriebswirtin & Sachbearbeiterin",
+      "title": "Office & Dokumentation",
       "location": "Köln",
       "languages": ["Deutsch"],
       "expertise": [
@@ -80,7 +80,7 @@
         "Datenanalyse",
         "Mandantenmanagement"
       ],
-      "bio": "Sie sorgt für reibungslose Abläufe und unterstützt die wirtschaftliche Analyse.",
+      "bio": "Aljona unterstützt die Kanzlei bei administrativen Aufgaben, Dokumentation und interner Organisation. Ihr Schwerpunkt liegt auf der sorgfältigen Vorbereitung von Unterlagen und der zuverlässigen Unterstützung laufender Mandate.",
       "image": "../../assets/Ajlona_Image.jpeg",
       "slug": "aljona-hartfeld"
     },
@@ -95,7 +95,7 @@
         "Fallmanagement",
         "Behördenkommunikation"
       ],
-      "bio": "Sie stellt sicher, dass alle Unterlagen für Restrukturierungen vollständig vorbereitet sind.",
+      "bio": "Elke unterstützt die Kanzlei bei der zuverlässigen Vorbereitung und Koordination von Unterlagen, Fristen und organisatorischen Abläufen. Mit Sorgfalt, Struktur und Erfahrung sorgt sie dafür, dass Verfahren effizient vorbereitet und Mandanten zuverlässig begleitet werden.",
       "image": "../../assets/Elke_Image.jpeg",
       "slug": "elke-schmidt"
     }

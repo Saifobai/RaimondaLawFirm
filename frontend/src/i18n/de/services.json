@@ -1,49 +1,49 @@
 {
   "services": {
-    "sectionTitle": "Unsere Leistungen im Überblick",
-    "btn":"Kostenlose Ersteinschätzung",
+    "sectionTitle": "UNSERE LEISTUNGEN IM ÜBERBLICK",
+    "btn":"KOSTENLOSE ERSTEINSCHÄTZUNG",
     "subheading": "Ob Privatperson oder Unternehmen – wir bieten Ihnen maßgeschneiderte Lösungen aus den Bereichen Wirtschaft, Recht und Sanierung.",
     "items": [
       {
         "id": "01",
         "title": "Wirtschaftsberatung",
-        "subtitle": "Fundierte Entscheidungen vorbereiten",
-        "content": "Unsere Wirtschaftsberatung richtet sich an Unternehmer und Privatpersonen, die rechtliche und wirtschaftliche Entscheidungen fundiert vorbereiten möchten. Wir analysieren betriebswirtschaftliche Strukturen, begleiten Verhandlungen und entwickeln strategische Lösungen zur Stabilisierung und Optimierung Ihrer Geschäftsprozesse.",
+        "subtitle": "Fundierte Entscheidungen Vorbereiten",
+        "content": "UWir analysieren wirtschaftliche Strukturen, erkennen Risiken und entwickeln tragfähige Lösungen für fundierte unternehmerische und private Entscheidungen. Unser Fokus liegt auf Stabilität, Optimierung und nachhaltiger wirtschaftlicher Handlungsfähigkeit",
         "slug": "wirtschaftsberatung"
       },
       {
         "id": "02",
         "title": "Rechtsberatung",
         "subtitle": "Rechtssicher und praxisorientiert",
-        "content": "Wir bieten kompetente rechtliche Beratung im Zivil-, Handels- und Gesellschaftsrecht sowie in Fragen der wirtschaftlichen Stabilisierung und Schuldenregulierung. Unser Ziel: rechtssichere und praxisorientierte Lösungen, die Ihren individuellen Bedürfnissen entsprechen.",
+        "content": "Wir Wir beraten praxisnah in wirtschaftsrechtlichen Fragen, bei Vertragsangelegenheiten und rechtlichen Risiken. Ziel ist eine klare, verlässliche und lösungsorientierte Begleitung Ihrer persönlichen oder unternehmerischen Interessen.",
         "slug": "rechtsberatung"
       },
       {
         "id": "03",
         "title": "Insolvenzberatung",
         "subtitle": "Oft noch zu vermeiden!",
-        "content": "Die Insolvenzberatung ist Ihr wichtigster Dienst, wenn eine finanzielle Krise droht oder bereits eingetreten ist. Wichtig zu wissen: Eine Insolvenz ist keine unumgängliche Tatsache, sondern oft noch zu vermeiden! Wir entwickeln Sanierungsstrategien und prüfen außergerichtliche Einigungen.",
+        "content": "Wir unterstützen Privatpersonen, Selbstständige und Unternehmen bei Zahlungsengpässen, Gläubigerdruck und drohender Insolvenz. Dabei prüfen wir Sanierung, Schuldenregulierung, StaRUG, Schutzschirm, Eigenverwaltung und EU-Verfahren.",
         "slug": "insolvenzberatung"
       },
       {
         "id": "04",
         "title": "Unternehmenssanierung",
         "subtitle": "Ihr Unternehmen retten",
-        "content": "Unsere Sanierungsstrategie ist modular: Wir setzen den StaRUG-Rahmen für eine diskrete Frühsanierung ein. Bei Insolvenzreife nutzen wir vorrangig die Eigenverwaltung (ESUG). Die Regelinsolvenz ist stets der letzte Schritt – unser Ziel ist die nachhaltige Zukunftssicherung.",
+        "content": "Wir entwickeln strukturierte Sanierungs- und Restrukturierungskonzepte zur Sicherung von Liquidität, Fortführung und wirtschaftlicher Stabilität. Im Mittelpunkt stehen frühzeitige Maßnahmen, Gläubigerverhandlungen und rechtssichere Umsetzung.",
         "slug": "unternehmenssanierung"
       },
       {
         "id": "05",
         "title": "Unternehmensgründung",
         "subtitle": "Das richtige Fundament",
-        "content": "Die Wahl der Rechtsform entscheidet über Erfolg oder Scheitern. Viele Gründer haften im schlimmsten Fall privat mit ihrem gesamten Vermögen. Wir helfen Ihnen, von Anfang an das richtige Fundament zu legen: für Ihre Sicherheit und Ihren maximalen Erfolg.",
+        "content": "Wir begleiten Gründer und Unternehmer bei Rechtsformwahl, Gesellschaftsstruktur, Verträgen und wirtschaftlicher Planung. Dazu zählen Einzelunternehmen, Personen- und Kapitalgesellschaften, Holdingmodelle, Stiftungen sowie spätere Umwandlungen.",
         "slug": "unternehmensgruendung"
       },
       {
         "id": "06",
         "title": "Internationales Recht",
         "subtitle": "Deutschland & Litauen",
-        "content": "Handel zwischen Deutschland und Litauen bietet Wachstumspotenzial, birgt aber juristische Risiken. Mit Rechtsanwältin Aurelija Maumeviče bieten wir zweisprachige Verträge, Forderungsdurchsetzung und Markteintrittsberatung aus einer Hand.",
+        "content": "Wir beraten im internationalen Handelsrecht mit Schwerpunkt Deutschland, Litauen, Spanien und Portugal. Unsere Leistungen umfassen Vertragsprüfung, Vertragsgestaltung, Forderungsmanagement, Inkasso-Vorbereitung und rechtssichere grenzüberschreitende Geschäftsbeziehungen.",
         "slug": "internationales-recht"
       }
     ]

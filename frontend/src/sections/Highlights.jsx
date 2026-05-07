@@ -1,314 +1,148 @@
-// import React, { useEffect, useRef } from "react";
-// import { useMotionValue, useSpring, useMotionTemplate, motion } from "framer-motion";
-// import { useTranslation } from "react-i18next";
-// import { ShieldCheck, ArrowRight, Send } from "lucide-react";
-// import { motion } from "framer-motion";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Rai_Image from "../assets/Rai_Image.jpeg";
-// import Auri_Image from "../assets/Auri_Image.jpeg";
-// import Both_Image from "../assets/Both_Image.png";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// export default function Highlights() {
-//   const { t } = useTranslation("highlights");
-//   const containerRef = useRef(null);
-//   const horizontalRef = useRef(null);
-
-//   const services = t("servicesSection.clusters", { returnObjects: true }) || [];
-//   const advantages = t("advantages.items", { returnObjects: true }) || [];
-
-//   useEffect(() => {
-//     let ctx = gsap.context(() => {
-//       const mm = gsap.matchMedia();
-
-//       mm.add("(min-width: 1024px)", () => {
-//         const sections = gsap.utils.toArray(".service-slide");
-//         if (sections.length === 0) return;
-
-//         gsap.to(sections, {
-//           xPercent: -100 * (sections.length - 1),
-//           ease: "none",
-//           scrollTrigger: {
-//             trigger: horizontalRef.current,
-//             pin: true,
-//             scrub: 1,
-//             snap: 1 / (sections.length - 1),
-//             end: () => `+=${horizontalRef.current?.offsetWidth || 2000}`,
-//             invalidateOnRefresh: true,
-//           },
-//         });
-//       });
-//     }, containerRef);
-
-//     return () => {
-//       ctx.revert();
-//       ScrollTrigger.getAll().forEach((t) => t.kill());
-//     };
-//   }, []);
-
-//   const scrollToContact = (e) => {
-//     e.preventDefault();
-//     const elem = document.getElementById("contact");
-//     if (elem) {
-//       const offset = 80;
-//       const elementPosition = elem.getBoundingClientRect().top;
-//       const offsetPosition = elementPosition + window.pageYOffset - offset;
-//       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-//     }
-//   };
-
-//   return (
-//     <div
-//       ref={containerRef}
-//       className="bg-[#262B3E] text-white overflow-x-hidden selection:bg-[#BA8C61] selection:text-white font-sans antialiased"
-//     >
-//       {/* --- SECTION 1: THE MANIFESTO (REMOVED BLACK) --- */}
-//       <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-24 py-20 bg-[#262B3E] overflow-hidden">
-//         {/* Background Decorative Text - Subtle Watermark */}
-//         <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03] select-none">
-//           <motion.h2
-//             style={{ x: "-5%" }}
-//             whileInView={{ x: "5%" }}
-//             transition={{
-//               duration: 20,
-//               repeat: Infinity,
-//               repeatType: "mirror",
-//             }}
-//             className="text-[25vw] font-serif italic whitespace-nowrap text-white"
-//           >
-//             {t("intro.text4")}
-//           </motion.h2>
-//         </div>
-
-//         <div className="max-w-[1400px] w-full grid lg:grid-cols-12 gap-10 items-center z-10">
-//           <div className="lg:col-span-6 space-y-8 order-2 lg:order-1 text-left">
-//             <div className="space-y-4">
-//               <h1
-//                 className="font-serif italic text-white leading-[1.1]"
-//                 style={{ fontSize: "clamp(2.5rem, 5vw, 3.2rem)" }}
-//               >
-//                 {t("intro.text1")
-//                   .split(" ")
-//                   .map((word, i) => (
-//                     <span
-//                       key={i}
-//                       className="inline-block overflow-hidden mr-3 pb-4 -mb-4"
-//                     >
-//                       <motion.span
-//                         initial={{ y: "100%" }}
-//                         whileInView={{ y: 0 }}
-//                         viewport={{ once: true }}
-//                         transition={{
-//                           duration: 1,
-//                           delay: i * 0.1,
-//                           ease: [0.16, 1, 0.3, 1],
-//                         }}
-//                         className="inline-block"
-//                       >
-//                         {word}
-//                       </motion.span>
-//                     </span>
-//                   ))}
-//               </h1>
-//               {/* Gold Accent Line */}
-//               <motion.div
-//                 initial={{ width: 0 }}
-//                 whileInView={{ width: "80px" }}
-//                 transition={{ duration: 1, delay: 0.8 }}
-//                 className="h-px bg-[#BA8C61]"
-//               />
-//             </div>
-
-//             <motion.p
-//               initial={{ opacity: 0, y: 20 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ delay: 0.5, duration: 1 }}
-//               className="text-white/90 font-light leading-relaxed max-w-md italic"
-//               style={{ fontSize: "clamp(1.1rem, 1.5vw, 1.3rem)" }}
-//             >
-//               {t("intro.text2")}
-//             </motion.p>
-//           </div>
-
-//           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end order-1 lg:order-2">
-//             <motion.div
-//               initial={{ y: 60, opacity: 0 }}
-//               whileInView={{ y: 0, opacity: 1 }}
-//               transition={{ duration: 1.2, ease: "circOut" }}
-//               className="relative w-full lg:w-[90%] aspect-[14/10] overflow-hidden border border-[#BA8C61]/20 shadow-2xl group cursor-default"
-//             >
-//               <img
-//                 src={Both_Image}
-//                 alt="Partners"
-//                 className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
-//               />
-//               <div className="absolute inset-0 bg-gradient-to-t from-[#1A1E2E]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-//               <div className="absolute bottom-6 left-6 right-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 text-left">
-//                 <p className="text-white font-serif italic text-base lg:text-lg">
-//                   Dr. jur. Raimonda Kraemer, LL.M.
-//                 </p>
-//                 <p className="text-white font-serif italic text-base lg:text-lg">
-//                   Aurelija Maumevičė, LL.M.
-//                 </p>
-//               </div>
-//             </motion.div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* --- SECTION 2: SERVICES (HORIZONTAL) --- */}
-//       <section
-//         ref={horizontalRef}
-//         className="horizontal-container bg-[#1A1E2E] border-y border-white/5"
-//       >
-//         <div className="flex flex-col lg:flex-row lg:w-[150%] h-auto lg:h-screen">
-//           {/* Intro Slide */}
-//           <div className="service-slide flex-shrink-0 w-full lg:w-screen h-[40vh] lg:h-full flex items-center px-6 lg:px-32 border-b lg:border-b-0 border-white/5">
-//             <div className="max-w-4xl text-left">
-//               <h2
-//                 className="font-serif italic mb-8 leading-tight text-white"
-//                 style={{ fontSize: "clamp(3rem, 6vw, 6.5rem)" }}
-//               >
-//                 {t("servicesSection.title")}
-//               </h2>
-//               <div className="flex items-center gap-6 text-[#BA8C61] group">
-//                 <span className="text-[12px] lg:text-sm tracking-[0.4em] uppercase font-bold text-white/60">
-//                   {t("servicesSection.slide")}
-//                 </span>
-//                 <ArrowRight
-//                   size={32}
-//                   className="group-hover:translate-x-3 transition-transform"
-//                 />
-//               </div>
-//             </div>
-//           </div>
-
-//           {/* Service Cards */}
-//           {services.map((service, index) => (
-//             <div
-//               key={index}
-//               className="service-slide flex-shrink-0 w-full lg:w-screen h-auto lg:h-full flex items-center justify-center px-6 lg:px-20 py-20 lg:py-0 border-b lg:border-b-0 border-white/5"
-//             >
-//               <div className="w-full max-w-[1200px] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-//                 <div className="relative w-full md:w-[60%] lg:w-[40%] aspect-[4/5] overflow-hidden border border-white/10 bg-[#262B3E]">
-//                   <img
-//                     src={index % 2 === 0 ? Rai_Image : Auri_Image}
-//                     className="w-full h-full object-cover"
-//                     alt="Partner Service"
-//                   />
-//                   <div className="absolute top-4 left-6 text-7xl lg:text-[10rem] font-serif text-white/[0.03] select-none">
-//                     0{index + 1}
-//                   </div>
-//                 </div>
-//                 <div className="w-full lg:w-[50%] flex flex-col justify-center space-y-6 text-left">
-//                   <h3
-//                     className="font-serif italic text-[#BA8C61] leading-tight"
-//                     style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
-//                   >
-//                     {service.headline || service.title}
-//                   </h3>
-//                   <p
-//                     className="text-white/80 font-light leading-relaxed"
-//                     style={{ fontSize: "clamp(1.1rem, 1.4vw, 1.4rem)" }}
-//                   >
-//                     {service.content}
-//                   </p>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* --- SECTION 3: ADVANTAGES --- */}
-//       <section className="py-24 lg:py-48 px-6 bg-[#262B3E] relative z-20">
-//         <div className="max-w-[1300px] mx-auto grid lg:grid-cols-12 gap-12 lg:gap-20 text-left">
-//           <motion.div
-//             initial={{ opacity: 0, x: -20 }}
-//             whileInView={{ opacity: 1, x: 0 }}
-//             viewport={{ once: true }}
-//             className="lg:col-span-5"
-//           >
-//             <h2
-//               className="font-serif leading-[1.1] tracking-tighter text-white"
-//               style={{ fontSize: "clamp(2.5rem, 4vw, 5rem)" }}
-//             >
-//               {t("servicesSection.legacy")}
-//             </h2>
-//           </motion.div>
-
-//           <div className="lg:col-span-7 grid md:grid-cols-2 gap-6">
-//             {advantages.map((item, i) => (
-//               <motion.div
-//                 key={i}
-//                 initial={{ opacity: 0, y: 20 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 viewport={{ once: true, margin: "-50px" }}
-//                 transition={{ delay: i * 0.1 }}
-//                 className="p-8 bg-white/[0.03] border border-white/5 rounded-sm group hover:border-[#BA8C61]/30 transition-all duration-500"
-//               >
-//                 <ShieldCheck
-//                   className="text-[#BA8C61] mb-6"
-//                   size={32}
-//                   strokeWidth={1.5}
-//                 />
-//                 <h4 className="text-2xl font-serif italic text-white mb-4">
-//                   {item.title}
-//                 </h4>
-//                 <p className="text-white/60 font-light leading-relaxed text-base group-hover:text-white/80 transition-colors">
-//                   {item.description}
-//                 </p>
-//               </motion.div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* --- SECTION 4: CTA (REMOVED BLACK) --- */}
-//       <section className="py-32 flex flex-col items-center text-center px-6 bg-[#202435] border-t border-white/5">
-//         <motion.h2
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           className="font-serif italic text-white mb-10 tracking-tight"
-//           style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
-//         >
-//           {t("servicesSection.contactButton")}
-//         </motion.h2>
-
-//         <motion.div
-//           onClick={scrollToContact}
-//           whileHover={{ scale: 1.05 }}
-//           whileTap={{ scale: 0.95 }}
-//           className="w-20 h-20 rounded-full border border-[#BA8C61] flex items-center justify-center text-[#BA8C61] cursor-pointer transition-all duration-500 hover:bg-[#BA8C61] hover:text-[#1A1E2E]"
-//         >
-//           <Send size={32} strokeWidth={1.5} />
-//         </motion.div>
-//       </section>
-//     </div>
-//   );
-// }
-
-//======================================================================
-import React, { useEffect, useRef } from "react";
-import { useMotionValue, useMotionTemplate, motion } from "framer-motion"; // Cleaned up imports
+import React, { useEffect, useRef, useState } from "react";
+import {
+  useMotionValue,
+  useMotionTemplate,
+  motion,
+  AnimatePresence,
+} from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { ShieldCheck, ArrowRight, Send } from "lucide-react";
+import { ShieldCheck, ArrowRight, Send, Plus, Minus } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Rai_Image from "../assets/Rai_Image.jpeg";
-import Auri_Image from "../assets/Auri_Image.jpeg";
 import Both_Image from "../assets/Both_Image.png";
+import Swipe_Image from "../assets/highlight_image.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// ─── Color system ──────────────────────────────────────────────────
+// Base:    #1B2A4A  — primary background
+// Surface: #1F3256  — card / elevated surfaces
+// Deep:    #141F36  — contrast sections (horizontal scroll, CTA)
+// Accent:  #BA8C61 / #C9B38C
+
+// ─── ServiceSlide ──────────────────────────────────────────────────
+// Displays title + summary prominently. Full headline revealed on toggle.
+function ServiceSlide({
+  service,
+  index,
+  areaLabel,
+  sectionTitle,
+  readMoreLabel,
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="service-slide flex-shrink-0 w-full lg:w-screen h-auto lg:h-full flex items-center justify-center px-6 sm:px-10 lg:px-28 xl:px-36 py-16 lg:py-0 border-b lg:border-b-0 border-slate-100">
+      <div className="w-full max-w-[820px] flex flex-col justify-center space-y-8">
+        {/* ── Top: index + eyebrow ── */}
+        <div className="flex items-center gap-5">
+          <span className="text-[#BA8C61] font-serif italic text-base tracking-[0.3em] font-bold">
+            0{index + 1}
+          </span>
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "56px" }}
+            transition={{ duration: 0.9 }}
+            className="h-[2px] bg-[#BA8C61]"
+          />
+          <span className="text-xs uppercase tracking-[0.4em] text-[#1B2A4A]/40 font-bold">
+            {areaLabel}
+          </span>
+        </div>
+
+        {/* ── Title — clusters[].title ── */}
+        <h3
+          className="font-serif italic text-[#1B2A4A] leading-[1.1]"
+          style={{ fontSize: "clamp(1.7rem, 2.8vw, 3.2rem)" }}
+        >
+          {service.title}
+        </h3>
+
+        {/* ── Divider ── */}
+        <div className="w-16 h-px bg-[#BA8C61]/40" />
+
+        {/* ── Summary — clusters[].summary (always visible, prominent) ── */}
+        <p
+          className="text-[#1B2A4A] font-light leading-[1.85] max-w-2xl"
+          style={{ fontSize: "clamp(1.05rem, 1.5vw, 1.25rem)" }}
+        >
+          {service.summary}
+        </p>
+
+        {/* ── Expand toggle ── */}
+        <div>
+          <button
+            onClick={() => setExpanded((v) => !v)}
+            className="flex items-center gap-3 group cursor-pointer"
+          >
+            <div className="w-7 h-7 border border-[#BA8C61]/40 flex items-center justify-center text-[#BA8C61] group-hover:bg-[#BA8C61] group-hover:text-white transition-all duration-300">
+              {expanded ? (
+                <Minus size={13} strokeWidth={2.5} />
+              ) : (
+                <Plus size={13} strokeWidth={2.5} />
+              )}
+            </div>
+            <span className="text-xs uppercase tracking-[0.35em] font-bold text-[#1B2A4A]/50 group-hover:text-[#BA8C61] transition-colors duration-300">
+              {readMoreLabel}
+            </span>
+          </button>
+
+          {/* ── Full headline — clusters[].headline (expandable) ── */}
+          <AnimatePresence initial={false}>
+            {expanded && (
+              <motion.div
+                key="detail"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="overflow-hidden"
+              >
+                <p
+                  className="text-slate-600 font-light leading-[1.95] max-w-2xl mt-6 border-l-2 border-[#BA8C61]/25 pl-5"
+                  style={{ fontSize: "clamp(0.95rem, 1.1vw, 1.05rem)" }}
+                >
+                  {service.headline}
+                </p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
+        {/* ── Tags — clusters[].tags (optional) ── */}
+        {service.tags && service.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {service.tags.map((tag, ti) => (
+              <span
+                key={ti}
+                className="text-xs uppercase tracking-[0.25em] font-semibold px-3 py-1 border border-[#BA8C61]/30 text-[#BA8C61]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* ── Footer rule ── */}
+        <div className="pt-2 border-t border-slate-200 flex items-center gap-4">
+          <span className="text-xs uppercase tracking-[0.4em] text-[#1B2A4A]/30 font-bold">
+            {areaLabel}
+          </span>
+          <div className="flex-1 h-px bg-slate-200" />
+          <span className="text-xs uppercase tracking-[0.3em] text-[#BA8C61] font-bold">
+            {sectionTitle}
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Highlights() {
   const { t } = useTranslation("highlights");
   const containerRef = useRef(null);
   const horizontalRef = useRef(null);
 
-  // --- SPOTLIGHT LOGIC FOR CTA ---
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -318,17 +152,17 @@ export default function Highlights() {
     mouseY.set(clientY - top);
   }
 
+  // JSON keys: servicesSection.clusters[] → { title, headline, ... }
+  // JSON keys: advantages.items[]         → { title, description }
   const services = t("servicesSection.clusters", { returnObjects: true }) || [];
   const advantages = t("advantages.items", { returnObjects: true }) || [];
 
   useEffect(() => {
     let ctx = gsap.context(() => {
       const mm = gsap.matchMedia();
-
       mm.add("(min-width: 1024px)", () => {
         const sections = gsap.utils.toArray(".service-slide");
         if (sections.length === 0) return;
-
         gsap.to(sections, {
           xPercent: -100 * (sections.length - 1),
           ease: "none",
@@ -337,13 +171,12 @@ export default function Highlights() {
             pin: true,
             scrub: 1,
             snap: 1 / (sections.length - 1),
-            end: () => `+=${horizontalRef.current?.offsetWidth || 2000}`,
+            end: () => `+=${(sections.length - 1) * window.innerWidth}`,
             invalidateOnRefresh: true,
           },
         });
       });
     }, containerRef);
-
     return () => {
       ctx.revert();
       ScrollTrigger.getAll().forEach((t) => t.kill());
@@ -354,9 +187,8 @@ export default function Highlights() {
     e.preventDefault();
     const elem = document.getElementById("contact");
     if (elem) {
-      const offset = 80;
-      const elementPosition = elem.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      const offsetPosition =
+        elem.getBoundingClientRect().top + window.pageYOffset - 80;
       window.scrollTo({ top: offsetPosition, behavior: "smooth" });
     }
   };
@@ -364,11 +196,18 @@ export default function Highlights() {
   return (
     <div
       ref={containerRef}
-      className="bg-[#262B3E] text-white overflow-x-hidden selection:bg-[#BA8C61] selection:text-white font-sans antialiased"
+      className="text-white overflow-x-hidden selection:bg-[#BA8C61] selection:text-white font-sans antialiased"
+      style={{ backgroundColor: "#1B2A4A" }}
     >
-      {/* --- SECTION 1: THE MANIFESTO --- */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-24 py-20 bg-[#262B3E] overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03] select-none">
+      {/* ══════════════════════════════════════════════════════════════
+          SECTION 1 — MANIFESTO
+      ══════════════════════════════════════════════════════════════ */}
+      <section
+        className="relative min-h-screen flex items-center justify-center px-6 sm:px-10 lg:px-24 py-24 overflow-hidden"
+        style={{ backgroundColor: "#1B2A4A" }}
+      >
+        {/* Background watermark — key: intro.text4 */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.025] select-none overflow-hidden">
           <motion.h2
             style={{ x: "-5%" }}
             whileInView={{ x: "5%" }}
@@ -383,27 +222,37 @@ export default function Highlights() {
           </motion.h2>
         </div>
 
-        <div className="max-w-[1400px] w-full grid lg:grid-cols-12 gap-10 items-center z-10">
+        <div className="max-w-[1400px] w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10">
+          {/* ── Left: Text ── */}
           <div className="lg:col-span-6 space-y-8 order-2 lg:order-1 text-left">
-            <div className="space-y-4">
+            {/* Eyebrow — key: servicesSection.area */}
+            <div className="flex items-center gap-3">
+              <div className="h-px w-8 bg-[#BA8C61]" />
+              <span className="text-[#BA8C61] text-xs uppercase tracking-[0.35em] font-semibold">
+                {t("servicesSection.area")}
+              </span>
+            </div>
+
+            {/* Animated heading — key: intro.text1 */}
+            <div className="space-y-3">
               <h1
                 className="font-serif italic text-white leading-[1.1]"
-                style={{ fontSize: "clamp(2.5rem, 5vw, 3.2rem)" }}
+                style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)" }}
               >
                 {t("intro.text1")
                   .split(" ")
                   .map((word, i) => (
                     <span
                       key={i}
-                      className="inline-block overflow-hidden mr-3 pb-4 -mb-4"
+                      className="inline-block overflow-hidden mr-[0.3em] pb-3 -mb-3"
                     >
                       <motion.span
                         initial={{ y: "100%" }}
                         whileInView={{ y: 0 }}
                         viewport={{ once: true }}
                         transition={{
-                          duration: 1,
-                          delay: i * 0.1,
+                          duration: 0.9,
+                          delay: i * 0.08,
                           ease: [0.16, 1, 0.3, 1],
                         }}
                         className="inline-block"
@@ -415,41 +264,54 @@ export default function Highlights() {
               </h1>
               <motion.div
                 initial={{ width: 0 }}
-                whileInView={{ width: "80px" }}
-                transition={{ duration: 1, delay: 0.8 }}
+                whileInView={{ width: "70px" }}
+                transition={{ duration: 1, delay: 0.7 }}
                 className="h-px bg-[#BA8C61]"
               />
             </div>
 
+            {/* Primary body — key: intro.text2 */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 1 }}
-              className="text-white/90 font-light leading-relaxed max-w-md italic"
-              style={{ fontSize: "clamp(1.1rem, 1.5vw, 1.3rem)" }}
+              transition={{ delay: 0.4, duration: 0.9 }}
+              className="text-white/70 font-light leading-[1.9] max-w-lg"
+              style={{ fontSize: "clamp(1rem, 1.4vw, 1.15rem)" }}
             >
               {t("intro.text2")}
             </motion.p>
+
+            {/* Secondary body / pull-quote — key: intro.text3 */}
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55, duration: 0.9 }}
+              className="text-white/50 font-light leading-[1.9] max-w-lg italic border-l-2 border-[#BA8C61]/30 pl-5"
+              style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}
+            >
+              {t("intro.text3")}
+            </motion.p>
           </div>
 
+          {/* ── Right: Image ── */}
           <div className="lg:col-span-6 relative flex items-center justify-center lg:justify-end order-1 lg:order-2">
             <motion.div
-              initial={{ y: 60, opacity: 0 }}
+              initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1.2, ease: "circOut" }}
-              className="relative w-full lg:w-[90%] aspect-[14/10] overflow-hidden border border-[#BA8C61]/20 shadow-2xl group cursor-default"
+              className="relative w-full lg:w-[90%] aspect-[14/10] overflow-hidden border border-[#BA8C61]/20 shadow-[0_30px_80px_rgba(0,0,0,0.4)] group cursor-default"
             >
               <img
                 src={Both_Image}
                 alt="Partners"
                 className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1A1E2E]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="absolute bottom-6 left-6 right-6 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700 text-left">
-                <p className="text-white font-serif italic text-base lg:text-lg">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1B2A4A]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute bottom-5 left-6 right-6 translate-y-3 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                <p className="text-white font-serif italic text-sm lg:text-base leading-relaxed">
                   Dr. jur. Raimonda Kraemer, LL.M.
                 </p>
-                <p className="text-white font-serif italic text-base lg:text-lg">
+                <p className="text-white/75 font-serif italic text-sm lg:text-base leading-relaxed">
                   Aurelija Maumevičė, LL.M.
                 </p>
               </div>
@@ -458,104 +320,144 @@ export default function Highlights() {
         </div>
       </section>
 
-      {/* --- SECTION 2: SERVICES (HORIZONTAL) --- */}
+      {/* ══════════════════════════════════════════════════════════════
+          SECTION 2 — SERVICES (HORIZONTAL SCROLL on desktop)
+      ══════════════════════════════════════════════════════════════ */}
       <section
         ref={horizontalRef}
-        className="horizontal-container bg-[#1A1E2E] border-y border-white/5"
+        className="horizontal-container border-y border-slate-200"
+        style={{ backgroundColor: "#ffffff" }}
       >
-        <div className="flex flex-col lg:flex-row lg:w-[150%] h-auto lg:h-screen">
-          <div className="service-slide flex-shrink-0 w-full lg:w-screen h-[40vh] lg:h-full flex items-center px-6 lg:px-32 border-b lg:border-b-0 border-white/5">
-            <div className="max-w-4xl text-left">
+        <div className="flex flex-col lg:flex-row lg:w-[300%] h-auto lg:h-screen">
+          {/* ── Slide 0: Title + image ── */}
+          <div className="service-slide flex-shrink-0 w-full lg:w-screen h-auto lg:h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 sm:px-10 lg:px-32 py-16 lg:py-0 gap-10 lg:gap-20 border-b lg:border-b-0 border-slate-100">
+            <div className="w-full lg:w-[46%] text-left space-y-8">
+              {/* Eyebrow — key: servicesSection.area */}
+              <div className="flex items-center gap-3">
+                <div className="h-px w-8 bg-[#BA8C61]" />
+                <span className="text-[#BA8C61] text-xs uppercase tracking-[0.4em] font-semibold">
+                  {t("servicesSection.area")}
+                </span>
+              </div>
+
+              {/* Big navy title — key: servicesSection.title */}
               <h2
-                className="font-serif italic mb-8 leading-tight text-white"
-                style={{ fontSize: "clamp(3rem, 6vw, 6.5rem)" }}
+                className="font-serif italic leading-[1.08] text-[#1B2A4A]"
+                style={{ fontSize: "clamp(2.2rem, 4vw, 4.8rem)" }}
               >
                 {t("servicesSection.title")}
               </h2>
-              <div className="flex items-center gap-6 text-[#BA8C61] group">
-                <span className="text-[12px] lg:text-sm tracking-[0.4em] uppercase font-bold text-white/60">
+
+              {/* Supporting text — key: servicesSection.sideTitle */}
+              <p
+                className="text-slate-500 font-light leading-[1.85] max-w-sm"
+                style={{ fontSize: "clamp(1rem, 1.3vw, 1.1rem)" }}
+              >
+                {t("servicesSection.sideTitle")}
+              </p>
+
+              {/* Scroll cue — key: servicesSection.slide */}
+              <div className="flex items-center gap-4 group cursor-default pt-2">
+                <span className="text-xs tracking-[0.4em] uppercase font-semibold text-[#1B2A4A]/40">
                   {t("servicesSection.slide")}
                 </span>
                 <ArrowRight
-                  size={32}
-                  className="group-hover:translate-x-3 transition-transform"
+                  size={20}
+                  className="text-[#BA8C61] group-hover:translate-x-2 transition-transform duration-300"
                 />
               </div>
             </div>
+
+            {/* Image — only on first slide */}
+            <div className="w-full lg:w-[46%] aspect-[4/3] overflow-hidden border border-[#BA8C61]/20 shadow-[0_24px_64px_rgba(27,42,74,0.12)]">
+              <img
+                src={Swipe_Image}
+                alt="Kanzlei"
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
 
+          {/* ── Slides 1+: clusters[] → title + summary + expandable headline ── */}
           {services.map((service, index) => (
-            <div
+            <ServiceSlide
               key={index}
-              className="service-slide flex-shrink-0 w-full lg:w-screen h-auto lg:h-full flex items-center justify-center px-6 lg:px-20 py-20 lg:py-0 border-b lg:border-b-0 border-white/5"
-            >
-              <div className="w-full max-w-[1200px] flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-                <div className="relative w-full md:w-[60%] lg:w-[40%] aspect-[4/5] overflow-hidden border border-white/10 bg-[#262B3E]">
-                  <img
-                    src={index % 2 === 0 ? Rai_Image : Auri_Image}
-                    className="w-full h-full object-cover"
-                    alt="Partner Service"
-                  />
-                  <div className="absolute top-4 left-6 text-7xl lg:text-[10rem] font-serif text-white/[0.03] select-none">
-                    0{index + 1}
-                  </div>
-                </div>
-                <div className="w-full lg:w-[50%] flex flex-col justify-center space-y-6 text-left">
-                  <h3
-                    className="font-serif italic text-[#BA8C61] leading-tight"
-                    style={{ fontSize: "clamp(2rem, 3.5vw, 4rem)" }}
-                  >
-                    {service.headline || service.title}
-                  </h3>
-                  <p
-                    className="text-white/80 font-light leading-relaxed"
-                    style={{ fontSize: "clamp(1.1rem, 1.4vw, 1.4rem)" }}
-                  >
-                    {service.content}
-                  </p>
-                </div>
-              </div>
-            </div>
+              service={service}
+              index={index}
+              areaLabel={t("servicesSection.area")}
+              sectionTitle={t("servicesSection.title")}
+              readMoreLabel={t("servicesSection.slide")}
+            />
           ))}
         </div>
       </section>
 
-      {/* --- SECTION 3: ADVANTAGES --- */}
-      <section className="py-24 lg:py-48 px-6 bg-[#262B3E] relative z-20">
-        <div className="max-w-[1300px] mx-auto grid lg:grid-cols-12 gap-12 lg:gap-20 text-left">
+      {/* ══════════════════════════════════════════════════════════════
+          SECTION 3 — ADVANTAGES
+      ══════════════════════════════════════════════════════════════ */}
+      <section
+        className="py-24 lg:py-44 px-6 sm:px-10 relative z-20"
+        style={{ backgroundColor: "#1B2A4A" }}
+      >
+        <div className="max-w-[1300px] mx-auto grid lg:grid-cols-12 gap-12 lg:gap-20">
+          {/* Heading — keys: advantages.title, servicesSection.legacy, servicesSection.choose */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 space-y-5"
           >
+            <div className="flex items-center gap-3">
+              <div className="h-px w-6 bg-[#BA8C61]/60" />
+              <span className="text-[#BA8C61]/70 text-xs uppercase tracking-[0.35em] font-semibold">
+                {t("advantages.title")}
+              </span>
+            </div>
             <h2
-              className="font-serif leading-[1.1] tracking-tighter text-white"
-              style={{ fontSize: "clamp(2.5rem, 4vw, 5rem)" }}
+              className="font-serif leading-[1.1] tracking-tight text-white"
+              style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)" }}
             >
               {t("servicesSection.legacy")}
             </h2>
+            <p
+              className="text-white/45 font-light leading-[1.85] max-w-xs"
+              style={{ fontSize: "clamp(0.95rem, 1.1vw, 1rem)" }}
+            >
+              {t("servicesSection.choose")}
+            </p>
           </motion.div>
 
-          <div className="lg:col-span-7 grid md:grid-cols-2 gap-6">
+          {/* Advantage cards — keys: advantages.items[].title + .description */}
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 lg:gap-5">
             {advantages.map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.1 }}
-                className="p-8 bg-white/[0.03] border border-white/5 rounded-sm group hover:border-[#BA8C61]/30 transition-all duration-500"
+                transition={{ delay: i * 0.1, duration: 0.7 }}
+                className="relative p-7 lg:p-8 border border-white/[0.06] group hover:border-[#BA8C61]/25 transition-all duration-500 overflow-hidden"
+                style={{ backgroundColor: "#1F3256" }}
               >
+                {/* Gold hover accent */}
+                <span className="absolute top-0 left-0 w-0 h-[2px] bg-gradient-to-r from-[#BA8C61] to-[#C9B38C] group-hover:w-full transition-all duration-500" />
+
                 <ShieldCheck
-                  className="text-[#BA8C61] mb-6"
-                  size={32}
+                  className="text-[#BA8C61] mb-5 opacity-75"
+                  size={24}
                   strokeWidth={1.5}
                 />
-                <h4 className="text-2xl font-serif italic text-white mb-4">
+
+                {/* Card title — key: advantages.items[].title */}
+                <h4 className="text-lg lg:text-xl font-serif italic text-white mb-3 leading-snug">
                   {item.title}
                 </h4>
-                <p className="text-white/60 font-light leading-relaxed text-base group-hover:text-white/80 transition-colors">
+
+                {/* Card body — key: advantages.items[].description */}
+                <p
+                  className="text-white/50 font-light leading-[1.85] group-hover:text-white/75 transition-colors duration-500"
+                  style={{ fontSize: "clamp(0.9rem, 1vw, 1rem)" }}
+                >
                   {item.description}
                 </p>
               </motion.div>
@@ -564,42 +466,87 @@ export default function Highlights() {
         </div>
       </section>
 
-      {/* --- SECTION 4: CTA WITH HIGH-INTENSITY SPOTLIGHT --- */}
+      {/* ══════════════════════════════════════════════════════════════
+          SECTION 4 — CTA SPOTLIGHT
+      ══════════════════════════════════════════════════════════════ */}
       <section
         onMouseMove={handleMouseMove}
-        className="relative py-32 flex flex-col items-center text-center px-6 bg-[#202435] border-t border-white/5 overflow-hidden group/cta"
+        className="relative py-28 lg:py-40 flex flex-col items-center text-center px-6 border-t border-slate-200 overflow-hidden group/cta"
+        style={{ backgroundColor: "#ffffff" }}
       >
-        {/* The Mouse Spotlight Engine */}
+        {/* Subtle gold spotlight on hover */}
         <motion.div
-          className="pointer-events-none absolute -inset-px opacity-0 group-hover/cta:opacity-100 transition duration-500"
+          className="pointer-events-none absolute -inset-px opacity-0 group-hover/cta:opacity-100 transition duration-700"
           style={{
             background: useMotionTemplate`
               radial-gradient(
-                600px circle at ${mouseX}px ${mouseY}px,
-                rgba(186, 140, 97, 0.15),
+                700px circle at ${mouseX}px ${mouseY}px,
+                rgba(186, 140, 97, 0.07),
                 transparent 80%
               )
             `,
           }}
         />
 
+        {/* Eyebrow — key: servicesSection.conversation */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="relative z-10 flex items-center gap-3 mb-7"
+        >
+          <div className="h-px w-8 bg-[#BA8C61]" />
+          <span className="text-[#BA8C61] text-xs uppercase tracking-[0.4em] font-bold">
+            {t("servicesSection.conversation")}
+          </span>
+          <div className="h-px w-8 bg-[#BA8C61]" />
+        </motion.div>
+
+        {/* Main heading — key: servicesSection.secure */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="relative z-10 font-serif italic text-white mb-10 tracking-tight"
-          style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+          transition={{ delay: 0.1 }}
+          className="relative z-10 font-serif italic text-[#1B2A4A] mb-5 tracking-tight max-w-3xl"
+          style={{ fontSize: "clamp(1.8rem, 4vw, 3.6rem)" }}
         >
-          {t("servicesSection.contactButton")}
+          {t("servicesSection.secure")}
         </motion.h2>
 
+        {/* Supporting text — key: servicesSection.sideTitle */}
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="relative z-10 text-slate-600 font-normal leading-relaxed mb-12 max-w-md"
+          style={{ fontSize: "clamp(1rem, 1.3vw, 1.1rem)" }}
+        >
+          {t("servicesSection.sideTitle")}
+        </motion.p>
+
+        {/* CTA button — key: servicesSection.contactButton */}
         <motion.div
           onClick={scrollToContact}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
-          className="relative z-10 w-20 h-20 rounded-full border border-[#BA8C61] flex items-center justify-center text-[#BA8C61] cursor-pointer transition-all duration-500 hover:bg-[#BA8C61] hover:text-[#1A1E2E] shadow-[0_0_30px_rgba(186,140,97,0.1)]"
+          className="relative z-10 flex items-center gap-4 px-10 py-4 border-2 border-[#1B2A4A] text-[#1B2A4A] cursor-pointer transition-all duration-300 hover:bg-[#1B2A4A] hover:text-white group/btn shadow-[0_8px_32px_rgba(27,42,74,0.12)] hover:shadow-[0_12px_40px_rgba(27,42,74,0.22)]"
         >
-          <Send size={32} strokeWidth={1.5} />
+          <span className="text-xs uppercase tracking-[0.35em] font-bold">
+            {t("servicesSection.contactButton")}
+          </span>
+          <Send
+            size={16}
+            strokeWidth={2}
+            className="transition-transform duration-300 group-hover/btn:translate-x-1"
+          />
         </motion.div>
+
+        {/* Bottom decorative line */}
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "80px" }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="mt-16 h-px bg-[#BA8C61]/40"
+        />
       </section>
     </div>
   );

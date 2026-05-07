@@ -1,11 +1,10 @@
 {
   "intro": {
-    "text1": "Wirtschaft & Recht aus einer Hand damit Sie Ihre finanzielle Kontrolle zurückgewinnen.",
-  "text2": "Sie stehen vor schwierigen wirtschaftlichen Entscheidungen, kämpfen mit Schulden oder planen den Schritt nach Litauen?",
-  "text3": "Wir sind die Kanzlei, die wirtschaftliche Expertise mit anwaltlicher Präzision verbindet – für Privatpersonen und Unternehmen in Deutschland und Litauen.",  
-  "text4": "PARTNERSCHAFT — PARTNERSCHAFT"
-  
-},
+    "text1": "Wirtschaft und Recht – gemeinsam stark",
+    "text2": "Wirtschaftliche Entscheidungen erfordern Erfahrung, strategisches Denken und ein sicheres Verständnis für Risiken. Genau hier setzen wir an: Die Wirtschaftskanzlei Dr. jur. R. Kraemer GmbH verbindet wirtschafts-juristische Kompetenz mit internationaler Erfahrung und einem starken Netzwerk rechtlicher Kooperationen.",
+    "text3": "Unser Ziel ist es, tragfähige Lösungen zu entwickeln, wirtschaftliche Stabilität zu sichern und Mandanten in komplexen Situationen verlässlich zu begleiten.",
+    "text4": "PARTNERSCHAFT — PARTNERSCHAFT"
+  },
 
   "value": {
     "title1": "Ganzheitlicher Ansatz",
@@ -15,70 +14,66 @@
     "title3": "Krisen-Kompetenz",
     "desc3": "Proaktive Sanierung statt klassischer Insolvenzverwaltung."
   },
+
   "servicesSection": {
     "title": "Unsere Schwerpunkte für Ihren Erfolg",
-    "slide":"Wischen für mehr",
-    "area":"Tätigkeitsbereich",
-    "secure":"Sichern Sie Ihre Zukunft",
-    "conversation":"Kostenlose Ersteinschätzung",
-    "choose":"Warum uns wählen",
-    "legacy":"Ein Vermächtnis, auf dem wir aufbauen.",
-    "trust":"vertrauen",
-    "and":"und",
-    "strategy":"strategie",
+    "slide": "Mehr erfahren",
+    "area": "Tätigkeitsbereich",
+    "secure": "Sichern Sie Ihre Zukunft",
+    "conversation": "Kostenlose Ersteinschätzung",
+    "choose": "Warum uns wählen",
+    "legacy": "Ein Vermächtnis, auf dem wir aufbauen.",
+    "trust": "vertrauen",
+    "and": "und",
+    "strategy": "strategie",
     "sideTitle": "Wenige Schritte zu den besten juristischen Lösungen für Ihr Unternehmen.",
     "contactButton": "Kontaktieren Sie uns",
     "clusters": [
       {
-        "title": "Wirtschaftsberatung & Recht",
-        "headline": "Wirtschaft und Recht aus einer Hand: Ihr Erfolg im Fokus",
-        "content": "Wir analysieren Strukturen, begleiten Verhandlungen und sichern Gründungen ab. Vermeiden Sie die 'Gründungsfalle' durch die Wahl der richtigen Rechtsform.",
-        "keywords": [
+        "title": "Beratung zur Unternehmensgründung und Rechtsformwahl",
+        "summary": "Die richtige Rechtsform ist das Fundament jedes Unternehmens. Wir begleiten Sie von der Gründung bis zur Umstrukturierung – rechtlich fundiert und individuell auf Ihr Geschäftsmodell abgestimmt.",
+        "headline": "Eine erfolgreiche Unternehmensgründung erfordert mehr als eine gute Geschäftsidee. Entscheidend sind eine passende Rechtsform, klare gesellschaftsrechtliche Strukturen, rechtssichere Verträge und eine wirtschaftlich tragfähige Planung. Wir beraten Gründer, Selbstständige, Unternehmer und Investoren bei der Wahl und Gestaltung der geeigneten Unternehmensform – vom Einzelunternehmen über GbR, eGbR, OHG, KG, GmbH & Co. KG, UG, GmbH, AG und KGaA bis hin zu Genossenschaft, Verein, Stiftung sowie europäischen oder internationalen Gesellschaftsstrukturen. Die Rechtsform beeinflusst insbesondere Haftung, Kapitalbedarf, steuerliche Behandlung, Geschäftsführung, Außenwirkung und spätere Entwicklungsmöglichkeiten. Darüber hinaus begleiten wir Umwandlungen und Strukturänderungen, etwa vom Einzelunternehmen zur GmbH, von der GbR zur GmbH oder UG, von der UG zur GmbH, von Personen- zu Kapitalgesellschaften sowie bei Holding-, Beteiligungs- oder Stiftungslösungen. Bei einem Rechtsformwechsel sind insbesondere gesellschaftsrechtliche, steuerliche und registerrechtliche Anforderungen sorgfältig zu prüfen. Unser Ziel ist es, von Beginn an eine stabile Grundlage für Wachstum, Haftungsschutz, Finanzierung und langfristige Unternehmensnachfolge zu schaffen – rechtlich fundiert, wirtschaftlich durchdacht und individuell auf Ihr Geschäftsmodell abgestimmt.",
+        "tags": [
           "Unternehmensgründung Köln",
           "Wirtschaftsberatung Düsseldorf",
           "Gesellschaftsrecht"
         ]
       },
       {
-        "title": "Sanierung & Insolvenz",
-        "headline": "Unternehmenssanierung: Krise als Chance zur Neuausrichtung",
-        "content": "Fokus auf StaRUG und ESUG. Wir vermeiden die Regelinsolvenz, um Ihre Reputation und Kontrolle zu wahren.",
-        "ctaLabel": "Krisen-Check anfordern"
-      },
-      {
-        "title": "Spezial: Deutschland & Litauen",
-        "headline": "Ihr Partner für deutsch-litauische Wirtschaftsbeziehungen",
-        "content": "Zweisprachige Verträge, Marktstrategien und rechtliche Absicherung für Exporteure und Investoren.",
-        "hoverMicrocopy": "Sichern Sie Ihren Markteintritt im Baltikum ab."
+        "title": "Insolvenzberatung für Privatpersonen, Selbstständige und Unternehmen",
+        "summary": "Finanzielle Krisen erfordern schnelles, strategisches Handeln. Wir prüfen außergerichtliche Lösungen, begleiten Sanierungen und sichern Ihren Handlungsspielraum – bevor es zu spät ist.",
+        "headline": "Finanzielle Krisen erfordern eine frühzeitige, rechtssichere und strategische Beratung. Wir unterstützen Privatpersonen, Selbstständige und Unternehmen bei Überschuldung, Zahlungsengpässen, Gläubigerdruck, Vollstreckungsmaßnahmen sowie bei drohender oder bereits eingetretener Insolvenz. Im Mittelpunkt steht zunächst die Prüfung außergerichtlicher Lösungen – etwa Schuldenregulierung, Gläubigerverhandlungen, Sanierung oder Restrukturierung. Für Unternehmen prüfen wir zudem geeignete Instrumente wie StaRUG-Verfahren, Eigenverwaltung, Schutzschirmverfahren oder Insolvenzplanlösungen. Ist ein Insolvenzverfahren erforderlich, begleiten wir Sie strukturiert bei der Vorbereitung und Auswahl des passenden Verfahrens – von der Verbraucherinsolvenz über die Regelinsolvenz bis zu unternehmerischen und grenzüberschreitenden Verfahren innerhalb der EU. Unser Ziel ist es, Risiken zu begrenzen, Handlungsspielräume zu sichern und eine Lösung zu entwickeln, die wirtschaftlich tragfähig, rechtlich fundiert und zukunftsorientiert ist.",
+        "tags": []
       }
     ]
   },
 
   "advantages": {
-  "title": "Ihre Vorteile auf einen Blick",
-  "items": [
-    {
-      "title": "Keine Wartezeit",
-      "description": "Termine oft innerhalb von 48 Stunden. Keine wochenlangen Wartezeiten, wenn Sie Hilfe brauchen."
-    },
-    {
-      "title": "Kostenlose Ersteinschätzung",
-      "description": "Lernen Sie uns und Ihre Handlungsoptionen kennen – ganz ohne finanzielles Risiko."
-    },
-    {
-      "title": "Faires Honorar",
-      "description": "Transparente Kostenstruktur. Keine versteckten Gebühren. Ratenzahlung oft möglich."
-    },
-    {
-      "title": "Deutschland & Litauen",
-      "description": "Wirtschaft & Recht aus einer Hand. Internationale Erfahrung für Ihre Sicherheit."
-    }
-  ]
-},
+    "title": "Ihre Vorteile auf einen Blick",
+    "items": [
+      {
+        "title": "Keine Wartezeit",
+        "description": "Termine oft innerhalb von 48 Stunden. Keine wochenlangen Wartezeiten, wenn Sie Hilfe brauchen."
+      },
+      {
+        "title": "Kostenlose Ersteinschätzung",
+        "description": "Lernen Sie uns und Ihre Handlungsoptionen kennen – ganz ohne finanzielles Risiko."
+      },
+      {
+        "title": "Faires Honorar",
+        "description": "Transparente Kostenstruktur. Keine versteckten Gebühren. Ratenzahlung oft möglich."
+      },
+      {
+        "title": "Deutschland & Litauen",
+        "description": "Wirtschaft & Recht aus einer Hand. Internationale Erfahrung für Ihre Sicherheit."
+      }
+    ]
+  },
 
   "process": {
     "title": "In 4 Schritten zu Ihrer Lösung"
   },
+
   "testimonials": {
     "title": "Das sagen unsere Mandanten"
   }

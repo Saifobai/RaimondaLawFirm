@@ -1,44 +1,249 @@
+// import React, { useState, useEffect, useRef } from "react";
+// import { useTranslation } from "react-i18next";
+// import { motion, AnimatePresence } from "framer-motion";
+// import {
+//   Plus,
+//   ArrowUpRight,
+//   Shield,
+//   Scale,
+//   Landmark,
+//   Gavel,
+//   Zap,
+// } from "lucide-react";
+// import gsap from "gsap";
+
+// export default function DebtWay() {
+//   const { t } = useTranslation("debtway");
+//   const [activeTab, setActiveTab] = useState(0);
+//   const [isPaused, setIsPaused] = useState(false); // For manual hover override
+//   const containerRef = useRef(null);
+
+//   const services = t("servicesSection.clusters", { returnObjects: true }) || [];
+//   const icons = [Landmark, Scale, Gavel, Shield];
+
+//   // 1. AUTO-PLAY LOGIC (4 Second Intervals)
+//   useEffect(() => {
+//     if (isPaused) return; // Stop timer if user is hovering manually
+
+//     const interval = setInterval(() => {
+//       setActiveTab((prev) => (prev + 1) % services.length);
+//     }, 4000);
+
+//     return () => clearInterval(interval);
+//   }, [isPaused, services.length]);
+
+//   // 2. MOUSE MESH MOVEMENT
+//   useEffect(() => {
+//     const handleMouseMove = (e) => {
+//       const { clientX, clientY } = e;
+//       const xPos = (clientX / window.innerWidth - 0.5) * 30;
+//       const yPos = (clientY / window.innerHeight - 0.5) * 30;
+
+//       gsap.to(".bg-mesh", {
+//         x: xPos,
+//         y: yPos,
+//         duration: 2.5,
+//         ease: "power2.out",
+//       });
+//     };
+//     window.addEventListener("mousemove", handleMouseMove);
+//     return () => window.removeEventListener("mousemove", handleMouseMove);
+//   }, []);
+
+//   return (
+//     <div
+//       id="debtway"
+//       ref={containerRef}
+//       className="relative min-h-screen bg-[#262B3E] text-white overflow-hidden font-sans selection:bg-[#BA8C61]"
+//     >
+//       {/* --- BACKGROUND ARCHITECTURE --- */}
+//       <div className="absolute inset-0 pointer-events-none">
+//         <div className="bg-mesh absolute inset-[-20%] opacity-30 bg-[radial-gradient(circle_at_50%_50%,_#BA8C61_0%,_transparent_60%)] blur-[140px]" />
+//         <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] mix-blend-overlay" />
+//         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#262B3E_100%)] opacity-80" />
+//       </div>
+
+//       <div className="relative z-40 max-w-[1400px] mx-auto min-h-screen flex flex-col">
+//         {/* --- HEADER --- */}
+//         <header className="flex justify-between items-start pt-16 px-8 lg:px-0">
+//           <div className="space-y-3">
+//             <motion.div
+//               initial={{ width: 0 }}
+//               animate={{ width: "3rem" }}
+//               className="h-1 bg-[#BA8C61]"
+//             />
+//             <span className="text-[#BA8C61] tracking-[0.8em] uppercase text-[11px] font-bold block">
+//               {t("sectionSubtitle")}
+//             </span>
+//             <h2 className="text-5xl lg:text-7xl font-serif italic tracking-tighter leading-none text-white/95">
+//               {t("sectionLabel")}
+//             </h2>
+//           </div>
+
+//           <div className="hidden lg:flex flex-col items-end gap-3">
+//             <div className="flex items-center gap-3 py-2 px-4 border border-white/10 bg-white/5 backdrop-blur-md">
+//               <div className="relative flex h-2 w-2">
+//                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BA8C61] opacity-75"></span>
+//                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#BA8C61]"></span>
+//               </div>
+//             </div>
+//           </div>
+//         </header>
+
+//         {/* --- CORE INTERACTION --- */}
+//         <main className="flex-grow grid lg:grid-cols-12 gap-16 items-center py-20 px-8 lg:px-0">
+//           {/* LEFT: THE NAVIGATOR (Handles Pause/Resume) */}
+//           <div
+//             className="lg:col-span-5 space-y-6"
+//             onMouseEnter={() => setIsPaused(true)}
+//             onMouseLeave={() => setIsPaused(false)}
+//           >
+//             {services.map((service, idx) => (
+//               <div
+//                 key={idx}
+//                 onMouseEnter={() => setActiveTab(idx)}
+//                 className={`group cursor-pointer relative py-8 border-b border-white/5 transition-all duration-500 ${
+//                   activeTab === idx
+//                     ? "pl-10"
+//                     : "pl-0 opacity-20 hover:opacity-100"
+//                 }`}
+//               >
+//                 {activeTab === idx && (
+//                   <motion.div
+//                     layoutId="activeGlow"
+//                     className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#BA8C61] shadow-[0_0_20px_#BA8C61]"
+//                   />
+//                 )}
+
+//                 {/* Progress Bar for the active item */}
+//                 {activeTab === idx && !isPaused && (
+//                   <motion.div
+//                     initial={{ width: 0 }}
+//                     animate={{ width: "100%" }}
+//                     transition={{ duration: 4, ease: "linear" }}
+//                     className="absolute bottom-0 left-0 h-[1px] bg-[#BA8C61]/50 z-10"
+//                   />
+//                 )}
+
+//                 <div className="flex items-center justify-between mb-2">
+//                   <span className="text-[10px] tracking-[0.4em] uppercase font-black text-[#BA8C61]/60">
+//                     Phase 0{idx + 1}
+//                   </span>
+//                   {activeTab === idx && (
+//                     <ArrowUpRight className="text-[#BA8C61]" size={20} />
+//                   )}
+//                 </div>
+//                 <h3
+//                   className={`text-3xl lg:text-5xl font-serif italic transition-all duration-700 ${
+//                     activeTab === idx
+//                       ? "text-white translate-x-2"
+//                       : "text-white/80"
+//                   }`}
+//                 >
+//                   {service.headline}
+//                 </h3>
+//               </div>
+//             ))}
+//           </div>
+
+//           {/* RIGHT: THE DISPLAY VIEWPORT */}
+//           <div className="lg:col-span-7 relative h-[600px] flex items-center">
+//             <AnimatePresence mode="wait">
+//               <motion.div
+//                 key={activeTab}
+//                 initial={{ opacity: 0, x: 40, filter: "blur(15px)" }}
+//                 animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+//                 exit={{ opacity: 0, x: -40, filter: "blur(15px)" }}
+//                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+//                 className="absolute inset-0 flex flex-col justify-center"
+//               >
+//                 <div className="relative p-12 lg:p-20 border border-white/10 bg-[#1e2335]/40 backdrop-blur-2xl shadow-2xl rounded-sm group overflow-hidden">
+//                   <div className="absolute -top-10 -right-10 pointer-events-none">
+//                     {React.createElement(icons[activeTab], {
+//                       className:
+//                         "text-[#BA8C61] opacity-[0.07] group-hover:opacity-15 transition-opacity duration-1000",
+//                       size: 320,
+//                       strokeWidth: 0.5,
+//                     })}
+//                   </div>
+
+//                   <div className="relative z-10 space-y-10">
+//                     <h4 className="text-4xl lg:text-6xl font-serif italic leading-[1.1] text-white">
+//                       {services[activeTab].title}
+//                     </h4>
+
+//                     <p className="text-xl lg:text-2xl text-white/50 font-light leading-relaxed max-w-lg">
+//                       {services[activeTab].content}
+//                     </p>
+
+//                     <div className="flex flex-wrap gap-3">
+//                       {services[activeTab].keywords.map((kw, i) => (
+//                         <span
+//                           key={i}
+//                           className="px-5 py-2 bg-white/[0.03] border border-white/10 text-[10px] tracking-[0.2em] uppercase text-[#BA8C61] font-bold"
+//                         >
+//                           {kw}
+//                         </span>
+//                       ))}
+//                     </div>
+//                   </div>
+//                 </div>
+//               </motion.div>
+//             </AnimatePresence>
+//           </div>
+//         </main>
+
+//         {/* --- FOOTER --- */}
+//         <footer className="pb-16 flex justify-between items-center px-8 lg:px-0 border-t border-white/5 pt-10">
+//           <div className="flex items-center gap-6">
+//             <div className="flex gap-2">
+//               {[...Array(services.length)].map((_, i) => (
+//                 <div
+//                   key={i}
+//                   className={`h-1 transition-all duration-700 rounded-full ${
+//                     activeTab === i ? "w-16 bg-[#BA8C61]" : "w-4 bg-white/10"
+//                   }`}
+//                 />
+//               ))}
+//             </div>
+//           </div>
+//         </footer>
+//       </div>
+//     </div>
+//   );
+// }
+
+//====================================================================
+//====================================================================
 import React, { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Plus,
-  ArrowUpRight,
-  Shield,
-  Scale,
-  Landmark,
-  Gavel,
-  Zap,
-} from "lucide-react";
+import { ArrowUpRight, Shield, Scale, Landmark, Gavel } from "lucide-react";
 import gsap from "gsap";
 
 export default function DebtWay() {
   const { t } = useTranslation("debtway");
   const [activeTab, setActiveTab] = useState(0);
-  const [isPaused, setIsPaused] = useState(false); // For manual hover override
+  const [isPaused, setIsPaused] = useState(false);
   const containerRef = useRef(null);
 
   const services = t("servicesSection.clusters", { returnObjects: true }) || [];
   const icons = [Landmark, Scale, Gavel, Shield];
 
-  // 1. AUTO-PLAY LOGIC (4 Second Intervals)
+  // ── Auto-play (4s intervals) ──
   useEffect(() => {
-    if (isPaused) return; // Stop timer if user is hovering manually
-
+    if (isPaused) return;
     const interval = setInterval(() => {
       setActiveTab((prev) => (prev + 1) % services.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [isPaused, services.length]);
 
-  // 2. MOUSE MESH MOVEMENT
+  // ── Mouse mesh movement ──
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const xPos = (clientX / window.innerWidth - 0.5) * 30;
-      const yPos = (clientY / window.innerHeight - 0.5) * 30;
-
+      const xPos = (e.clientX / window.innerWidth - 0.5) * 30;
+      const yPos = (e.clientY / window.innerHeight - 0.5) * 30;
       gsap.to(".bg-mesh", {
         x: xPos,
         y: yPos,
@@ -54,47 +259,55 @@ export default function DebtWay() {
     <div
       id="debtway"
       ref={containerRef}
-      className="relative min-h-screen bg-[#262B3E] text-white overflow-hidden font-sans selection:bg-[#BA8C61]"
+      className="relative min-h-screen bg-white text-[#1B2A4A] overflow-hidden font-sans selection:bg-[#BA8C61] selection:text-white"
     >
-      {/* --- BACKGROUND ARCHITECTURE --- */}
+      {/* ══ BACKGROUND ARCHITECTURE ══ */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="bg-mesh absolute inset-[-20%] opacity-30 bg-[radial-gradient(circle_at_50%_50%,_#BA8C61_0%,_transparent_60%)] blur-[140px]" />
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] mix-blend-overlay" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_#262B3E_100%)] opacity-80" />
+        {/* Soft gold mesh — very subtle on white */}
+        <div className="bg-mesh absolute inset-[-20%] opacity-[0.06] bg-[radial-gradient(circle_at_50%_50%,_#BA8C61_0%,_transparent_60%)] blur-[140px]" />
+        {/* Navy vignette corners */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_40%,_rgba(27,42,74,0.04)_100%)]" />
+        {/* Dot grid */}
+        <div className="absolute inset-0 opacity-[0.035] bg-[radial-gradient(#1B2A4A_0.6px,transparent_0.6px)] [background-size:32px_32px]" />
       </div>
 
-      <div className="relative z-40 max-w-[1400px] mx-auto min-h-screen flex flex-col">
-        {/* --- HEADER --- */}
-        <header className="flex justify-between items-start pt-16 px-8 lg:px-0">
+      <div className="relative z-40 max-w-[1400px] mx-auto min-h-screen flex flex-col px-5 md:px-8 lg:px-0">
+        {/* ══ HEADER ══ */}
+        <header className="flex justify-between items-start pt-16">
           <div className="space-y-3">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: "3rem" }}
-              className="h-1 bg-[#BA8C61]"
+              transition={{ duration: 0.8 }}
+              className="h-[2px] bg-[#BA8C61]"
             />
             <span className="text-[#BA8C61] tracking-[0.8em] uppercase text-[11px] font-bold block">
               {t("sectionSubtitle")}
             </span>
-            <h2 className="text-5xl lg:text-7xl font-serif italic tracking-tighter leading-none text-white/95">
+            <h2
+              className="font-serif italic tracking-tight leading-none text-[#1B2A4A]"
+              style={{ fontSize: "clamp(2.4rem, 6vw, 4.5rem)" }}
+            >
               {t("sectionLabel")}
             </h2>
           </div>
 
+          {/* Live indicator */}
           <div className="hidden lg:flex flex-col items-end gap-3">
-            <div className="flex items-center gap-3 py-2 px-4 border border-white/10 bg-white/5 backdrop-blur-md">
+            <div className="flex items-center gap-3 py-2 px-4 border border-[#1B2A4A]/10 bg-[#1B2A4A]/[0.03]">
               <div className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BA8C61] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#BA8C61]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BA8C61] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#BA8C61]" />
               </div>
             </div>
           </div>
         </header>
 
-        {/* --- CORE INTERACTION --- */}
-        <main className="flex-grow grid lg:grid-cols-12 gap-16 items-center py-20 px-8 lg:px-0">
-          {/* LEFT: THE NAVIGATOR (Handles Pause/Resume) */}
+        {/* ══ CORE INTERACTION ══ */}
+        <main className="flex-grow grid lg:grid-cols-12 gap-10 lg:gap-16 items-center py-16 md:py-20">
+          {/* ── LEFT: NAVIGATOR ── */}
           <div
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 space-y-1"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -102,43 +315,47 @@ export default function DebtWay() {
               <div
                 key={idx}
                 onMouseEnter={() => setActiveTab(idx)}
-                className={`group cursor-pointer relative py-8 border-b border-white/5 transition-all duration-500 ${
+                className={`group cursor-pointer relative py-7 border-b transition-all duration-500 ${
                   activeTab === idx
-                    ? "pl-10"
-                    : "pl-0 opacity-20 hover:opacity-100"
+                    ? "pl-10 border-[#1B2A4A]/15"
+                    : "pl-0 opacity-30 hover:opacity-70 border-[#1B2A4A]/08"
                 }`}
               >
+                {/* Active gold dot */}
                 {activeTab === idx && (
                   <motion.div
                     layoutId="activeGlow"
-                    className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#BA8C61] shadow-[0_0_20px_#BA8C61]"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#BA8C61] shadow-[0_0_16px_rgba(186,140,97,0.6)]"
                   />
                 )}
 
-                {/* Progress Bar for the active item */}
+                {/* Progress bar */}
                 {activeTab === idx && !isPaused && (
                   <motion.div
+                    key={`progress-${idx}`}
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 4, ease: "linear" }}
-                    className="absolute bottom-0 left-0 h-[1px] bg-[#BA8C61]/50 z-10"
+                    className="absolute bottom-0 left-0 h-[1.5px] bg-[#BA8C61]/40 z-10"
                   />
                 )}
 
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] tracking-[0.4em] uppercase font-black text-[#BA8C61]/60">
+                  <span className="text-[10px] tracking-[0.4em] uppercase font-black text-[#BA8C61]/70">
                     Phase 0{idx + 1}
                   </span>
                   {activeTab === idx && (
-                    <ArrowUpRight className="text-[#BA8C61]" size={20} />
+                    <ArrowUpRight className="text-[#BA8C61]" size={18} />
                   )}
                 </div>
+
                 <h3
-                  className={`text-3xl lg:text-5xl font-serif italic transition-all duration-700 ${
+                  className={`font-serif italic transition-all duration-700 ${
                     activeTab === idx
-                      ? "text-white translate-x-2"
-                      : "text-white/80"
+                      ? "text-[#1B2A4A] translate-x-2"
+                      : "text-[#1B2A4A]/70"
                   }`}
+                  style={{ fontSize: "clamp(1.6rem, 3vw, 2.8rem)" }}
                 >
                   {service.headline}
                 </h3>
@@ -146,8 +363,8 @@ export default function DebtWay() {
             ))}
           </div>
 
-          {/* RIGHT: THE DISPLAY VIEWPORT */}
-          <div className="lg:col-span-7 relative h-[600px] flex items-center">
+          {/* ── RIGHT: DISPLAY VIEWPORT ── */}
+          <div className="lg:col-span-7 relative h-[480px] md:h-[560px] lg:h-[600px] flex items-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -157,35 +374,53 @@ export default function DebtWay() {
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute inset-0 flex flex-col justify-center"
               >
-                <div className="relative p-12 lg:p-20 border border-white/10 bg-[#1e2335]/40 backdrop-blur-2xl shadow-2xl rounded-sm group overflow-hidden">
+                <div
+                  className="relative p-10 md:p-14 lg:p-16 border border-white/10 shadow-[0_8px_60px_rgba(27,42,74,0.18)] group overflow-hidden"
+                  style={{ backgroundColor: "#1B2A4A" }}
+                >
+                  {/* Large background icon */}
                   <div className="absolute -top-10 -right-10 pointer-events-none">
-                    {React.createElement(icons[activeTab], {
+                    {React.createElement(icons[activeTab % icons.length], {
                       className:
-                        "text-[#BA8C61] opacity-[0.07] group-hover:opacity-15 transition-opacity duration-1000",
-                      size: 320,
+                        "text-white opacity-[0.04] group-hover:opacity-[0.08] transition-opacity duration-1000",
+                      size: 280,
                       strokeWidth: 0.5,
                     })}
                   </div>
 
-                  <div className="relative z-10 space-y-10">
-                    <h4 className="text-4xl lg:text-6xl font-serif italic leading-[1.1] text-white">
+                  {/* Gold top accent */}
+                  <span className="absolute top-0 left-0 w-0 h-[3px] bg-gradient-to-r from-[#BA8C61] to-[#C9B38C] group-hover:w-full transition-all duration-700" />
+
+                  <div className="relative z-10 space-y-8">
+                    {/* Title — key: servicesSection.clusters[].title */}
+                    <h4
+                      className="font-serif italic leading-[1.1] text-white"
+                      style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
+                    >
                       {services[activeTab].title}
                     </h4>
 
-                    <p className="text-xl lg:text-2xl text-white/50 font-light leading-relaxed max-w-lg">
+                    {/* Content — key: servicesSection.clusters[].content */}
+                    <p
+                      className="text-white/80 font-semibold leading-[1.9]"
+                      style={{ fontSize: "clamp(1rem, 1.3vw, 1.15rem)" }}
+                    >
                       {services[activeTab].content}
                     </p>
 
-                    <div className="flex flex-wrap gap-3">
-                      {services[activeTab].keywords.map((kw, i) => (
-                        <span
-                          key={i}
-                          className="px-5 py-2 bg-white/[0.03] border border-white/10 text-[10px] tracking-[0.2em] uppercase text-[#BA8C61] font-bold"
-                        >
-                          {kw}
-                        </span>
-                      ))}
-                    </div>
+                    {/* Keywords — key: servicesSection.clusters[].keywords */}
+                    {services[activeTab].keywords?.length > 0 && (
+                      <div className="flex flex-wrap gap-2 pt-2">
+                        {services[activeTab].keywords.map((kw, i) => (
+                          <span
+                            key={i}
+                            className="px-4 py-1.5 border border-[#BA8C61]/40 text-[#BA8C61] text-[10px] tracking-[0.25em] uppercase font-bold bg-[#BA8C61]/[0.08]"
+                          >
+                            {kw}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -193,15 +428,23 @@ export default function DebtWay() {
           </div>
         </main>
 
-        {/* --- FOOTER --- */}
-        <footer className="pb-16 flex justify-between items-center px-8 lg:px-0 border-t border-white/5 pt-10">
+        {/* ══ FOOTER ══ */}
+        <footer className="pb-16 flex justify-between items-center border-t border-[#1B2A4A]/08 pt-10">
+          {/* Progress dots */}
           <div className="flex items-center gap-6">
             <div className="flex gap-2">
               {[...Array(services.length)].map((_, i) => (
-                <div
+                <button
                   key={i}
-                  className={`h-1 transition-all duration-700 rounded-full ${
-                    activeTab === i ? "w-16 bg-[#BA8C61]" : "w-4 bg-white/10"
+                  onClick={() => {
+                    setActiveTab(i);
+                    setIsPaused(true);
+                    setTimeout(() => setIsPaused(false), 6000);
+                  }}
+                  className={`h-[3px] rounded-full transition-all duration-700 ${
+                    activeTab === i
+                      ? "w-14 bg-[#BA8C61]"
+                      : "w-4 bg-[#1B2A4A]/15 hover:bg-[#1B2A4A]/30"
                   }`}
                 />
               ))}

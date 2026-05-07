@@ -80,7 +80,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 md:py-48 text-slate-200 overflow-hidden bg-gradient-to-b from-[#1A1E2E] via-[#262B3E] to-[#1A1E2E]"
+      className="relative py-24 md:py-48 text-slate-200 overflow-hidden bg-[#1B2A4A]"
     >
       <style>{`
         input:-webkit-autofill,
