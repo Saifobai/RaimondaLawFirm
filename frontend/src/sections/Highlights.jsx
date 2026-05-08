@@ -21,7 +21,7 @@ gsap.registerPlugin(ScrollTrigger);
 // Accent:  #BA8C61 / #C9B38C
 
 // ─── ServiceSlide ──────────────────────────────────────────────────
-// Displays title + summary prominently. Full headline revealed on toggle.
+// Premium editorial card — contained, shadowed, newspaper two-column inside
 function ServiceSlide({
   service,
   index,
@@ -32,106 +32,128 @@ function ServiceSlide({
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="service-slide flex-shrink-0 w-full lg:w-screen h-auto lg:h-full flex items-center justify-center px-6 sm:px-10 lg:px-28 xl:px-36 py-16 lg:py-0 border-b lg:border-b-0 border-slate-100">
-      <div className="w-full max-w-[820px] flex flex-col justify-center space-y-8">
-        {/* ── Top: index + eyebrow ── */}
-        <div className="flex items-center gap-5">
-          <span className="text-[#BA8C61] font-serif italic text-base tracking-[0.3em] font-bold">
-            0{index + 1}
-          </span>
-          <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: "56px" }}
-            transition={{ duration: 0.9 }}
-            className="h-[2px] bg-[#BA8C61]"
-          />
-          <span className="text-xs uppercase tracking-[0.4em] text-[#1B2A4A]/40 font-bold">
-            {areaLabel}
-          </span>
-        </div>
-
-        {/* ── Title — clusters[].title ── */}
-        <h3
-          className="font-serif italic text-[#1B2A4A] leading-[1.1]"
-          style={{ fontSize: "clamp(1.7rem, 2.8vw, 3.2rem)" }}
+    <div className="service-slide flex-shrink-0 w-full lg:w-screen h-auto lg:h-full flex items-center justify-center px-6 sm:px-10 lg:px-20 xl:px-24 py-16 lg:py-0">
+      {/* ── Outer card — wider, more breathing room ── */}
+      <div
+        className="w-full max-w-[1200px] grid lg:grid-cols-12 gap-0 overflow-hidden"
+        style={{
+          background: "linear-gradient(135deg, #fafaf9 0%, #f5f0e8 100%)",
+          boxShadow:
+            "0 4px 6px rgba(27,42,74,0.04), 0 20px 60px rgba(27,42,74,0.10), 0 1px 0 rgba(186,140,97,0.15)",
+          border: "1px solid rgba(186,140,97,0.15)",
+        }}
+      >
+        {/* ══ LEFT: Typographic anchor ══ */}
+        <div
+          className="lg:col-span-5 flex flex-col justify-between p-12 lg:p-16 border-b lg:border-b-0 lg:border-r"
+          style={{ borderColor: "rgba(186,140,97,0.15)" }}
         >
-          {service.title}
-        </h3>
-
-        {/* ── Divider ── */}
-        <div className="w-16 h-px bg-[#BA8C61]/40" />
-
-        {/* ── Summary — clusters[].summary (always visible, prominent) ── */}
-        <p
-          className="text-[#1B2A4A] font-light leading-[1.85] max-w-2xl"
-          style={{ fontSize: "clamp(1.05rem, 1.5vw, 1.25rem)" }}
-        >
-          {service.summary}
-        </p>
-
-        {/* ── Expand toggle ── */}
-        <div>
-          <button
-            onClick={() => setExpanded((v) => !v)}
-            className="flex items-center gap-3 group cursor-pointer"
-          >
-            <div className="w-7 h-7 border border-[#BA8C61]/40 flex items-center justify-center text-[#BA8C61] group-hover:bg-[#BA8C61] group-hover:text-white transition-all duration-300">
-              {expanded ? (
-                <Minus size={13} strokeWidth={2.5} />
-              ) : (
-                <Plus size={13} strokeWidth={2.5} />
-              )}
-            </div>
-            <span className="text-xs uppercase tracking-[0.35em] font-bold text-[#1B2A4A]/50 group-hover:text-[#BA8C61] transition-colors duration-300">
-              {readMoreLabel}
-            </span>
-          </button>
-
-          {/* ── Full headline — clusters[].headline (expandable) ── */}
-          <AnimatePresence initial={false}>
-            {expanded && (
-              <motion.div
-                key="detail"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="overflow-hidden"
-              >
-                <p
-                  className="text-slate-600 font-light leading-[1.95] max-w-2xl mt-6 border-l-2 border-[#BA8C61]/25 pl-5"
-                  style={{ fontSize: "clamp(0.95rem, 1.1vw, 1.05rem)" }}
-                >
-                  {service.headline}
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-
-        {/* ── Tags — clusters[].tags (optional) ── */}
-        {service.tags && service.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {service.tags.map((tag, ti) => (
-              <span
-                key={ti}
-                className="text-xs uppercase tracking-[0.25em] font-semibold px-3 py-1 border border-[#BA8C61]/30 text-[#BA8C61]"
-              >
-                {tag}
-              </span>
-            ))}
+          <div className="space-y-7">
+            {/* Title — bolder, bigger */}
+            <h3
+              className="font-serif italic text-[#1B2A4A] leading-[1.08] font-bold"
+              style={{ fontSize: "clamp(1.7rem, 2.4vw, 2.9rem)" }}
+            >
+              {service.title}
+            </h3>
           </div>
-        )}
 
-        {/* ── Footer rule ── */}
-        <div className="pt-2 border-t border-slate-200 flex items-center gap-4">
-          <span className="text-xs uppercase tracking-[0.4em] text-[#1B2A4A]/30 font-bold">
-            {areaLabel}
-          </span>
-          <div className="flex-1 h-px bg-slate-200" />
-          <span className="text-xs uppercase tracking-[0.3em] text-[#BA8C61] font-bold">
-            {sectionTitle}
-          </span>
+          {/* Tags pushed to bottom */}
+          {service.tags && service.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 pt-10 mt-auto">
+              {service.tags.map((tag, ti) => (
+                <span
+                  key={ti}
+                  className="text-[10px] uppercase tracking-[0.3em] font-bold px-3 py-1.5 text-[#BA8C61]"
+                  style={{
+                    border: "1px solid rgba(186,140,97,0.35)",
+                    background: "rgba(186,140,97,0.05)",
+                  }}
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* ══ RIGHT: Summary + expandable body ══ */}
+        <div className="lg:col-span-7 flex flex-col justify-center p-12 lg:p-16 gap-8">
+          {/* Pull quote — bolder, bigger */}
+          <p
+            className="text-[#1B2A4A] font-semibold leading-[2] border-l-[3px] border-[#BA8C61] pl-6"
+            style={{ fontSize: "clamp(1.05rem, 1.4vw, 1.22rem)" }}
+          >
+            {service.summary}
+          </p>
+
+          {/* Subtle divider */}
+          <div
+            className="h-px w-full"
+            style={{ background: "rgba(27,42,74,0.08)" }}
+          />
+
+          {/* Expand toggle */}
+          <div>
+            <button
+              onClick={() => setExpanded((v) => !v)}
+              className="flex items-center gap-3 group cursor-pointer"
+            >
+              <div
+                className="w-7 h-7 flex items-center justify-center transition-all duration-300 group-hover:bg-[#BA8C61] group-hover:text-white"
+                style={{
+                  border: "1px solid rgba(186,140,97,0.45)",
+                  color: "#BA8C61",
+                }}
+              >
+                {expanded ? (
+                  <Minus size={12} strokeWidth={2.5} />
+                ) : (
+                  <Plus size={12} strokeWidth={2.5} />
+                )}
+              </div>
+              <span className="text-[11px] uppercase tracking-[0.4em] font-bold text-[#1B2A4A]/40 group-hover:text-[#BA8C61] transition-colors duration-300">
+                {readMoreLabel}
+              </span>
+            </button>
+
+            {/* Full body — split into readable paragraph groups */}
+            <AnimatePresence initial={false}>
+              {expanded && (
+                <motion.div
+                  key="detail"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="mt-7 space-y-5 max-w-xl">
+                    {service.headline
+                      .split(/(?<=\.)\s+/)
+                      .reduce((acc, sentence, i) => {
+                        const g = Math.floor(i / 3);
+                        if (!acc[g]) acc[g] = [];
+                        acc[g].push(sentence);
+                        return acc;
+                      }, [])
+                      .map((group, gi) => (
+                        <p
+                          key={gi}
+                          className="leading-[1.95] font-medium"
+                          style={{
+                            fontSize: "clamp(0.92rem, 1.05vw, 1.02rem)",
+                            color: "rgba(27,42,74,0.75)",
+                          }}
+                        >
+                          {group.join(" ")}
+                        </p>
+                      ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </div>
@@ -169,8 +191,12 @@ export default function Highlights() {
           scrollTrigger: {
             trigger: horizontalRef.current,
             pin: true,
-            scrub: 1,
-            snap: 1 / (sections.length - 1),
+            scrub: 4,
+            snap: {
+              snapTo: 1 / (sections.length - 1),
+              duration: { min: 0.4, max: 0.8 },
+              ease: "power2.inOut",
+            },
             end: () => `+=${(sections.length - 1) * window.innerWidth}`,
             invalidateOnRefresh: true,
           },
@@ -225,14 +251,6 @@ export default function Highlights() {
         <div className="max-w-[1400px] w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10">
           {/* ── Left: Text ── */}
           <div className="lg:col-span-6 space-y-8 order-2 lg:order-1 text-left">
-            {/* Eyebrow — key: servicesSection.area */}
-            <div className="flex items-center gap-3">
-              <div className="h-px w-8 bg-[#BA8C61]" />
-              <span className="text-[#BA8C61] text-xs uppercase tracking-[0.35em] font-semibold">
-                {t("servicesSection.area")}
-              </span>
-            </div>
-
             {/* Animated heading — key: intro.text1 */}
             <div className="space-y-3">
               <h1
@@ -262,12 +280,6 @@ export default function Highlights() {
                     </span>
                   ))}
               </h1>
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: "70px" }}
-                transition={{ duration: 1, delay: 0.7 }}
-                className="h-px bg-[#BA8C61]"
-              />
             </div>
 
             {/* Primary body — key: intro.text2 */}
@@ -275,7 +287,7 @@ export default function Highlights() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.9 }}
-              className="text-white/70 font-light leading-[1.9] max-w-lg"
+              className="text-white/90 font-light leading-[1.9] max-w-lg"
               style={{ fontSize: "clamp(1rem, 1.4vw, 1.15rem)" }}
             >
               {t("intro.text2")}
@@ -286,8 +298,8 @@ export default function Highlights() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55, duration: 0.9 }}
-              className="text-white/50 font-light leading-[1.9] max-w-lg italic border-l-2 border-[#BA8C61]/30 pl-5"
-              style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}
+              className="text-white/90 font-light leading-[1.9] max-w-lg  "
+              style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.2rem)" }}
             >
               {t("intro.text3")}
             </motion.p>
@@ -368,12 +380,13 @@ export default function Highlights() {
               </div>
             </div>
 
-            {/* Image — only on first slide */}
-            <div className="w-full lg:w-[46%] aspect-[4/3] overflow-hidden border border-[#BA8C61]/20 shadow-[0_24px_64px_rgba(27,42,74,0.12)]">
+            {/* Image — constrained height to match text column, no detail chopping */}
+            <div className="w-full lg:w-[44%] lg:max-h-[70vh] overflow-hidden border border-[#BA8C61]/20 shadow-[0_24px_64px_rgba(27,42,74,0.12)] flex-shrink-0">
               <img
                 src={Swipe_Image}
                 alt="Kanzlei"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
+                style={{ maxHeight: "520px" }}
               />
             </div>
           </div>
