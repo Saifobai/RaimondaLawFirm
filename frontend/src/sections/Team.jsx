@@ -901,7 +901,7 @@ export default function Team() {
       id="team"
       ref={containerRef}
       className="relative overflow-hidden"
-      style={{ backgroundColor: "#F5F0EA", fontFamily: "inherit" }}
+      style={{ backgroundColor: "#1B2A4A", fontFamily: "inherit" }}
     >
       {/* Subtle dot texture */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.025]">
@@ -914,18 +914,16 @@ export default function Team() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-center mb-20 md:mb-28 space-y-5"
+          className="text-center mb-20 md:mb-18 space-y-5"
         >
           <motion.div
             variants={fadeUp}
             custom={0}
             className="flex items-center justify-center gap-3"
           >
-            <div className="h-px w-8 bg-[#BA8C61]" />
-            <span className="text-[#BA8C61] text-xs uppercase tracking-[0.45em] font-semibold">
-              {t("hero.eyebrow") || "Das Team"}
+            <span className="text-[#BA8C61] text-xl uppercase tracking-[0.35em] font-semibold">
+              {t("hero.title") || "Das Team"}
             </span>
-            <div className="h-px w-8 bg-[#BA8C61]" />
           </motion.div>
 
           <motion.h2
@@ -1013,7 +1011,7 @@ function FounderCard({ member }) {
       {/* Photo */}
       <div
         className="relative overflow-hidden flex-shrink-0"
-        style={{ aspectRatio: "4/5" }}
+        style={{ aspectRatio: "6/5" }}
       >
         <img
           src={TEAM_IMAGES[member.slug]}
@@ -1030,7 +1028,7 @@ function FounderCard({ member }) {
           className="flex-shrink-0 flex items-start justify-center text-center"
           style={{ minHeight: "44px" }}
         >
-          <p className="text-[#BA8C61] text-[10px] uppercase tracking-[0.45em] font-bold leading-snug">
+          <p className="text-[#BA8C61] text-[12px] uppercase tracking-[0.35em] font-bold leading-snug">
             {member.title}
           </p>
         </div>

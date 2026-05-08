@@ -501,19 +501,6 @@ export default function Highlights() {
           }}
         />
 
-        {/* Eyebrow — key: servicesSection.conversation */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="relative z-10 flex items-center gap-3 mb-7"
-        >
-          <div className="h-px w-8 bg-[#BA8C61]" />
-          <span className="text-[#BA8C61] text-xs uppercase tracking-[0.4em] font-bold">
-            {t("servicesSection.conversation")}
-          </span>
-          <div className="h-px w-8 bg-[#BA8C61]" />
-        </motion.div>
-
         {/* Main heading — key: servicesSection.secure */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -524,17 +511,6 @@ export default function Highlights() {
         >
           {t("servicesSection.secure")}
         </motion.h2>
-
-        {/* Supporting text — key: servicesSection.sideTitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="relative z-10 text-slate-600 font-normal leading-relaxed mb-12 max-w-md"
-          style={{ fontSize: "clamp(1rem, 1.3vw, 1.1rem)" }}
-        >
-          {t("servicesSection.sideTitle")}
-        </motion.p>
 
         {/* CTA button — key: servicesSection.contactButton */}
         <motion.div

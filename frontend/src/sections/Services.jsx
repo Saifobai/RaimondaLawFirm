@@ -65,14 +65,6 @@ export default function Services() {
         {/* ══ HEADER ══ */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 md:mb-28 gap-6">
           <div className="space-y-5">
-            {/* Eyebrow line */}
-            <div className="flex items-center gap-3">
-              <div className="h-px w-10 bg-[#BA8C61]" />
-              <span className="text-[#BA8C61] text-xs uppercase tracking-[0.4em] font-semibold">
-                Leistungen
-              </span>
-            </div>
-
             {/* Section title — key: services.sectionTitle */}
             <h2
               className="font-serif italic text-white leading-[1.05] tracking-tight"
@@ -83,8 +75,8 @@ export default function Services() {
 
             {/* Subheading — key: services.subheading */}
             <p
-              className="text-white/50 font-light leading-[1.85] max-w-xl"
-              style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)" }}
+              className="text-white/90 font-light leading-[1.85] max-w-xl"
+              style={{ fontSize: "clamp(1.05rem, 1.2vw, 1.05rem)" }}
             >
               {t("services.subheading")}
             </p>
@@ -118,8 +110,8 @@ export default function Services() {
               <div className="flex items-start justify-between gap-4">
                 {/* Subtitle — key: services.items[].subtitle */}
                 <span
-                  className="text-[#BA8C61] uppercase tracking-[0.3em] font-semibold leading-snug"
-                  style={{ fontSize: "clamp(0.65rem, 0.8vw, 0.75rem)" }}
+                  className="text-[#BA8C61] uppercase tracking-[0.1em] font-semibold leading-snug"
+                  style={{ fontSize: "clamp(0.95rem, 0.8vw, 0.75rem)" }}
                 >
                   {service.subtitle}
                 </span>
@@ -153,7 +145,7 @@ export default function Services() {
                 {/* Content — key: services.items[].content */}
                 <p
                   className="text-[#1B2A4A]/80 font-normal leading-[1.85] group-hover:text-[#1B2A4A] transition-colors duration-500"
-                  style={{ fontSize: "clamp(0.9rem, 1vw, 1rem)" }}
+                  style={{ fontSize: "clamp(1.02rem, 1vw, 1rem)" }}
                 >
                   {service.content}
                 </p>
