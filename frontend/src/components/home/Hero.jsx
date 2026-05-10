@@ -168,7 +168,7 @@ export default function Hero() {
         <div
           className="
             absolute z-40
-            left-1/2 -translate-x-1/2 bottom-[22%]
+            left-1/2 -translate-x-1/2 bottom-[12%]
             md:left-auto md:translate-x-0 md:-translate-y-1/2
             md:right-[18%] md:top-1/2
             lg:right-[20%]
