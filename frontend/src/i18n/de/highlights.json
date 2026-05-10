@@ -28,24 +28,30 @@
     "strategy": "strategie",
     "sideTitle": "Wenige Schritte zu den besten juristischen Lösungen für Ihr Unternehmen.",
     "contactButton": "Kontaktieren Sie uns",
-    "clusters": [
-      {
-        "title": "Beratung zur Unternehmens- gründung und Rechtsformwahl",
-        "summary": "Die richtige Rechtsform ist das Fundament jedes Unternehmens. Wir begleiten Sie von der Gründung bis zur Umstrukturierung – rechtlich fundiert und individuell auf Ihr Geschäftsmodell abgestimmt.",
-        "headline": "Eine erfolgreiche Unternehmensgründung erfordert mehr als eine gute Geschäftsidee. Entscheidend sind eine passende Rechtsform, klare gesellschaftsrechtliche Strukturen, rechtssichere Verträge und eine wirtschaftlich tragfähige Planung. Wir beraten Gründer, Selbstständige, Unternehmer und Investoren bei der Wahl und Gestaltung der geeigneten Unternehmensform – vom Einzelunternehmen über GbR, eGbR, OHG, KG, GmbH & Co. KG, UG, GmbH, AG und KGaA bis hin zu Genossenschaft, Verein, Stiftung sowie europäischen oder internationalen Gesellschaftsstrukturen. Die Rechtsform beeinflusst insbesondere Haftung, Kapitalbedarf, steuerliche Behandlung, Geschäftsführung, Außenwirkung und spätere Entwicklungsmöglichkeiten. Darüber hinaus begleiten wir Umwandlungen und Strukturänderungen, etwa vom Einzelunternehmen zur GmbH, von der GbR zur GmbH oder UG, von der UG zur GmbH, von Personen- zu Kapitalgesellschaften sowie bei Holding-, Beteiligungs- oder Stiftungslösungen. Bei einem Rechtsformwechsel sind insbesondere gesellschaftsrechtliche, steuerliche und registerrechtliche Anforderungen sorgfältig zu prüfen. Unser Ziel ist es, von Beginn an eine stabile Grundlage für Wachstum, Haftungsschutz, Finanzierung und langfristige Unternehmensnachfolge zu schaffen – rechtlich fundiert, wirtschaftlich durchdacht und individuell auf Ihr Geschäftsmodell abgestimmt.",
-        "tags": [
-          "Unternehmensgründung Köln",
-          "Wirtschaftsberatung Düsseldorf",
-          "Gesellschaftsrecht"
-        ]
-      },
-      {
-        "title": "Insolvenzberatung für Privatpersonen, Selbstständige und Unternehmen",
-        "summary": "Finanzielle Krisen erfordern schnelles, strategisches Handeln. Wir prüfen außergerichtliche Lösungen, begleiten Sanierungen und sichern Ihren Handlungsspielraum – bevor es zu spät ist.",
-        "headline": "Finanzielle Krisen erfordern eine frühzeitige, rechtssichere und strategische Beratung. Wir unterstützen Privatpersonen, Selbstständige und Unternehmen bei Überschuldung, Zahlungsengpässen, Gläubigerdruck, Vollstreckungsmaßnahmen sowie bei drohender oder bereits eingetretener Insolvenz. Im Mittelpunkt steht zunächst die Prüfung außergerichtlicher Lösungen – etwa Schuldenregulierung, Gläubigerverhandlungen, Sanierung oder Restrukturierung. Für Unternehmen prüfen wir zudem geeignete Instrumente wie StaRUG-Verfahren, Eigenverwaltung, Schutzschirmverfahren oder Insolvenzplanlösungen. Ist ein Insolvenzverfahren erforderlich, begleiten wir Sie strukturiert bei der Vorbereitung und Auswahl des passenden Verfahrens – von der Verbraucherinsolvenz über die Regelinsolvenz bis zu unternehmerischen und grenzüberschreitenden Verfahren innerhalb der EU. Unser Ziel ist es, Risiken zu begrenzen, Handlungsspielräume zu sichern und eine Lösung zu entwickeln, die wirtschaftlich tragfähig, rechtlich fundiert und zukunftsorientiert ist.",
-        "tags": []
-      }
-    ]
+    "clusters": 
+ [
+  {
+    "title1": "Beratung zur Unternehmens-gründung und Rechtsformwahl",
+    "content1": "Eine erfolgreiche Unternehmensgründung erfordert mehr als eine gute Geschäftsidee. Entscheidend sind eine passende Rechtsform, klare gesellschaftsrechtliche Strukturen, rechtssichere Verträge und eine wirtschaftlich tragfähige Planung.",
+    "content2": "Wir beraten Gründer, Selbstständige, Unternehmer und Investoren bei der Wahl und Gestaltung der geeigneten Unternehmensform – vom Einzelunternehmen über GbR, eGbR, OHG, KG, GmbH & Co. KG, UG, GmbH, AG und KGaA bis hin zu Genossenschaft, Verein, Stiftung sowie europäischen oder internationalen Gesellschaftsstrukturen. Die Rechtsform beeinflusst insbesondere Haftung, Kapitalbedarf, steuerliche Behandlung, Geschäftsführung, Außenwirkung und spätere Entwicklungsmöglichkeiten. ",
+    "content3": "Darüber hinaus begleiten wir Umwandlungen und Strukturänderungen, etwa vom Einzelunternehmen zur GmbH, von der GbR zur GmbH oder UG, von der UG zur GmbH, von Personen- zu Kapitalgesellschaften sowie bei Holding-, Beteiligungs- oder Stiftungslösungen. Bei einem Rechtsformwechsel sind insbesondere gesellschaftsrechtliche, steuerliche und registerrechtliche Anforderungen sorgfältig zu prüfen.",
+    "content4": "Unser Ziel ist es, von Beginn an eine stabile Grundlage für Wachstum, Haftungsschutz, Finanzierung und langfristige Unternehmensnachfolge zu schaffen – rechtlich fundiert, wirtschaftlich durchdacht und individuell auf Ihr Geschäftsmodell abgestimmt."
+  },
+  {
+    "title2": "Internationales Handelsrecht",
+    "content1": "Internationale Handelsbeziehungen erfordern klare Verträge, rechtliche Sicherheit und eine verlässliche Durchsetzung wirtschaftlicher Ansprüche. Wir beraten Unternehmen, Unternehmer und Investoren im grenzüberschreitenden Geschäftsverkehr, insbesondere mit Bezug zu Deutschland, Litauen, Spanien und Portugal.",
+    "content2": "Unsere Beratung umfasst die Prüfung, Gestaltung und Verhandlung internationaler Verträge, Liefer- und Dienstleistungsvereinbarungen, Handelsvertretungs- und Vertriebsverträge, Kooperationsmodelle, Zahlungsbedingungen, Haftungsfragen sowie die rechtliche Bewertung wirtschaftlicher Risiken.",
+    "content3": "Darüber hinaus unterstützen wir Sie bei der Bearbeitung offener Forderungen – von der außergerichtlichen Zahlungsaufforderung über die Kommunikation mit Geschäftspartnern und Schuldnern bis hin zur strukturierten Vorbereitung weiterer rechtlicher Schritte. Bei Bedarf begleiten wir auch die Übergabe an Inkasso, Anwälte oder zuständige Stellen im jeweiligen Land.",
+    "content4": "Unser Ziel ist es, internationale Geschäftsbeziehungen rechtssicher zu gestalten, Forderungen konsequent zu verfolgen und wirtschaftliche Interessen über Ländergrenzen hinweg wirksam zu schützen."
+  },
+  {
+    "title3": "Insolvenzberatung für Privatpersonen, Selbstständige und Unternehmen",
+    "content1": "Finanzielle Krisen erfordern eine frühzeitige, rechtssichere und strategische Beratung. Wir unterstützen Privatpersonen, Selbstständige und Unternehmen bei Überschuldung, Zahlungsengpässen, Gläubigerdruck, Vollstreckungsmaßnahmen sowie bei drohender oder bereits eingetretener Insolvenz.",
+    "content2": "Im Mittelpunkt steht zunächst die Prüfung außergerichtlicher Lösungen – etwa Schuldenregulierung, Gläubigerverhandlungen, Sanierung oder Restrukturierung. Für Unternehmen prüfen wir zudem geeignete Instrumente wie StaRUG-Verfahren, Eigenverwaltung, Schutzschirmverfahren oder Insolvenzplanlösungen.",
+    "content3": "Ist ein Insolvenzverfahren erforderlich, begleiten wir Sie strukturiert bei der Vorbereitung und Auswahl des passenden Verfahrens – von der Verbraucherinsolvenz über die Regelinsolvenz bis zu unternehmerischen und grenzüberschreitenden Verfahren innerhalb der EU",
+    "content4": "Unser Ziel ist es, Risiken zu begrenzen, Handlungsspielräume zu sichern und eine Lösung zu entwickeln, die wirtschaftlich tragfähig, rechtlich fundiert und zukunftsorientiert ist."
+  }
+]
   },
 
   "advantages": {
