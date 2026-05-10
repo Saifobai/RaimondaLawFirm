@@ -82,7 +82,7 @@ export default function Team() {
             custom={0}
             className="flex items-center justify-center gap-3"
           >
-            <span className="text-[#BA8C61] text-5xl uppercase tracking-[0.02em] font-semibold">
+            <span className="text-[#BA8C61] text-5xl tracking-[0.02em] font-semibold">
               {t("hero.title") || "Das Team"}
             </span>
           </motion.div>

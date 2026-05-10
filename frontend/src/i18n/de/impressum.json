@@ -1,76 +1,102 @@
 {
   "hero": {
-    "content": [
-      "Anbieter dieser Website im Sinne des § 5 DDG ist",
-      "Wirtschaftskanzlei Dr. jur. Kraemer GmbH",
-      "Sitz Köln, Amtsgericht Köln HRB 123210",
+    "intro": "Anbieter dieser Website im Sinne des § 5 DDG ist",
+    "companyName": "Wirtschaftskanzlei Dr. jur. Kraemer GmbH",
+    "registration": "Sitz Köln, Amtsgericht Köln HRB 123210",
 
-      "Hauptstelle",
-      "Im Sionstal 3–5",
-      "50678 Köln",
-      "Tel.: +49 221 28275740",
-      "Fax: +49 221 28275741",
-      "E-Mail: info@kanzlei-dr-jura-kraemer.de",
+    "mainOffice": {
+      "label": "Hauptstelle",
+      "street": "Im Sionstal 3–5",
+      "city": "50678 Köln",
+      "phone": "Tel.: +49 221 28275740",
+      "fax": "Fax: +49 221 28275741",
+      "email": "E-Mail: info@kanzlei-dr-jura-kraemer.de"
+    },
 
-      "Zweigstelle Düsseldorf:",
-      "Friedrichstraße 7",
-      "40217 Düsseldorf",
-      "Tel.: +49 211 15937650",
-      "Fax: +49 211 15937651",
+    "branchOffice": {
+      "label": "Zweigstelle Düsseldorf:",
+      "street": "Friedrichstraße 7",
+      "city": "40217 Düsseldorf",
+      "phone": "Tel.: +49 211 15937650",
+      "fax": "Fax: +49 211 15937651"
+    },
 
-      "Umsatzsteueridentifikationsnummer: 214/5803/7630",
-      "Steuernummer: 5214/5803/Ü 1049 (Finanzamt Köln-Altstadt)",
+    "tax": {
+      "vatId": "Umsatzsteueridentifikationsnummer: 214/5803/7630",
+      "taxNumber": "Steuernummer: 5214/5803/Ü 1049 (Finanzamt Köln-Altstadt)"
+    },
 
-      "Vertretung",
-      "Die Gesellschaft wird vertreten durch die Geschäftsführerin",
-      "Dr. jur. Raimonda Kraemer, LL.M. – Wirtschaftsjuristin / Geschäftsführerin",
+    "representation": {
+      "label": "Vertretung",
+      "intro": "Die Gesellschaft wird vertreten durch die Geschäftsführerin",
+      "person": "Dr. jur. Raimonda Kraemer, LL.M. – Wirtschaftsjuristin / Geschäftsführerin"
+    },
 
-      "Kooperation mit:",
-      "Rechtsanwältin Aurelija Maumevičė, LL.M. – europäische Rechtsanwältin nach § 2 EuRAG.",
-      "Zugelassen zur Rechtsanwaltschaft in Litauen und seit dem 21.05.2025 auch Mitglied der Rechtsanwaltskammer Köln.",
+    "cooperation": {
+      "label": "Kooperation mit:",
+      "person": "Rechtsanwältin Aurelija Maumevičė, LL.M. – europäische Rechtsanwältin nach § 2 EuRAG.",
+      "detail": "Zugelassen zur Rechtsanwaltschaft in Litauen und seit dem 21.05.2025 auch Mitglied der Rechtsanwaltskammer Köln."
+    },
 
-      "Standorte",
-      "Die Kanzlei Dr. R. Kraemer unterhält Standorte in Köln (Hauptsitz) und Düsseldorf (Zweigstelle).",
+    "locations": {
+      "label": "Standorte",
+      "description": "Die Kanzlei Dr. R. Kraemer unterhält Standorte in Köln (Hauptsitz) und Düsseldorf (Zweigstelle)."
+    },
 
-      "Zuständige Kammern",
-      "Rechtsanwaltskammer Köln",
-      "Riehler Straße 30",
-      "50668 Köln",
-      "www.rak-koeln.de",
+    "chambers": {
+      "label": "Zuständige Kammern",
+      "cologne": {
+        "name": "Rechtsanwaltskammer Köln",
+        "street": "Riehler Straße 30",
+        "city": "50668 Köln",
+        "website": "www.rak-koeln.de"
+      },
+      "lithuania": {
+        "label": "Für die Zulassung in Litauen:",
+        "name": "Lietuvos advokatūra (Litauische Rechtsanwaltskammer)",
+        "website": "www.advokatura.lt"
+      }
+    },
 
-      "Für die Zulassung in Litauen:",
-      "Lietuvos advokatūra (Litauische Rechtsanwaltskammer)",
-      "www.advokatura.lt",
+    "insurance": {
+      "label": "Berufshaftpflichtversicherung",
+      "insurer": "Versicherer: AAS \u201eBTA Baltic Insurance Company\u201c",
+      "scope": "Räumlicher Geltungsbereich: Europa (außer Belarus, Ukraine, Russische Föderation)"
+    },
 
-      "Berufshaftpflichtversicherung",
-      "Versicherer: AAS „BTA Baltic Insurance Company“",
-      "Räumlicher Geltungsbereich: Europa (außer Belarus, Ukraine, Russische Föderation)",
+    "practice": {
+      "label": "Tätigkeitsbereiche",
+      "intro": "Die Dr. R. Kraemer ist spezialisiert auf:",
+      "areas": [
+        "Wirtschaftsberatung",
+        "Sanierung",
+        "Internationales Recht zwischen Deutschland und Litauen"
+      ],
+      "description": "Die Gesellschaft verbindet juristische Expertise im Insolvenz- und Sanierungsrecht (Rechtsanwältin Aurelija Maumevičė) mit wirtschaftsjuristischer Beratung (Dr. jur. Raimonda Kraemer, LL.M.) und bietet dadurch eine interdisziplinäre, grenzüberschreitende Beratung insbesondere im deutsch-litauischen Rechts- und Wirtschaftsverkehr."
+    },
 
-      "Tätigkeitsbereiche",
-      "Die Dr. R. Kraemer ist spezialisiert auf:",
-      "- Wirtschaftsberatung",
-      "- Sanierung",
-      "- Internationales Recht zwischen Deutschland und Litauen",
+    "dispute": {
+      "label": "Außergerichtliche Streitschlichtung (§§ 36, 37 VSBG)",
+      "description": "Bei Streitigkeiten zwischen Rechtsanwälten und ihren Auftraggebern besteht auf Antrag die Möglichkeit der außergerichtlichen Streitschlichtung bei der Rechtsanwaltskammer Köln oder bei der Schlichtungsstelle der Rechtsanwaltschaft (§ 191f BRAO) bei der Bundesrechtsanwaltskammer, Neue Grünstraße 17, 10179 Berlin – www.schlichtungsstelle-der-rechtsanwaltschaft.de, E-Mail: schlichtungsstelle@s-d-r.org.",
+      "noParticipation": "Die Dr. jur. Kraemer GmbH nimmt nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.",
+      "euPlatform": "Die Plattform der EU zur außergerichtlichen Online-Streitbeilegung finden Sie unter: https://ec.europa.eu/consumers/odr/."
+    },
 
-      "Die Gesellschaft verbindet juristische Expertise im Insolvenz- und Sanierungsrecht (Rechtsanwältin Aurelija Maumevičė) mit wirtschaftsjuristischer Beratung (Dr. jur. Raimonda Kraemer, LL.M.) und bietet dadurch eine interdisziplinäre, grenzüberschreitende Beratung insbesondere im deutsch-litauischen Rechts- und Wirtschaftsverkehr.",
+    "professional": {
+      "label": "Berufsrechtliche Regelungen",
+      "items": [
+        "BRAO – Bundesrechtsanwaltsordnung – https://www.gesetze-im-internet.de/brao/",
+        "BORA – Berufsordnung für Rechtsanwälte – https://www.brak.de",
+        "RVG – Rechtsanwaltsvergütungsgesetz – https://www.gesetze-im-internet.de/rvg/",
+        "FAO – Fachanwaltsordnung – https://www.brak.de",
+        "CCBE-Berufsregeln – Berufsregeln der Rechtsanwälte der Europäischen Gemeinschaft – https://www.brak.de"
+      ]
+    },
 
-      "Außergerichtliche Streitschlichtung (§§ 36, 37 VSBG)",
-      "Bei Streitigkeiten zwischen Rechtsanwälten und ihren Auftraggebern besteht auf Antrag die Möglichkeit der außergerichtlichen Streitschlichtung bei der Rechtsanwaltskammer Köln oder bei der Schlichtungsstelle der Rechtsanwaltschaft (§ 191f BRAO) bei der Bundesrechtsanwaltskammer, Neue Grünstraße 17, 10179 Berlin – www.schlichtungsstelle-der-rechtsanwaltschaft.de, E-Mail: schlichtungsstelle@s-d-r.org.",
-
-      "Die Dr. jur. Kraemer GmbH nimmt nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.",
-
-      "Die Plattform der EU zur außergerichtlichen Online-Streitbeilegung finden Sie unter: https://ec.europa.eu/consumers/odr/.",
-
-      "Berufsrechtliche Regelungen",
-      "- BRAO – Bundesrechtsanwaltsordnung – https://www.gesetze-im-internet.de/brao/",
-      "- BORA – Berufsordnung für Rechtsanwälte – https://www.brak.de",
-      "- RVG – Rechtsanwaltsvergütungsgesetz – https://www.gesetze-im-internet.de/rvg/",
-      "- FAO – Fachanwaltsordnung – https://www.brak.de",
-      "- CCBE-Berufsregeln – Berufsregeln der Rechtsanwälte der Europäischen Gemeinschaft – https://www.brak.de",
-
-      "Haftungsausschluss",
-      "Es wurde größte Sorgfalt auf die Richtigkeit und Aktualität der Inhalte dieser Website verwendet. Dennoch übernehmen wir keine Haftung für externe Links. Für die Inhalte verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.",
-      "Die auf dieser Website bereitgestellten Informationen dienen ausschließlich der allgemeinen Information und stellen keine Rechtsberatung dar."
-    ]
+    "liability": {
+      "label": "Haftungsausschluss",
+      "text1": "Es wurde größte Sorgfalt auf die Richtigkeit und Aktualität der Inhalte dieser Website verwendet. Dennoch übernehmen wir keine Haftung für externe Links. Für die Inhalte verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.",
+      "text2": "Die auf dieser Website bereitgestellten Informationen dienen ausschließlich der allgemeinen Information und stellen keine Rechtsberatung dar."
+    }
   }
 }

@@ -290,6 +290,17 @@ export default function Contact() {
                 </span>
               </div>
             </div>
+
+            <div className="p-10 bg-white/[0.02] border border-white/5 flex flex-col gap-6">
+              <div className="flex items-center gap-6 group overflow-hidden">
+                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center group-hover:border-[#BA8C61] transition-colors shrink-0">
+                  <Mail size={18} className="text-[#BA8C61]" />
+                </div>
+                <span className="text-sm md:text-[18px] tracking-widest font-light text-white truncate">
+                  info@kanzlei-dr-jura-kraemer.com
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
