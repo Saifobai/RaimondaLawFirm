@@ -14,14 +14,6 @@ import Swipe_Image from "../assets/highlight_image.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// ─── Color system ──────────────────────────────────────────────────
-// Base:    #1B2A4A  — primary background
-// Surface: #1F3256  — card / elevated surfaces
-// Deep:    #141F36  — contrast sections (horizontal scroll, CTA)
-// Accent:  #BA8C61 / #C9B38C
-
-// ─── ServiceSlide ──────────────────────────────────────────────────
-// Premium editorial card — contained, shadowed, newspaper two-column inside
 function ServiceSlide({
   service,
   index,
@@ -234,7 +226,7 @@ export default function Highlights() {
       >
         {/* Background watermark — key: intro.text4 */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.025] select-none overflow-hidden">
-          <motion.h2
+          {/* <motion.h2
             style={{ x: "-5%" }}
             whileInView={{ x: "5%" }}
             transition={{
@@ -245,7 +237,7 @@ export default function Highlights() {
             className="text-[25vw] font-serif italic whitespace-nowrap text-white"
           >
             {t("intro.text4")}
-          </motion.h2>
+          </motion.h2> */}
         </div>
 
         <div className="max-w-[1400px] w-full grid lg:grid-cols-12 gap-12 lg:gap-16 items-center z-10">
@@ -287,7 +279,7 @@ export default function Highlights() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.9 }}
-              className="text-white/90 font-light leading-[1.9] max-w-lg"
+              className="text-white/90 font-bold leading-[1.9] max-w-lg"
               style={{ fontSize: "clamp(1rem, 1.4vw, 1.15rem)" }}
             >
               {t("intro.text2")}
@@ -298,7 +290,7 @@ export default function Highlights() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55, duration: 0.9 }}
-              className="text-white/90 font-light leading-[1.9] max-w-lg  "
+              className="text-white/90 font-bold leading-[1.9] max-w-lg  "
               style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.2rem)" }}
             >
               {t("intro.text3")}
@@ -344,14 +336,6 @@ export default function Highlights() {
           {/* ── Slide 0: Title + image ── */}
           <div className="service-slide flex-shrink-0 w-full lg:w-screen h-auto lg:h-full flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 sm:px-10 lg:px-32 py-16 lg:py-0 gap-10 lg:gap-20 border-b lg:border-b-0 border-slate-100">
             <div className="w-full lg:w-[46%] text-left space-y-8">
-              {/* Eyebrow — key: servicesSection.area */}
-              <div className="flex items-center gap-3">
-                <div className="h-px w-8 bg-[#BA8C61]" />
-                <span className="text-[#BA8C61] text-xs uppercase tracking-[0.4em] font-semibold">
-                  {t("servicesSection.area")}
-                </span>
-              </div>
-
               {/* Big navy title — key: servicesSection.title */}
               <h2
                 className="font-serif italic leading-[1.08] text-[#1B2A4A]"
@@ -360,21 +344,13 @@ export default function Highlights() {
                 {t("servicesSection.title")}
               </h2>
 
-              {/* Supporting text — key: servicesSection.sideTitle */}
-              <p
-                className="text-slate-500 font-light leading-[1.85] max-w-sm"
-                style={{ fontSize: "clamp(1rem, 1.3vw, 1.1rem)" }}
-              >
-                {t("servicesSection.sideTitle")}
-              </p>
-
               {/* Scroll cue — key: servicesSection.slide */}
               <div className="flex items-center gap-4 group cursor-default pt-2">
-                <span className="text-xs tracking-[0.4em] uppercase font-semibold text-[#1B2A4A]/40">
+                <span className="text-xl tracking-[0.2em] font-bold text-[#1B2A4A]/90">
                   {t("servicesSection.slide")}
                 </span>
                 <ArrowRight
-                  size={20}
+                  size={40}
                   className="text-[#BA8C61] group-hover:translate-x-2 transition-transform duration-300"
                 />
               </div>
@@ -420,24 +396,12 @@ export default function Highlights() {
             viewport={{ once: true }}
             className="lg:col-span-5 space-y-5"
           >
-            <div className="flex items-center gap-3">
-              <div className="h-px w-6 bg-[#BA8C61]/60" />
-              <span className="text-[#BA8C61]/70 text-xs uppercase tracking-[0.35em] font-semibold">
-                {t("advantages.title")}
-              </span>
-            </div>
             <h2
               className="font-serif leading-[1.1] tracking-tight text-white"
               style={{ fontSize: "clamp(2rem, 4vw, 4.5rem)" }}
             >
               {t("servicesSection.legacy")}
             </h2>
-            <p
-              className="text-white/45 font-light leading-[1.85] max-w-xs"
-              style={{ fontSize: "clamp(0.95rem, 1.1vw, 1rem)" }}
-            >
-              {t("servicesSection.choose")}
-            </p>
           </motion.div>
 
           {/* Advantage cards — keys: advantages.items[].title + .description */}
@@ -462,13 +426,13 @@ export default function Highlights() {
                 />
 
                 {/* Card title — key: advantages.items[].title */}
-                <h4 className="text-lg lg:text-xl font-serif italic text-white mb-3 leading-snug">
+                <h4 className="text-2xl lg:text-xl font-serif italic text-white mb-3 leading-snug">
                   {item.title}
                 </h4>
 
                 {/* Card body — key: advantages.items[].description */}
                 <p
-                  className="text-white/50 font-light leading-[1.85] group-hover:text-white/75 transition-colors duration-500"
+                  className="text-white/90 font-semibold leading-[1.85] group-hover:text-white/95 transition-colors duration-500"
                   style={{ fontSize: "clamp(0.9rem, 1vw, 1rem)" }}
                 >
                   {item.description}
@@ -501,18 +465,6 @@ export default function Highlights() {
           }}
         />
 
-        {/* Main heading — key: servicesSection.secure */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="relative z-10 font-serif italic text-[#1B2A4A] mb-5 tracking-tight max-w-3xl"
-          style={{ fontSize: "clamp(1.8rem, 4vw, 3.6rem)" }}
-        >
-          {t("servicesSection.secure")}
-        </motion.h2>
-
-        {/* CTA button — key: servicesSection.contactButton */}
         <motion.div
           onClick={scrollToContact}
           whileHover={{ scale: 1.08 }}

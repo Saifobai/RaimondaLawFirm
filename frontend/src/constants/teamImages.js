@@ -1,7 +1,7 @@
 // src/constants/teamImages.js
 import Rai_Image from "../assets/raii_.jpeg";
 import Auri_Image from "../assets/aurii_.jpeg";
-import Kris_Image from "../assets/Kriss_.jpeg";
+import Kris_Image from "../assets/krisss__.jpeg";
 import Ajlona_Image from "../assets/aljona_.jpeg";
 import Elke_Image from "../assets/elkee_.jpeg";
 

@@ -188,7 +188,7 @@ function SubtitleParagraphs({ text, className }) {
       {parts.map((part, i) => (
         <p
           key={i}
-          className="text-white/90 font-light text-[14px] sm:text-[17px] leading-[1.85] tracking-wide mt-0 mb-5 last:mb-0"
+          className="text-white/90 font-bold text-[14px] sm:text-[17px] leading-[1.85] tracking-wide mt-0 mb-5 last:mb-0"
         >
           {part}
         </p>
@@ -350,7 +350,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, delay: 0.5 }}
-                  className="inline-block bg-[#BA8C61] hover:bg-white hover:text-[#C9B38C] text-white px-8 py-4 rounded-sm font-bold uppercase tracking-[0.18em] text-[12px] sm:text-[13px] transition-all duration-500 shadow-xl"
+                  className="inline-block bg-[#BA8C61] hover:bg-white hover:text-[#C9B38C] text-white px-9 py-5 rounded-sm font-bold uppercase tracking-[0.18em] text-[12px] sm:text-[15px] transition-all duration-500 shadow-xl"
                 >
                   {t("cta")}
                 </motion.a>
