@@ -17,7 +17,6 @@ export default function Privacy() {
     ScrollTrigger.refresh();
   }, []);
 
-  // Lines that look like bullet data points (short, no verb)
   const isBulletLine = (line) =>
     line.length < 55 &&
     !line.endsWith(".") &&
@@ -46,7 +45,7 @@ export default function Privacy() {
           className="mb-20 md:mb-28"
         >
           <h1
-            className="font-serif italic text-white leading-[1.08] tracking-tight mb-8"
+            className="font-sans text-white leading-[1.08] tracking-tight mb-8"
             style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
           >
             {t("hero.title")}
@@ -69,9 +68,9 @@ export default function Privacy() {
               {/* Gold dot on left border */}
               <span className="absolute -left-[5px] top-[6px] w-[9px] h-[9px] rounded-full border-2 border-[#BA8C61] bg-[#1B2A4A] group-hover:bg-[#BA8C61] transition-colors duration-500" />
 
-              {/* Section number + title */}
+              {/* Section title */}
               <h2
-                className="font-serif italic text-white mb-6 leading-snug"
+                className="font-sans text-white mb-6 leading-snug"
                 style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)" }}
               >
                 {section.title}
@@ -89,22 +88,22 @@ export default function Privacy() {
                   return (
                     <div key={idx}>
                       {isIntro ? (
-                        <p className="text-white/80 font-semibold text-[17px] uppercase tracking-[0.15em] mt-5 mb-2">
+                        <p className="font-sans text-white/80 font-semibold text-[17px] uppercase tracking-[0.15em] mt-5 mb-2">
                           {line}
                         </p>
                       ) : isLegal ? (
-                        <p className="text-[#BA8C61]/90 font-medium text-[17px] tracking-wide mt-4 ">
+                        <p className="font-sans text-[#BA8C61]/90 font-medium text-[17px] tracking-wide mt-4">
                           {line}
                         </p>
                       ) : isBullet ? (
                         <div className="flex items-start gap-3 pl-1">
                           <span className="mt-[9px] w-1 h-1 rounded-full bg-[#BA8C61]/90 flex-shrink-0" />
-                          <p className="text-white/90 font-semibold text-[17px] leading-[1.8]">
+                          <p className="font-sans text-white/90 font-semibold text-[17px] leading-[1.8]">
                             {line}
                           </p>
                         </div>
                       ) : (
-                        <p className="text-white/90 font-semibold text-[17px] md:text-[16px] leading-[1.95]">
+                        <p className="font-sans text-white/90 font-semibold text-[17px] md:text-[16px] leading-[1.95]">
                           {line}
                         </p>
                       )}
@@ -125,7 +124,7 @@ export default function Privacy() {
           className="mt-24 h-px bg-gradient-to-r from-[#BA8C61]/50 via-[#BA8C61]/20 to-transparent origin-left"
         />
 
-        <p className="mt-6 text-white/80 text-[17px] uppercase tracking-[0.1em] font-medium">
+        <p className="mt-6 font-sans text-white/80 text-[17px] uppercase tracking-[0.1em] font-medium">
           Wirtschaftskanzlei Dr. jur. Kraemer GmbH
         </p>
       </div>

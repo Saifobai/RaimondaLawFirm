@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const SectionHeading = ({ children }) => (
   <h2
-    className="font-serif italic text-white mt-16 mb-3 leading-snug"
+    className="font-sans text-white mt-16 mb-3 leading-snug"
     style={{ fontSize: "clamp(1.3rem, 2vw, 1.6rem)" }}
   >
     {children}
@@ -20,14 +20,14 @@ const SectionHeading = ({ children }) => (
 
 const Body = ({ children, className = "" }) => (
   <p
-    className={`text-white/90 font-semibold text-[15px] md:text-[16px] leading-[1.9] ${className}`}
+    className={`font-sans text-white/90 font-semibold text-[15px] md:text-[16px] leading-[1.9] ${className}`}
   >
     {children}
   </p>
 );
 
 const ContactLine = ({ children }) => (
-  <p className="text-white/90 font-semibold text-[15px] leading-[1.85] font-mono tracking-wide">
+  <p className="font-sans text-white/90 font-semibold text-[15px] leading-[1.85] tracking-wide">
     {children}
   </p>
 );
@@ -35,7 +35,7 @@ const ContactLine = ({ children }) => (
 const BulletItem = ({ children }) => (
   <div className="flex items-start gap-3 pl-2">
     <span className="mt-[10px] w-1.5 h-1.5 rounded-full bg-[#BA8C61] flex-shrink-0" />
-    <p className="text-[#C9B38C] font-medium text-[15px] leading-[1.8]">
+    <p className="font-sans text-[#C9B38C] font-medium text-[15px] leading-[1.8]">
       {children}
     </p>
   </div>
@@ -97,7 +97,7 @@ export default function Impressum() {
           className="mb-20 md:mb-28"
         >
           <h1
-            className="font-serif italic text-white leading-[1.08] tracking-tight mb-8"
+            className="font-sans text-white leading-[1.08] tracking-tight mb-8"
             style={{ fontSize: "clamp(2.4rem, 5vw, 4rem)" }}
           >
             Impressum
@@ -114,8 +114,6 @@ export default function Impressum() {
           <Body>{h("registration")}</Body>
         </motion.div>
 
-        <Divider />
-
         {/* ── MAIN OFFICE ── */}
         <motion.div {...fadeUp(1)} className="space-y-1">
           <SectionHeading>{mainOffice.label}</SectionHeading>
@@ -126,8 +124,6 @@ export default function Impressum() {
           <ContactLine>{mainOffice.email}</ContactLine>
         </motion.div>
 
-        <Divider />
-
         {/* ── BRANCH OFFICE ── */}
         <motion.div {...fadeUp(2)} className="space-y-1">
           <SectionHeading>{branchOffice.label}</SectionHeading>
@@ -137,15 +133,11 @@ export default function Impressum() {
           <ContactLine>{branchOffice.fax}</ContactLine>
         </motion.div>
 
-        <Divider />
-
         {/* ── TAX ── */}
         <motion.div {...fadeUp(3)} className="space-y-1">
           <ContactLine>{tax.vatId}</ContactLine>
           <ContactLine>{tax.taxNumber}</ContactLine>
         </motion.div>
-
-        <Divider />
 
         {/* ── REPRESENTATION ── */}
         <motion.div {...fadeUp(4)} className="space-y-2">
@@ -154,8 +146,6 @@ export default function Impressum() {
           <Body className="text-[#C9B38C]">{representation.person}</Body>
         </motion.div>
 
-        <Divider />
-
         {/* ── COOPERATION ── */}
         <motion.div {...fadeUp(5)} className="space-y-2">
           <SectionHeading>{cooperation.label}</SectionHeading>
@@ -163,15 +153,11 @@ export default function Impressum() {
           <Body>{cooperation.detail}</Body>
         </motion.div>
 
-        <Divider />
-
         {/* ── LOCATIONS ── */}
         <motion.div {...fadeUp(6)} className="space-y-2">
           <SectionHeading>{locations.label}</SectionHeading>
           <Body>{locations.description}</Body>
         </motion.div>
-
-        <Divider />
 
         {/* ── CHAMBERS ── */}
         <motion.div {...fadeUp(7)} className="space-y-1">
@@ -190,16 +176,12 @@ export default function Impressum() {
           </div>
         </motion.div>
 
-        <Divider />
-
         {/* ── INSURANCE ── */}
         <motion.div {...fadeUp(8)} className="space-y-1">
           <SectionHeading>{insurance.label}</SectionHeading>
           <ContactLine>{insurance.insurer}</ContactLine>
           <Body>{insurance.scope}</Body>
         </motion.div>
-
-        <Divider />
 
         {/* ── PRACTICE AREAS ── */}
         <motion.div {...fadeUp(9)} className="space-y-3">
@@ -213,8 +195,6 @@ export default function Impressum() {
           <Body className="pt-2">{practice.description}</Body>
         </motion.div>
 
-        <Divider />
-
         {/* ── DISPUTE RESOLUTION ── */}
         <motion.div {...fadeUp(10)} className="space-y-3">
           <SectionHeading>{dispute.label}</SectionHeading>
@@ -222,8 +202,6 @@ export default function Impressum() {
           <Body>{dispute.noParticipation}</Body>
           <Body>{dispute.euPlatform}</Body>
         </motion.div>
-
-        <Divider />
 
         {/* ── PROFESSIONAL REGULATIONS ── */}
         <motion.div {...fadeUp(11)} className="space-y-3">
@@ -234,8 +212,6 @@ export default function Impressum() {
             ))}
           </div>
         </motion.div>
-
-        <Divider />
 
         {/* ── LIABILITY ── */}
         <motion.div {...fadeUp(12)} className="space-y-3">
@@ -253,7 +229,7 @@ export default function Impressum() {
           className="mt-24 h-px bg-gradient-to-r from-[#BA8C61]/50 via-[#BA8C61]/20 to-transparent origin-left"
         />
 
-        <p className="mt-6 text-white/80 text-[16px] uppercase tracking-[0.1em] font-medium">
+        <p className="mt-6 font-sans text-white/80 text-[16px] uppercase tracking-[0.1em] font-medium">
           Wirtschaftskanzlei Dr. jur. Kraemer GmbH
         </p>
       </div>
