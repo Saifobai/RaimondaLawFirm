@@ -8,7 +8,12 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      const scrolled = window.scrollY;
+      const totalHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const nearBottom = scrolled > totalHeight - 150;
+
+      if (scrolled > 300 && !nearBottom) {
         setVisible(true);
       } else {
         setVisible(false);
@@ -29,24 +34,23 @@ export default function ScrollToTop() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 group flex items-center">
-      {/* 1. Added "group" to the wrapper */}
-
-      {/* THE TOOLTIP */}
+    <div className="fixed bottom-12 right-4 sm:bottom-6 sm:right-6 z-50 group flex items-center">
+      {/* TOOLTIP — desktop only */}
       <span
         className="
-        mr-3 
-        bg-[#262B3E] text-white text-[16px] uppercase tracking-[0.2em] 
-        px-3 py-2 rounded border border-white/10 
-        opacity-0 group-hover:opacity-100 
-        transition-opacity duration-300 
-        whitespace-nowrap pointer-events-none
-      "
+          hidden lg:block
+          mr-3
+          bg-[#262B3E] text-white text-[16px] uppercase tracking-[0.2em]
+          px-3 py-2 rounded border border-white/10
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-300
+          whitespace-nowrap pointer-events-none
+        "
       >
         {t("scrollToTop")}
       </span>
 
-      {/* THE BUTTON */}
+      {/* BUTTON */}
       <button
         onClick={scrollToTop}
         className="
