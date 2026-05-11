@@ -456,7 +456,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Briefcase, RefreshCw, Rocket, Globe, Play, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import slide1 from "../../assets/hero_pic_01.jpeg";
+import slide1 from "../../assets/hero_pic_2.jpeg";
 import mobile_hero from "../../assets/mobile_hero_02.jpeg";
 import Video_Law from "../../assets/law_vid.mp4";
 
