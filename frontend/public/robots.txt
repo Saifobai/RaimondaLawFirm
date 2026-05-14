@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kanzlei-dr-jura-kraemer.com/sitemap.xml
